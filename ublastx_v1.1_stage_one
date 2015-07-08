@@ -42,8 +42,8 @@ $opt_n ||= 1;
 $opt_f ||="fq";
 $opt_o ||= ".";
 
-my $ARDB_PATH ||= "$ublastxdir/DB/arg.udb";
-my $ggnr90 ||= "$ublastxdir/DB/dbgg91.udb";
+my $ARDB_PATH ||= "$ublastxdir/DB/SARDB.udb";
+my $ggnr90 ||= "$ublastxdir/DB/gg85.udb";
 
 if($opt_h  ||  ($opt_i eq "") ){
 	die "$usage\n";
