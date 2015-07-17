@@ -55,7 +55,7 @@ The example runs like this, in directory example/ after running stage one pipeli
 
 ###Stage two pipeline on Galaxy system and download results
 
-Go to http://147.8.134.193/ and using the module ARG_Annotation.  
+Go to http://147.8.134.193:4432 and using the module ARG_Annotation.  
 
 1. Using Get data module to upload the extracted fasta file and meta_data_out file generated in stage one into Galaxy  
 2. Click ARG_Annotation and select your uploaded files  
