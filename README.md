@@ -25,9 +25,9 @@ Example of meta-data file **meta-data.txt**  Tips:
 * The SampleID are required to be numbers counting from 1 to 2 to 3 etc.
 * Category is the classification of your samples into groups and we will colored your samples in PcoA by this informaton
 * The meta-data table should be separated by tabular for each of the items 
-* The Name of each sample should be the fastq file names for your pair-end Illumina sequencing data, your fastq files will automatically be recognized by Name_1.fq and Name_2.fq, so you need to keep the name consistent with your fq file name. 
+* The Name of each sample should be the fastq file names for your pair-end Illumina sequencing data, your fastq files will automatically be recognized by Name_1.fq and Name_2.fq, so you need to keep the name consistent with your fq file name.  For example your have two pair end samples STAS_1.fq STAS_2.fq and SWHAS104_1.fq SWHAS104_2.fq. The meta-data.txt could be like this.
 
-SampleID | Name | Catergory | Librarysize
+SampleID | Name | Category | Librarysize
 ---------|------|-----------|------------ 
  1       | STAS | ST  |         300  
  2       | SWHAS104 | SWH  |         300
