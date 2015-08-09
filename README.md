@@ -43,11 +43,13 @@ This step will search reads against Structural ARG database and 16 greengene non
 Then using another scripts, we will generate the files for stage two of Ublastx.   
 ` perl merge_extracted_fa_update_metadate.pl  <Indir> <outdir> <meta_data_in> <meta_data_out> <extracted fasta>`  
 
+Input parameters
 * \<Indir\> is the input directory of your fastq files
 * \<outdir\> is the testourdir
 * \<meta_data_in\> is the meta-data.txt
-* \<meta_data_out\> is the meta-data file for stage two analysis
-* \<extracted fasta\> is the potential reads from all users metagenomics datasets
+Output parameters
+* \<meta_data_out\> is the meta-data file for stage two analysis (named by users)
+* \<extracted fasta\> is the potential reads from all users metagenomics datasets (named by users)
 
 The above script will merged all the extracted potential ARG reads into one fasta file and add two column size of each sample (# of reads) and 16S copies (# of reads) into meta-data file to generate the meta_data_out 
 The example runs like this, in directory example/ after running stage one pipeline  
