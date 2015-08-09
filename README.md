@@ -47,6 +47,7 @@ Input parameters
 * \<Indir\> is the input directory of your fastq files
 * \<outdir\> is the testourdir
 * \<meta_data_in\> is the meta-data.txt  
+
 Output parameters
 * \<meta_data_out\> is the meta-data file for stage two analysis (named by users)
 * \<extracted fasta\> is the potential reads from all users metagenomics datasets (named by users)
