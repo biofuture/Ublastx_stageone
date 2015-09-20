@@ -23,7 +23,7 @@ To run Ublastx, users should download the stage one source code into local compu
 Example of meta-data file **meta-data.txt**  Tips:   
 * You need keep the first and second column's name as SampleID and Name
 * The SampleID are required to be numbers counting from 1 to 2 to 3 etc.
-* Category is the classification of your samples into groups and we will colored your samples in PcoA by this informaton
+* Category is the classification of your samples into groups and we will colored your samples in PcoA with this informaton
 * The meta-data table should be separated by tabular for each of the items 
 * The Name of each sample should be the fastq file names for your pair-end Illumina sequencing data, your fastq files will automatically be recognized by Name_1.fq and Name_2.fq, so you need to keep the name consistent with your fq file name.  For example your have two pair end samples STAS_1.fq STAS_2.fq and SWHAS104_1.fq SWHAS104_2.fq. The meta-data.txt could be like this.
 
@@ -38,7 +38,7 @@ When meta-data.txt is prepared, then put all your fastq files into one directory
 
 `../ublastx_v1.1_stage_one  -i inputfqs -o testoutdir -m meta-data.txt`  
 
-This step will search reads against Structural ARG database and 16 greengene non-redundant 85 OTUs database to identify potential ARG reads and 16S reads. This step will generated searching results files for each fastq.  
+This step will search reads against Structural ARG database and 16S greengene non-redundant 85 OTUs database to identify potential ARG reads and 16S reads. This step will generated searching results files for each fastq.  
  
 Then using another scripts, we will generate the files for stage two of Ublastx.   
 ` perl merge_extracted_fa_update_metadate.pl  <Indir> <outdir> <meta_data_in> <meta_data_out> <extracted fasta>`  
@@ -58,13 +58,13 @@ The example runs like this, in directory example/ after running stage one pipeli
 
 ###Stage two pipeline on Galaxy system and download results
 
-Go to http://147.8.134.193:4432 and using the module ARG_Annotation.  
+Go to http://147.8.134.193:4432 and using the module ARG_OAP.  
 
 1. Using Get data module to upload the extracted fasta file and meta_data_out file generated in stage one into Galaxy  
 2. Click ARG_Annotation and select your uploaded files  
 3. For \"Column in Metadata:\" chose the column you want to classify your samples  
 
-Click submit and Good luck!
+Click submit
 
 After a while or so, you will notice that their are four files generated for your information.  
  
