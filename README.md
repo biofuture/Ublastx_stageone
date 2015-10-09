@@ -70,7 +70,7 @@ Click submit
 After a while or so, you will notice that their are four files generated for your information.  
  
 1. PcoA figures of your samples and other environment samples  
-2. Other three tabular mother tables which including the profile of ARGs type and sub type information, as long as with other environment samples mother table  
+2. Other three tabular mother tables which including the profile of ARGs type and sub type information, as well as other environment samples mother table  
 
 
 
