@@ -1,19 +1,20 @@
+
+Welcome to the Ublastx_v1.1 wiki! 
+
 # Ublastxv1.1_stageone
 This is the source code for Ublastx stage one analysis
 
 Ublastx include two steps
 
-1: using usearch to search agianst SARG DB and 16S ggotu tables 
+1: using usearch to search agianst structure antibiotic resistent gene (SARG) database and 16S ggotu database
 
-2: blastx to curate the results of usearch searching and identification of ARGs ratio/abundance
-
-Welcome to the Ublastx_v1.1 wiki!
+2: using blastx to curate the searching results of usearch and identification of ARGs ratio/abundance
 
 To run Ublastx, users should download the stage one source code into local computer system and upload the generated files for stage two onto our Galaxy analysis platform. 
 
 ##**What does Ublastx do:**   
-1. Fast environmental searching of antibiotic resistant gene in metagenomics data sets.   
-2. Generate mother table of type and sub-type level ARGs of users samples and a merged sub-type level mother table    
+1. Fast environmental searching of antibiotic resistant gene in multipile metagenomics data sets; the ARGs abundance were normalized with 16S copies     
+2. Generate mother table of type and sub-type level ARGs of users' samples and a merged sub-type level mother table    
 3. Generate a PcoA of users samples with other typical environment samples such as human gut, ocean and sediment to show the relationship of user concerned samples with already sequenced environment.
 
 ###clone source code into local computer
