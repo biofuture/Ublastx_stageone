@@ -4,69 +4,69 @@ http://drive5.com/usearch
 
 Licensed to: yy1095035@gmail.com
 
-00:00  19Mb Reading /workhome/JXT/GitProject/ublastxv1.1/DB/SARDB.udb
+00:00  19Mb Reading /envbio/JXT/GitProject/Ublastxv1.1_stageone/DB/SARDB.udb
+00:01  41Mb Database loaded
+00:01  41Mb    0.1% Searching, 0.0% matched00:02  43Mb   24.3% Searching, 0.1% matched00:03  43Mb   50.1% Searching, 0.1% matched00:04  43Mb   77.0% Searching, 0.1% matched00:04  43Mb  100.0% Searching, 0.1% matched
+usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+http://drive5.com/usearch
+
+Licensed to: yy1095035@gmail.com
+
+00:00  19Mb Reading /envbio/JXT/GitProject/Ublastxv1.1_stageone/DB/SARDB.udb
 00:00  41Mb Database loaded
-00:00  41Mb    0.1% Searching, 0.0% matched00:01  43Mb   16.6% Searching, 0.1% matched00:02  43Mb   39.9% Searching, 0.1% matched00:03  43Mb   64.8% Searching, 0.1% matched00:04  43Mb   88.8% Searching, 0.1% matched00:04  43Mb  100.0% Searching, 0.1% matched
+00:00  41Mb    0.1% Searching, 0.0% matched00:01  42Mb    3.2% Searching, 0.1% matched00:02  43Mb   28.8% Searching, 0.1% matched00:03  43Mb   55.2% Searching, 0.1% matched00:04  43Mb   81.0% Searching, 0.1% matched00:04  43Mb  100.0% Searching, 0.0% matched
 usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
 (C) Copyright 2013 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
 Licensed to: yy1095035@gmail.com
 
-00:00  19Mb Reading /workhome/JXT/GitProject/ublastxv1.1/DB/SARDB.udb
+00:00  19Mb Reading /envbio/JXT/GitProject/Ublastxv1.1_stageone/DB/gg85.udb
+00:01  55Mb Database loaded
+00:01  55Mb    0.1% Searching, 0.0% matched00:02  57Mb    2.3% Searching, 0.0% matched00:03  57Mb    4.5% Searching, 0.0% matched00:04  57Mb    6.7% Searching, 0.1% matched00:05  57Mb    9.1% Searching, 0.1% matched00:06  57Mb   11.5% Searching, 0.1% matched00:07  57Mb   13.8% Searching, 0.1% matched00:08  57Mb   16.2% Searching, 0.1% matched00:09  57Mb   18.6% Searching, 0.1% matched00:10  57Mb   21.0% Searching, 0.1% matched00:11  57Mb   23.5% Searching, 0.1% matched00:12  57Mb   25.7% Searching, 0.1% matched00:13  57Mb   27.9% Searching, 0.1% matched00:14  57Mb   30.1% Searching, 0.1% matched00:15  57Mb   32.5% Searching, 0.1% matched00:16  57Mb   34.9% Searching, 0.1% matched00:17  57Mb   37.3% Searching, 0.1% matched00:18  57Mb   39.5% Searching, 0.1% matched00:19  57Mb   41.7% Searching, 0.1% matched00:20  57Mb   44.0% Searching, 0.1% matched00:21  57Mb   46.4% Searching, 0.1% matched00:22  57Mb   48.7% Searching, 0.1% matched00:23  57Mb   51.1% Searching, 0.1% matched00:24  57Mb   53.3% Searching, 0.1% matched00:25  57Mb   55.5% Searching, 0.1% matched00:26  57Mb   57.9% Searching, 0.1% matched00:27  57Mb   60.3% Searching, 0.1% matched00:28  57Mb   62.5% Searching, 0.1% matched00:29  57Mb   64.8% Searching, 0.1% matched00:30  57Mb   67.2% Searching, 0.1% matched00:31  57Mb   69.7% Searching, 0.1% matched00:32  57Mb   72.2% Searching, 0.1% matched00:33  57Mb   74.7% Searching, 0.1% matched00:34  57Mb   77.0% Searching, 0.1% matched00:35  57Mb   79.4% Searching, 0.1% matched00:36  58Mb   81.6% Searching, 0.1% matched00:37  58Mb   83.9% Searching, 0.1% matched00:38  58Mb   86.3% Searching, 0.1% matched00:39  58Mb   88.8% Searching, 0.1% matched00:40  58Mb   91.2% Searching, 0.1% matched00:41  58Mb   93.6% Searching, 0.1% matched00:42  58Mb   96.1% Searching, 0.1% matched00:43  58Mb   98.6% Searching, 0.1% matched00:43  58Mb  100.0% Searching, 0.1% matched
+usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+http://drive5.com/usearch
+
+Licensed to: yy1095035@gmail.com
+
+00:00  19Mb Reading /envbio/JXT/GitProject/Ublastxv1.1_stageone/DB/gg85.udb
+00:00  55Mb Database loaded
+00:00  55Mb    0.1% Searching, 0.0% matched00:01  58Mb    1.0% Searching, 0.1% matched00:02  58Mb    3.2% Searching, 0.0% matched00:03  58Mb    5.4% Searching, 0.1% matched00:04  58Mb    7.6% Searching, 0.1% matched00:05  58Mb    9.9% Searching, 0.1% matched00:06  58Mb   12.1% Searching, 0.1% matched00:07  58Mb   14.4% Searching, 0.1% matched00:08  58Mb   16.8% Searching, 0.1% matched00:09  58Mb   19.2% Searching, 0.1% matched00:10  58Mb   21.7% Searching, 0.1% matched00:11  58Mb   23.9% Searching, 0.1% matched00:12  58Mb   26.1% Searching, 0.1% matched00:13  58Mb   28.4% Searching, 0.1% matched00:14  58Mb   30.7% Searching, 0.1% matched00:15  58Mb   33.0% Searching, 0.1% matched00:16  58Mb   35.3% Searching, 0.1% matched00:17  58Mb   37.5% Searching, 0.1% matched00:18  58Mb   39.9% Searching, 0.1% matched00:19  58Mb   42.3% Searching, 0.1% matched00:20  58Mb   44.8% Searching, 0.1% matched00:21  58Mb   47.1% Searching, 0.1% matched00:22  58Mb   49.3% Searching, 0.1% matched00:23  58Mb   51.7% Searching, 0.1% matched00:24  58Mb   54.2% Searching, 0.1% matched00:25  58Mb   56.6% Searching, 0.1% matched00:26  58Mb   58.8% Searching, 0.1% matched00:27  58Mb   61.1% Searching, 0.1% matched00:28  58Mb   63.5% Searching, 0.1% matched00:29  58Mb   66.0% Searching, 0.1% matched00:30  58Mb   68.4% Searching, 0.1% matched00:31  58Mb   70.7% Searching, 0.1% matched00:32  58Mb   72.9% Searching, 0.1% matched00:33  58Mb   75.1% Searching, 0.1% matched00:34  58Mb   77.3% Searching, 0.1% matched00:35  58Mb   79.7% Searching, 0.1% matched00:36  58Mb   81.9% Searching, 0.1% matched00:37  58Mb   84.1% Searching, 0.1% matched00:38  58Mb   86.4% Searching, 0.1% matched00:39  58Mb   88.7% Searching, 0.1% matched00:40  58Mb   91.2% Searching, 0.1% matched00:41  58Mb   93.6% Searching, 0.1% matched00:42  58Mb   95.9% Searching, 0.1% matched00:43  58Mb   98.2% Searching, 0.1% matched00:43  58Mb  100.0% Searching, 0.1% matched
+usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+http://drive5.com/usearch
+
+Licensed to: yy1095035@gmail.com
+
+00:00  19Mb Reading /envbio/JXT/GitProject/Ublastxv1.1_stageone/DB/SARDB.udb
 00:00  41Mb Database loaded
-00:00  41Mb    0.1% Searching, 0.0% matched00:01  43Mb   12.9% Searching, 0.1% matched00:02  43Mb   38.2% Searching, 0.1% matched00:03  43Mb   64.1% Searching, 0.1% matched00:04  43Mb   90.7% Searching, 0.1% matched00:04  43Mb  100.0% Searching, 0.0% matched
+00:00  41Mb    0.1% Searching, 0.0% matched00:01  43Mb    6.3% Searching, 0.1% matched00:02  43Mb   32.9% Searching, 0.1% matched00:03  43Mb   59.2% Searching, 0.1% matched00:04  43Mb   87.9% Searching, 0.1% matched00:04  43Mb  100.0% Searching, 0.1% matched
 usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
 (C) Copyright 2013 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
 Licensed to: yy1095035@gmail.com
 
-00:00  19Mb Reading /workhome/JXT/GitProject/ublastxv1.1/DB/gg85.udb
-00:00  55Mb Database loaded
-00:00  55Mb    0.1% Searching, 0.0% matched00:01  57Mb    1.6% Searching, 0.1% matched00:02  57Mb    3.9% Searching, 0.1% matched00:03  57Mb    6.1% Searching, 0.1% matched00:04  57Mb    8.4% Searching, 0.1% matched00:05  57Mb   10.9% Searching, 0.1% matched00:06  57Mb   13.4% Searching, 0.1% matched00:07  57Mb   15.9% Searching, 0.1% matched00:08  57Mb   18.2% Searching, 0.1% matched00:09  57Mb   20.5% Searching, 0.1% matched00:10  57Mb   22.9% Searching, 0.1% matched00:11  57Mb   25.3% Searching, 0.1% matched00:12  57Mb   27.8% Searching, 0.1% matched00:13  57Mb   30.1% Searching, 0.1% matched00:14  57Mb   32.4% Searching, 0.1% matched00:15  57Mb   35.0% Searching, 0.1% matched00:16  57Mb   37.5% Searching, 0.1% matched00:17  57Mb   40.1% Searching, 0.1% matched00:18  57Mb   42.3% Searching, 0.1% matched00:19  57Mb   44.6% Searching, 0.1% matched00:20  57Mb   47.2% Searching, 0.1% matched00:21  57Mb   49.7% Searching, 0.1% matched00:22  57Mb   52.2% Searching, 0.1% matched00:23  57Mb   54.5% Searching, 0.1% matched00:24  57Mb   56.8% Searching, 0.1% matched00:25  57Mb   59.4% Searching, 0.1% matched00:26  57Mb   61.9% Searching, 0.1% matched00:27  57Mb   64.4% Searching, 0.1% matched00:28  57Mb   67.0% Searching, 0.1% matched00:29  57Mb   69.5% Searching, 0.1% matched00:30  57Mb   72.1% Searching, 0.1% matched00:31  57Mb   74.6% Searching, 0.1% matched00:32  57Mb   77.0% Searching, 0.1% matched00:33  58Mb   79.6% Searching, 0.1% matched00:34  58Mb   81.9% Searching, 0.1% matched00:35  58Mb   84.1% Searching, 0.1% matched00:36  58Mb   86.7% Searching, 0.1% matched00:37  58Mb   89.2% Searching, 0.1% matched00:38  58Mb   91.7% Searching, 0.1% matched00:39  58Mb   94.0% Searching, 0.1% matched00:40  58Mb   96.3% Searching, 0.1% matched00:41  58Mb   98.8% Searching, 0.1% matched00:41  58Mb  100.0% Searching, 0.1% matched
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
-http://drive5.com/usearch
-
-Licensed to: yy1095035@gmail.com
-
-00:00  19Mb Reading /workhome/JXT/GitProject/ublastxv1.1/DB/gg85.udb
-00:00  55Mb Database loaded
-00:00  55Mb    0.1% Searching, 0.0% matched00:01  58Mb    1.3% Searching, 0.1% matched00:02  58Mb    3.5% Searching, 0.0% matched00:03  58Mb    5.8% Searching, 0.1% matched00:04  58Mb    8.0% Searching, 0.1% matched00:05  58Mb   10.5% Searching, 0.1% matched00:06  58Mb   13.0% Searching, 0.1% matched00:07  58Mb   15.6% Searching, 0.1% matched00:08  58Mb   17.8% Searching, 0.1% matched00:09  58Mb   20.1% Searching, 0.1% matched00:10  58Mb   22.6% Searching, 0.1% matched00:11  58Mb   25.1% Searching, 0.1% matched00:12  58Mb   27.6% Searching, 0.1% matched00:13  58Mb   30.1% Searching, 0.1% matched00:14  58Mb   32.4% Searching, 0.1% matched00:15  58Mb   34.7% Searching, 0.1% matched00:16  58Mb   37.2% Searching, 0.1% matched00:17  58Mb   39.7% Searching, 0.1% matched00:18  58Mb   42.0% Searching, 0.1% matched00:19  58Mb   44.2% Searching, 0.1% matched00:20  58Mb   46.8% Searching, 0.1% matched00:21  58Mb   49.3% Searching, 0.1% matched00:22  58Mb   51.9% Searching, 0.1% matched00:23  58Mb   54.2% Searching, 0.1% matched00:24  58Mb   56.3% Searching, 0.1% matched00:25  58Mb   58.7% Searching, 0.1% matched00:26  58Mb   61.1% Searching, 0.1% matched00:27  58Mb   63.3% Searching, 0.1% matched00:28  58Mb   65.6% Searching, 0.1% matched00:29  58Mb   67.9% Searching, 0.1% matched00:30  58Mb   70.2% Searching, 0.1% matched00:31  58Mb   72.5% Searching, 0.1% matched00:32  58Mb   74.7% Searching, 0.1% matched00:33  58Mb   76.6% Searching, 0.1% matched00:34  58Mb   78.7% Searching, 0.1% matched00:35  58Mb   80.8% Searching, 0.1% matched00:36  58Mb   83.0% Searching, 0.1% matched00:37  58Mb   85.2% Searching, 0.1% matched00:38  58Mb   87.3% Searching, 0.1% matched00:39  58Mb   89.5% Searching, 0.1% matched00:40  58Mb   91.7% Searching, 0.1% matched00:41  58Mb   93.8% Searching, 0.1% matched00:42  58Mb   96.0% Searching, 0.1% matched00:43  58Mb   98.1% Searching, 0.1% matched00:43  58Mb  100.0% Searching, 0.1% matched
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
-http://drive5.com/usearch
-
-Licensed to: yy1095035@gmail.com
-
-00:00  19Mb Reading /workhome/JXT/GitProject/ublastxv1.1/DB/SARDB.udb
+00:00  19Mb Reading /envbio/JXT/GitProject/Ublastxv1.1_stageone/DB/SARDB.udb
 00:00  41Mb Database loaded
-00:00  41Mb    0.1% Searching, 0.0% matched00:01  42Mb    2.8% Searching, 0.1% matched00:02  43Mb   29.2% Searching, 0.1% matched00:03  43Mb   55.5% Searching, 0.1% matched00:04  43Mb   80.3% Searching, 0.1% matched00:04  43Mb  100.0% Searching, 0.1% matched
+00:00  41Mb    0.1% Searching, 0.0% matched00:01  43Mb   16.1% Searching, 0.1% matched00:02  43Mb   46.2% Searching, 0.1% matched00:03  43Mb   74.4% Searching, 0.1% matched00:03  43Mb  100.0% Searching, 0.1% matched
 usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
 (C) Copyright 2013 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
 Licensed to: yy1095035@gmail.com
 
-00:00  19Mb Reading /workhome/JXT/GitProject/ublastxv1.1/DB/SARDB.udb
-00:00  41Mb Database loaded
-00:00  41Mb    0.1% Searching, 0.0% matched00:01  42Mb    5.8% Searching, 0.1% matched00:02  43Mb   32.6% Searching, 0.1% matched00:03  43Mb   60.2% Searching, 0.1% matched00:04  43Mb   90.2% Searching, 0.1% matched00:04  43Mb  100.0% Searching, 0.1% matched
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
-http://drive5.com/usearch
-
-Licensed to: yy1095035@gmail.com
-
-00:00  19Mb Reading /workhome/JXT/GitProject/ublastxv1.1/DB/gg85.udb
+00:00  19Mb Reading /envbio/JXT/GitProject/Ublastxv1.1_stageone/DB/gg85.udb
 00:00  55Mb Database loaded
-00:00  55Mb    0.1% Searching, 0.0% matched00:01  55Mb    1.3% Searching, 0.0% matched00:02  57Mb    3.4% Searching, 0.1% matched00:03  57Mb    5.5% Searching, 0.1% matched00:04  57Mb    7.7% Searching, 0.1% matched00:05  57Mb    9.9% Searching, 0.1% matched00:06  57Mb   12.0% Searching, 0.1% matched00:07  57Mb   14.2% Searching, 0.1% matched00:08  57Mb   16.7% Searching, 0.1% matched00:09  57Mb   19.2% Searching, 0.1% matched00:10  57Mb   21.6% Searching, 0.1% matched00:11  57Mb   23.9% Searching, 0.1% matched00:12  58Mb   26.1% Searching, 0.1% matched00:13  58Mb   28.5% Searching, 0.1% matched00:14  58Mb   31.0% Searching, 0.1% matched00:15  58Mb   33.4% Searching, 0.1% matched00:16  58Mb   35.6% Searching, 0.1% matched00:17  58Mb   37.8% Searching, 0.1% matched00:18  58Mb   40.2% Searching, 0.1% matched00:19  58Mb   42.7% Searching, 0.1% matched00:20  58Mb   45.1% Searching, 0.1% matched00:21  58Mb   47.5% Searching, 0.1% matched00:22  58Mb   50.1% Searching, 0.1% matched00:23  58Mb   52.6% Searching, 0.1% matched00:24  58Mb   55.1% Searching, 0.1% matched00:25  58Mb   57.7% Searching, 0.1% matched00:26  58Mb   60.2% Searching, 0.1% matched00:27  58Mb   62.5% Searching, 0.1% matched00:28  58Mb   64.8% Searching, 0.1% matched00:29  59Mb   67.3% Searching, 0.1% matched00:30  59Mb   69.9% Searching, 0.1% matched00:31  59Mb   72.4% Searching, 0.1% matched00:32  59Mb   74.8% Searching, 0.1% matched00:33  59Mb   77.1% Searching, 0.1% matched00:34  59Mb   79.6% Searching, 0.1% matched00:35  59Mb   82.0% Searching, 0.1% matched00:36  59Mb   84.5% Searching, 0.1% matched00:37  59Mb   86.6% Searching, 0.1% matched00:38  59Mb   88.7% Searching, 0.1% matched00:39  59Mb   91.1% Searching, 0.1% matched00:40  59Mb   93.6% Searching, 0.1% matched00:41  59Mb   96.1% Searching, 0.1% matched00:42  59Mb   98.3% Searching, 0.1% matched00:42  59Mb  100.0% Searching, 0.1% matched
+00:00  55Mb    0.1% Searching, 0.0% matched00:01  55Mb    0.2% Searching, 0.0% matched00:02  57Mb    2.5% Searching, 0.1% matched00:03  57Mb    4.7% Searching, 0.1% matched00:04  57Mb    7.0% Searching, 0.1% matched00:05  57Mb    9.2% Searching, 0.1% matched00:06  57Mb   11.4% Searching, 0.1% matched00:07  57Mb   13.8% Searching, 0.1% matched00:08  57Mb   16.2% Searching, 0.1% matched00:09  57Mb   18.7% Searching, 0.1% matched00:10  57Mb   21.0% Searching, 0.1% matched00:11  57Mb   23.2% Searching, 0.1% matched00:12  58Mb   25.6% Searching, 0.1% matched00:13  58Mb   28.0% Searching, 0.1% matched00:14  58Mb   30.3% Searching, 0.1% matched00:15  58Mb   32.5% Searching, 0.1% matched00:16  58Mb   34.9% Searching, 0.1% matched00:17  58Mb   37.3% Searching, 0.1% matched00:18  58Mb   39.6% Searching, 0.1% matched00:19  58Mb   41.9% Searching, 0.1% matched00:20  58Mb   44.1% Searching, 0.1% matched00:21  58Mb   46.4% Searching, 0.1% matched00:22  58Mb   48.8% Searching, 0.1% matched00:23  58Mb   51.0% Searching, 0.1% matched00:24  58Mb   53.3% Searching, 0.1% matched00:25  58Mb   55.5% Searching, 0.1% matched00:26  58Mb   57.8% Searching, 0.1% matched00:27  58Mb   60.1% Searching, 0.1% matched00:28  58Mb   62.4% Searching, 0.1% matched00:29  58Mb   64.8% Searching, 0.1% matched00:30  59Mb   67.0% Searching, 0.1% matched00:31  59Mb   69.3% Searching, 0.1% matched00:32  59Mb   71.6% Searching, 0.1% matched00:33  59Mb   74.0% Searching, 0.1% matched00:34  59Mb   76.2% Searching, 0.1% matched00:35  59Mb   78.4% Searching, 0.1% matched00:36  59Mb   80.7% Searching, 0.1% matched00:37  59Mb   83.1% Searching, 0.1% matched00:38  59Mb   85.3% Searching, 0.1% matched00:39  59Mb   87.6% Searching, 0.1% matched00:40  59Mb   89.8% Searching, 0.1% matched00:41  59Mb   92.1% Searching, 0.1% matched00:42  59Mb   94.4% Searching, 0.1% matched00:43  59Mb   96.6% Searching, 0.1% matched00:44  59Mb   98.9% Searching, 0.1% matched00:44  59Mb  100.0% Searching, 0.1% matched
 usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
 (C) Copyright 2013 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
 Licensed to: yy1095035@gmail.com
 
-00:00  19Mb Reading /workhome/JXT/GitProject/ublastxv1.1/DB/gg85.udb
+00:00  19Mb Reading /envbio/JXT/GitProject/Ublastxv1.1_stageone/DB/gg85.udb
 00:00  55Mb Database loaded
-00:00  55Mb    0.1% Searching, 0.0% matched00:01  55Mb    0.7% Searching, 0.0% matched00:02  57Mb    2.9% Searching, 0.1% matched00:03  57Mb    5.2% Searching, 0.1% matched00:04  57Mb    7.7% Searching, 0.1% matched00:05  57Mb    9.9% Searching, 0.1% matched00:06  57Mb   12.1% Searching, 0.1% matched00:07  57Mb   14.5% Searching, 0.1% matched00:08  57Mb   17.0% Searching, 0.1% matched00:09  57Mb   19.4% Searching, 0.1% matched00:10  57Mb   21.7% Searching, 0.1% matched00:11  57Mb   23.9% Searching, 0.1% matched00:12  58Mb   26.2% Searching, 0.1% matched00:13  58Mb   28.7% Searching, 0.1% matched00:14  58Mb   31.2% Searching, 0.1% matched00:15  58Mb   33.5% Searching, 0.1% matched00:16  58Mb   35.8% Searching, 0.1% matched00:17  58Mb   38.3% Searching, 0.1% matched00:18  58Mb   40.8% Searching, 0.1% matched00:19  59Mb   43.2% Searching, 0.1% matched00:20  59Mb   45.5% Searching, 0.1% matched00:21  59Mb   47.8% Searching, 0.1% matched00:22  59Mb   50.4% Searching, 0.1% matched00:23  59Mb   52.9% Searching, 0.1% matched00:24  59Mb   55.4% Searching, 0.1% matched00:25  59Mb   57.7% Searching, 0.1% matched00:26  59Mb   60.0% Searching, 0.1% matched00:27  59Mb   62.6% Searching, 0.1% matched00:28  59Mb   65.1% Searching, 0.1% matched00:29  59Mb   67.7% Searching, 0.1% matched00:30  59Mb   70.0% Searching, 0.1% matched00:31  59Mb   72.3% Searching, 0.1% matched00:32  59Mb   74.9% Searching, 0.1% matched00:33  59Mb   77.3% Searching, 0.1% matched00:34  59Mb   79.8% Searching, 0.1% matched00:35  59Mb   82.1% Searching, 0.1% matched00:36  59Mb   84.4% Searching, 0.1% matched00:37  59Mb   87.0% Searching, 0.1% matched00:38  59Mb   89.5% Searching, 0.1% matched00:39  59Mb   92.1% Searching, 0.1% matched00:40  59Mb   94.4% Searching, 0.1% matched00:41  59Mb   96.7% Searching, 0.1% matched00:42  59Mb   99.2% Searching, 0.1% matched00:42  59Mb  100.0% Searching, 0.1% matched
+00:00  55Mb    0.1% Searching, 0.0% matched00:01  55Mb    1.1% Searching, 0.0% matched00:02  57Mb    3.1% Searching, 0.1% matched00:03  57Mb    5.4% Searching, 0.1% matched00:04  57Mb    7.6% Searching, 0.1% matched00:05  57Mb   10.1% Searching, 0.1% matched00:06  57Mb   12.3% Searching, 0.1% matched00:07  57Mb   14.6% Searching, 0.1% matched00:08  57Mb   17.0% Searching, 0.1% matched00:09  57Mb   19.4% Searching, 0.1% matched00:10  57Mb   21.6% Searching, 0.1% matched00:11  57Mb   23.9% Searching, 0.1% matched00:12  58Mb   26.1% Searching, 0.1% matched00:13  58Mb   28.3% Searching, 0.1% matched00:14  58Mb   30.6% Searching, 0.1% matched00:15  58Mb   32.9% Searching, 0.1% matched00:16  58Mb   35.2% Searching, 0.1% matched00:17  58Mb   37.4% Searching, 0.1% matched00:18  58Mb   39.6% Searching, 0.1% matched00:19  58Mb   41.9% Searching, 0.1% matched00:20  59Mb   44.4% Searching, 0.1% matched00:21  59Mb   46.7% Searching, 0.1% matched00:22  59Mb   49.0% Searching, 0.1% matched00:23  59Mb   51.3% Searching, 0.1% matched00:24  59Mb   53.5% Searching, 0.1% matched00:25  59Mb   55.9% Searching, 0.1% matched00:26  59Mb   58.2% Searching, 0.1% matched00:27  59Mb   60.5% Searching, 0.1% matched00:28  59Mb   62.9% Searching, 0.1% matched00:29  59Mb   65.2% Searching, 0.1% matched00:30  59Mb   67.4% Searching, 0.1% matched00:31  59Mb   69.7% Searching, 0.1% matched00:32  59Mb   72.0% Searching, 0.1% matched00:33  59Mb   74.5% Searching, 0.1% matched00:34  59Mb   76.9% Searching, 0.1% matched00:35  59Mb   79.5% Searching, 0.1% matched00:36  59Mb   82.0% Searching, 0.1% matched00:37  59Mb   84.5% Searching, 0.1% matched00:38  59Mb   87.0% Searching, 0.1% matched00:39  59Mb   89.2% Searching, 0.1% matched00:40  59Mb   91.4% Searching, 0.1% matched00:41  59Mb   93.7% Searching, 0.1% matched00:42  59Mb   96.0% Searching, 0.1% matched00:43  59Mb   98.6% Searching, 0.1% matched00:43  59Mb  100.0% Searching, 0.1% matched
