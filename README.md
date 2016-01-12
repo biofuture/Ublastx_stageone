@@ -6,7 +6,7 @@ New release of Ublastx Version 1.2
 Detail introduction of copy number correction can be referred to [Transform ARGs abundance against cell number](https://github.com/biofuture/Ublastx_stageone/wiki/Transform-ARGs-abundance-against-cell-number)
 
 
-Welcome to the Ublastx_v1.2 wiki!
+Welcome to the Ublastx_v1.2
 
 To run Ublastx, users should download the stage one source code into local computer system (Unix/Linux) and upload the generated files for stage two onto our Galaxy analysis platform (http://smile.hku.hk/SARGs). 
 
