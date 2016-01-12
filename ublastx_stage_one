@@ -1,0 +1,221 @@
+#!/usr/bin/perl -w
+use strict;
+
+##This programme generate scripts for uclust + blastx + R  for all the metagenomics fastq files 
+##in one input directory.
+##Author: JIANG Xiaotao - 2014-12-12
+##Email: biofurue.jiang@gmail.com
+##version 1.2 
+
+use Getopt::Std;
+use File::Basename;
+use FindBin qw($Bin);
+
+##Generalize dir for this program
+our (@dirset,$ublastxdir);
+BEGIN {
+    @dirset = split(/\//,$Bin);
+    $ublastxdir = join("/", @dirset);
+    unshift @INC, "$ublastxdir/bin";
+}
+
+our ($opt_h, $opt_i, $opt_o, $opt_n, $opt_m, $opt_f, $opt_z, $opt_c) = "";
+my  $usage = <<USE;
+	Author: JIANG Xiaotao
+	Date: 12-11-2014
+	Modified : 10-01-2016
+	Email: biofuture.jiang\@gmail.com
+	$0 -i <Fq input dir> -m <Metadata_map.txt> -o <output dir> -n [number of threads] -f [fa|fq] -z -h  -c	
+
+	-i Input files directory, required
+	-m meta data file, required
+	-o Output files directory, default current directory
+	-n number of threads used for usearch, default 1
+	-f the format of processed files, default fq
+	-z whether the fq files were .gz format, if -z, then firstly gzip -d, default(none) 
+	-c This option fulfill copy number correction by Copywriter database to transfrom 16S information into cell number [ direct searching hyper variable region database by usearch]
+	-h print this help information
+USE
+
+#Get all the input parameters
+getopts('i:o:n:f:m:ahzc');
+
+$opt_n ||= 1;
+$opt_f ||="fq";
+$opt_o ||= ".";
+
+#$opt_c
+my $ARDB_PATH ||= "$ublastxdir/DB/SARDB.udb";
+my $ggnr85 ||= "$ublastxdir/DB/gg85.udb"; 
+
+
+##Adding database files for copy number correction  for -c 3
+my $REFHVR6 ||= "$ublastxdir/DB/RefHVR.V6.udb";  ##Hyper variable region Usearch database
+my $REFHVR6_taxonomy ||= "$ublastxdir/DB/RefHVR.V6.taxonomy.txt";  ##Taxonomy information of each hyper variable region in database
+my $cnd ||= "$ublastxdir/DB/Copy_db.copyrighter.txt";
+
+##Adding database files for copy number corrction for -c 2
+
+
+if($opt_h  ||  ($opt_i eq "") ){
+	die "$usage\n";
+}
+
+##Get all the fastq in input dir
+#opendir Folder, $opt_i || die "Can not open this directory";
+#my @filelist = readdir Folder;
+
+
+##Generate output script files for all fastq
+my $date = localtime;
+$date =~ s/\s+/-/g;
+
+my $o_sh = "$opt_o/ublastx_bash_$date.sh";
+unless(-d $opt_o){
+	`mkdir $opt_o`;
+}
+open(BASH, ">$o_sh") || die "output dir can not write:\n"; 
+
+my $count = 1;
+
+##--------------------------------------------------------------------------------------------------------
+##1. Check the files processed. 
+##hash %samples store all samples information 
+
+my %samples;
+my %metainfo;
+#my %singlepair;  ##single_end or pair_end
+die "$!\n" unless open(META,"$opt_m");
+<META>;
+while(<META>){
+	chomp;
+	my $info = $_;
+	my @tem = split("\t", $_);
+	$samples{$tem[0]} = $tem[1];
+	$metainfo{$tem[0]} = $info;
+}#
+close META;
+
+##--------------------------------------------------------------------------------------------------------
+##2. Process files and generate shell scripts for running
+##Read meta_data and check all the fastq and fasta gzip  files
+
+my %sample16s; #this hash store 16S number of each sample 
+
+for my $fq (sort {$a <=> $b } keys %samples){
+
+	##process each sample separately 
+	print BASH "#Processing fq $fq begain:\n";
+	
+	my ($f1,$f2) = ("","");
+	if($opt_f eq "fq"){
+		if($opt_z){				
+			$f1 = "$opt_i/$samples{$fq}_1.fq.gz";
+			$f2 = "$opt_i/$samples{$fq}_2.fq.gz";
+			die "No $f1\t$f2\n" unless(-e $f1 && -e $f2);
+			print BASH "gzip -d $f1\n";
+			print BASH "gzip -d $f2\n";
+			$f1 = "$opt_i/$samples{$fq}_1.fq";
+			$f2 = "$opt_i/$samples{$fq}_2.fq";
+
+		}else{
+			$f1 = "$opt_i/$samples{$fq}_1.fq";
+			$f2 = "$opt_i/$samples{$fq}_2.fq";
+			##Need to transform fq to fa		
+			die "No $f1\t$f2\n" unless(-e $f1 && -e $f2); 		
+		}
+
+		##Fq -> fa
+		my $fa1 = "$opt_i/$samples{$fq}_1.fa";
+		my $fa2 = "$opt_i/$samples{$fq}_2.fa";
+
+		print BASH "perl  $ublastxdir/bin/Fq2fa.pl $f1 $fa1\n";
+		print BASH "perl  $ublastxdir/bin/Fq2fa.pl $f2 $fa2\n";
+		
+		$f1 = $fa1;
+		$f2 = $fa2;	##Read Files and keep $f1 $f2 store fa name
+
+
+	}elsif( $opt_f eq "fa"){
+		$f1 = "$opt_i/$samples{$fq}_1.fa";
+		$f2 = "$opt_i/$samples{$fq}_2.fa";
+		die "No $f1\t$f2\n" unless(-e $f1 && -e $f2);
+	}else{
+		die "Wrong format, files were not end with fa or fq\n";
+	}##Fq->fa
+
+	my $uso1 = "$opt_o/$samples{$fq}_1.us";
+	my $uso2 = "$opt_o/$samples{$fq}_2.us";
+	my $us16s1 = "$opt_o/$samples{$fq}_1.16s";
+	my $us16s2 = "$opt_o/$samples{$fq}_2.16s";
+
+	##statistic the data size of each sample with #number of reads
+
+
+	##do usearch against ARDB to extract potential ARG reads
+	print BASH "$ublastxdir/bin/usearch -ublast $f1 -db $ARDB_PATH -evalue 1e-5 -accel 0.5 -blast6out $uso1 -threads $opt_n -maxaccepts 1\n";
+	print BASH "$ublastxdir/bin/usearch -ublast $f2 -db $ARDB_PATH -evalue 1e-5 -accel 0.5 -blast6out $uso2 -threads $opt_n -maxaccepts 1\n\n";
+	
+	##extract potential reads for each sample
+	my $e1fa = "$opt_o/$samples{$fq}.extract_1.fa";
+	my $e2fa = "$opt_o/$samples{$fq}.extract_2.fa";
+	print BASH "$ublastxdir/bin/extract_usearch_reads.pl $uso1 $f1 $e1fa\n";
+	print BASH "$ublastxdir/bin/extract_usearch_reads.pl $uso2 $f2 $e2fa\n";
+
+	##do usearch against greengene nr90 database to calculate 16S copies number
+	print BASH "$ublastxdir/bin/usearch -ublast $f1 -db $ggnr85 -evalue 1e-5 -accel 0.5 -blast6out $us16s1 -threads $opt_n -strand both  -maxaccepts 1\n";
+        print BASH "$ublastxdir/bin/usearch -ublast $f2 -db $ggnr85 -evalue 1e-5 -accel 0.5 -blast6out $us16s2 -threads $opt_n -strand both  -maxaccepts 1\n\n";
+
+
+	##Obtain microbial community by 16S hyper variable informaton in shotgun metagenomics data
+	##This option is heavy locading in computation
+	
+	if($opt_c){
+			
+			##Directly searching the hyper variable region database and obtain the target 16S hyper varaible region data
+			my $us16s1v6 = "$opt_o/$samples{$fq}.16s_1v6.us";
+			my $us16s2v6 = "$opt_o/$samples{$fq}.16s_2v6.us";
+			my $hyperout = "$opt_o/$samples{$fq}.16s_hyperout.txt";
+			my $community = "$opt_o/$samples{$fq}.16s_hvr_community.txt";
+			my $correctcommunity = "$opt_o/$samples{$fq}.16s_hvr_community.adjust.txt";
+
+			print BASH "\n#Search hyper variable region\n";
+			print BASH "$ublastxdir/bin/usearch -ublast $f1 -db  $REFHVR6  -evalue 1e-5 -accel 0.5 -blast6out $us16s1v6 -threads $opt_n -strand both  -maxaccepts 1 -query_cov 0.2 -target_cov 0.2\n";		
+			print BASH "$ublastxdir/bin/usearch -ublast $f2 -db  $REFHVR6  -evalue 1e-5 -accel 0.5 -blast6out $us16s2v6 -threads $opt_n -strand both  -maxaccepts 1 -query_cov 0.2 -target_cov 0.2\n";		
+			
+			##filter out all the target 16S hypervairable reads and merge the two 16S hyper varaible reads files 
+			print BASH "\n#Cut, filter and merge two fasta files 16S hyper varaible region\n";
+			print BASH "$ublastxdir/bin/filter_16shvr.pl -a $us16s1v6 -b $us16s2v6 -c $f1 -d $f2 -o $hyperout\n";	
+
+			##taxonomy classification of the hypervariable region and obtain the microbial community
+			print BASH "\n#Obatin the microbial community from the hyper variable data\n";
+
+			print BASH "$ublastxdir/bin/obtain_community.pl $hyperout  $REFHVR6_taxonomy $community\n\n";			
+			##copy number correction by Copywriter copy number database
+
+			print BASH "\n#Copy number correction\n";
+			print BASH "$ublastxdir/bin/copy_correction.pl $community $cnd $correctcommunity\n";
+	}
+
+}##for process each sample separately
+
+##--------------------------------------------------------------------------------------------------------
+
+##3. Paralell running of tasks
+print BASH "The script file is $o_sh\n";
+##excute the program
+`sh $o_sh  > ublastx.log.txt` ;
+
+## 4 Merge  extracted fasta and update meta data 
+##---------------------------------------------------------------------------------------------------------------
+my $metaout = "$opt_o/meta_data_online.txt";
+my $extractfa = "$opt_o/extracted.fa";
+if($opt_c){
+	#option -c do copy number correction
+	`$ublastxdir/bin/merge_extracted_fa_update_metadate.pl $opt_i $opt_o $opt_m $metaout $extractfa Y`;
+}else{
+	`$ublastxdir/bin/merge_extracted_fa_update_metadate.pl $opt_i $opt_o $opt_m $metaout $extractfa N`;
+}
+
+1;
+__END__
