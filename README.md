@@ -18,7 +18,7 @@ To run Ublastx, users should download the stage one source code into local compu
 3. Generate a PcoA of users samples with other typical environment samples such as human gut, ocean and sediment to show the relationship of user concerned samples with already sequenced environment.
 
 ###clone source code into local computer
-    git clone  git@github.com:biofuture/Ublastx_stageone.git  
+    git clone  https://github.com/biofuture/Ublastx_stageone.git  
 ###Prepare the meta-data file of your samples
  To run the stage one pipeline, users need to prepare relative meta-data.txt file and put all the pair-end fastq file into one directory  
 Example of meta-data file **meta-data.txt**  Tips:   
