@@ -1,3 +1,0 @@
-SampleID	Name	Category	LibrarySize	Samplesize	16Sreads
-1	STAS	ST	300	200000	156
-2	SWHAS104	SWH	300		200000	179

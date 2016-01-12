@@ -202,7 +202,7 @@ for my $fq (sort {$a <=> $b } keys %samples){
 ##--------------------------------------------------------------------------------------------------------
 
 ##3. Paralell running of tasks
-print BASH "The script file is $o_sh\n";
+print BASH "#The script file is $o_sh\n";
 ##excute the program
 `sh $o_sh  > ublastx.log.txt` ;
 

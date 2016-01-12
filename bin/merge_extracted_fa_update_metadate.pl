@@ -123,9 +123,9 @@ for my $ids (sort {$a <=> $b}  keys %sampleid){
 for my $id (sort {$a <=> $b} keys %metainfo){
 	##update meta data files 
 	if($ARGV[5]){
-		print T "$metainfo{$id}\t$hashreads{$sampleid{$id}}\t$hash16s{$sampleid{$ids}}\t$cellnum{$sampleid{$id}}\n";
+		print T "$metainfo{$id}\t$hashreads{$sampleid{$id}}\t$hash16s{$sampleid{$id}}\t$cellnum{$sampleid{$id}}\n";
 	}else{
-		print T "$metainfo{$id}\t$hashreads{$sampleid{$id}}\t$hash16s{$sampleid{$ids}}\n";
+		print T "$metainfo{$id}\t$hashreads{$sampleid{$id}}\t$hash16s{$sampleid{$id}}\n";
 	}
 }
 
