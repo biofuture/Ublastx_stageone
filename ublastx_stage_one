@@ -38,6 +38,7 @@ my  $usage = <<USE;
 USE
 
 #Get all the input parameters
+
 getopts('i:o:n:f:m:ahzc');
 
 $opt_n ||= 1;
@@ -180,8 +181,8 @@ for my $fq (sort {$a <=> $b } keys %samples){
 			my $correctcommunity = "$opt_o/$samples{$fq}.16s_hvr_community.adjust.txt";
 
 			print BASH "\n#Search hyper variable region\n";
-			print BASH "$ublastxdir/bin/usearch -ublast $f1 -db  $REFHVR6  -evalue 1e-5 -accel 0.5 -blast6out $us16s1v6 -threads $opt_n -strand both  -maxaccepts 1 -query_cov 0.2 -target_cov 0.2\n";		
-			print BASH "$ublastxdir/bin/usearch -ublast $f2 -db  $REFHVR6  -evalue 1e-5 -accel 0.5 -blast6out $us16s2v6 -threads $opt_n -strand both  -maxaccepts 1 -query_cov 0.2 -target_cov 0.2\n";		
+			print BASH "$ublastxdir/bin/usearch -ublast $f1 -db  $REFHVR6  -evalue 1e-5 -accel 0.5 -blast6out $us16s1v6 -threads $opt_n -strand both  -maxaccepts 10 -query_cov 0.2 -target_cov 0.5 -id 0.9\n";		
+			print BASH "$ublastxdir/bin/usearch -ublast $f2 -db  $REFHVR6  -evalue 1e-5 -accel 0.5 -blast6out $us16s2v6 -threads $opt_n -strand both  -maxaccepts 10 -query_cov 0.2 -target_cov 0.5 -id 0.9\n";		
 			
 			##filter out all the target 16S hypervairable reads and merge the two 16S hyper varaible reads files 
 			print BASH "\n#Cut, filter and merge two fasta files 16S hyper varaible region\n";

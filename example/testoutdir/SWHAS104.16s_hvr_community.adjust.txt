@@ -1,10 +1,6 @@
-k__Bacteria; p__Actinobacteria; c__Acidimicrobiia; o__Acidimicrobiales; f__C111; g__; s__	0.574689870924926
-k__Bacteria; p__Chloroflexi; c__Anaerolineae; o__SBR1031; f__A4b; g__; s__	0.389103057926177
-k__Bacteria; p__Firmicutes; c__Clostridia; o__SHA-98; f__D2; g__; s__	0.344676606660635
-k__Bacteria; p__Proteobacteria; c__Alphaproteobacteria; o__Rickettsiales; f__; g__; s__	1
-k__Bacteria; p__Proteobacteria; c__Betaproteobacteria; o__MND1; f__; g__; s__	0.424866519815183
-k__Bacteria; p__Proteobacteria; c__Epsilonproteobacteria; o__Campylobacterales; f__Helicobacteraceae; g__; s__	0.361111111111111
-k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__Enterobacteriales; f__Enterobacteriaceae; g__Photorhabdus; s__	1
-k__Bacteria; p__Spirochaetes; c__Spirochaetes; o__M2PT2-76; f__; g__; s__	0.470701074139912
-k__Bacteria; p__Spirochaetes; c__Spirochaetes; o__Sphaerochaetales; f__Sphaerochaetaceae; g__Sphaerochaeta; s__	0.333333333333333
-k__Bacteria; p__TM7; c__TM7-3; o__Blgi18; f__; g__; s__	0.413531588101149
+k__Bacteria; p__Actinobacteria; c__Acidimicrobiia; o__Acidimicrobiales; f__C111; g__; s__	0.616244369284112
+k__Bacteria; p__Proteobacteria; c__Betaproteobacteria; o__Burkholderiales; f__; g__; s__	0.330926216640502
+k__Bacteria; p__Proteobacteria; c__Betaproteobacteria; o__Burkholderiales; f__Comamonadaceae; g__; s__	0.29056342952578
+k__Bacteria; p__Proteobacteria; c__Betaproteobacteria; o__Rhodocyclales; f__Rhodocyclaceae; g__Thauera; s__	0.245251328591975
+k__Bacteria; p__Spirochaetes; c__[Leptospirae]; o__; f__; g__; s__	0.470957613814755
+k__Bacteria; p__TM7; c__TM7-3; o__; f__; g__; s__	0.450431329808636

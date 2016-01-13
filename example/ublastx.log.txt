@@ -34,7 +34,6 @@ http://drive5.com/usearch
 
 Licensed to: yy1095035@gmail.com
 
-k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__Thiotrichales; f__Thiotrichaceae; g__E8; s__
 usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
 (C) Copyright 2013 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
@@ -71,3 +70,5 @@ http://drive5.com/usearch
 
 Licensed to: yy1095035@gmail.com
 
+k__Bacteria; p__Proteobacteria; c__Betaproteobacteria; o__Burkholderiales; f__; g__; s__
+k__Bacteria; p__Spirochaetes; c__[Leptospirae]; o__; f__; g__; s__

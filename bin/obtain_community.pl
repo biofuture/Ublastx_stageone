@@ -18,6 +18,53 @@ while( <II>){
 }
 close II;
 
+my @blank = ("k__", "p__", "c__", "o__", "f__", "g__", "s__");
+sub lca{
+        my @all = @_;
+        my @total = ();
+        my @common = ();
+
+        ##split each taxonomy by "; " 
+
+
+        my $i = 0;
+        my $j = 0;
+        ##store in matrix and transform column to row
+        for($i = 0; $i <= $#all; $i++){
+                my @tem = split("; ", $all[$i]);
+                die "$all[$i]" if($#tem != 6);
+                for($j = 0; $j <= $#tem; $j++){
+                        $total[$j][$i] = $tem[$j];
+                }
+        }
+
+        ##compare and generate consistent taxonomy assignment by over 2/3 of all the matched
+        for(my $k = 0; $k < $j; $k++){
+                my $flag = 0;
+
+		my %temp = ();
+		
+                for(my $l = 0; $l < $i; $l++){
+			if(exists $temp{$total[$k][$l]}){
+				$temp{$total[$k][$l]} ++;
+			}else{
+				$temp{$total[$k][$l]} = 1;
+			}	
+                }
+
+		my @temn = sort {$temp{$b} <=> $temp{$a}} keys %temp;
+		if($temp{$temn[0]} >= 2*($k+1)/3){
+			$common[$k] = $temn[0];
+
+		}else{
+			$common[$k] = $blank[$k];
+		}
+        }
+
+	return join("; ", @common);
+}
+
+
 my %community;
 while(my $n = <I>){
 	my $s = <I>;
@@ -25,15 +72,34 @@ while(my $n = <I>){
 	my @tem = split(/\_/, $n);
 	#print "$tem[1]\n";
 
-
-	if(exists $id2tax{$tem[1]}){
-		$community{$id2tax{$tem[1]}} ++;
-	}else{
-		$community{$id2tax{$tem[1]}} = 1;
+	my @alls = split("-", $tem[-1]); ##split all the hits to one reads
+	my @seqtax;
+	my $averlen = 0;
+	for(my $i =0; $i <= $#alls ; $i++){
+		my @sp = split(":", $alls[$i]);
+		$averlen += $sp[1];
+		#print "$sp[0]\t$id2tax{$sp[0]}\n";
+		push @seqtax, $id2tax{$sp[0]};
 	}
+	##For abundance
+	$averlen = $averlen / ($#alls + 1);
+	
+	##for taxonomy LCA
+	my $taxs = lca(@seqtax);
+	#print "$taxs\n";
+
+	if(exists $id2tax{$tem[-1]}){
+		$community{$taxs} += $averlen/65;
+	}else{
+		$community{$taxs} = $averlen/65;
+	}
+
 }
 close I;
 
 for my $key (sort keys %community){
 	print T "$key\t$community{$key}\n";
 }
+
+
+

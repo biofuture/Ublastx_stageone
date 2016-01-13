@@ -28,7 +28,6 @@ if($opt_h  ||  ($opt_a eq "") ){
 
 
 die "$!\n" unless open(T, ">$opt_o");
-
 die "$!\n" unless open(C, "$opt_c");
 die "$!\n" unless open(D, "$opt_d");
 
@@ -38,17 +37,18 @@ my %f2hash;
 die "$!\n" unless open(A, "$opt_a");
 die "$!\n" unless open(B, "$opt_b");
 
+
 while(<A>){
 	chomp;
 	my @tem = split(/\t/);
-	$f1hash{$tem[0]} = $tem[1];
+	$f1hash{$tem[0]}{$tem[1]} = $tem[3];
 }
 close A;
 
 while(<B>){
 	chomp;
 	my @tem = split(/\t/);
-	$f2hash{$tem[0]} = $tem[1];
+	$f2hash{$tem[0]}{$tem[1]} = $tem[3];
 }
 close B;
 
@@ -57,7 +57,16 @@ while(my $n = <C>){
 	$n =~ s/^>//;
 	$n = (split(/\s+/, $n))[0];
 	if(exists $f1hash{$n}){
-		print T ">$n\_$f1hash{$n}\n$s";
+		#print T ">$n\_$f1hash{$n}\n$s";
+		my @tem = ();
+		for my $k1 (keys %{$f1hash{$n}}){
+			my $s1 = join(":", $k1, $f1hash{$n}{$k1});
+			push @tem, $s1;
+		}
+		my $os = join("-", @tem);
+		print T ">$n\_$os\n$s";
+			
+
 	}
 }
 close C;
@@ -67,7 +76,14 @@ while(my $n = <D>){
 	$n =~ s/^>//;
 	$n = (split(/\s+/, $n))[0];
 	if(exists $f2hash{$n}){
-		print T ">$n\_$f2hash{$n}\n$s";
+		#print T ">$n\_$f2hash{$n}\n$s";
+		my @tem = ();
+		for my $k2 (keys %{$f2hash{$n}}){
+			my $s2 = join(":", $k2, $f2hash{$n}{$k2});
+			push @tem, $s2;
+		}
+		my $os = join("-", @tem);
+		print T ">$n\_$os\n$s";
 	}
 }
 close D;
