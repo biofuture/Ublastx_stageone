@@ -89,9 +89,9 @@ while(my $n = <I>){
 	#print "$taxs\n";
 
 	if(exists $id2tax{$tem[-1]}){
-		$community{$taxs} += $averlen/65;
+		$community{$taxs} += $averlen/66.2;
 	}else{
-		$community{$taxs} = $averlen/65;
+		$community{$taxs} = $averlen/66.2;
 	}
 
 }
