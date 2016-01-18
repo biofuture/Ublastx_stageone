@@ -26,7 +26,7 @@ while(<I>){
 		print T "$ts[0]\t$acnum\n"; 
 	}else{
 		my $acnum = $ts[1] / 2.45;
-		print "$ts[0]\n";
+		#print "$ts[0]\n";
 		print T "$ts[0]\t$acnum\n";
 	}
 }
