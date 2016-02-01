@@ -7,7 +7,7 @@ use strict;
 ##Generate input for online part analysis, merge all extracted fasta 
 ##and update the meta_data file with number of reads for each sample and number of 16S like reads in each sample
 
-die "perl $0 <Indir> <outdir> <meta_data_in> <meta_data_out> <extracted fasta>  <copycorrect>$!\n" unless (@ARGV == 6);
+die "perl $0 <Indir> <outdir> <meta_data_in> <meta_data_out> <extracted fasta>  <normal copy>$!\n" unless (@ARGV == 6);
 
 #Indir is the directory including your fastq file
 #Outdir is the directory for output of ublastx_v1.1
@@ -19,6 +19,7 @@ die "perl $0 <Indir> <outdir> <meta_data_in> <meta_data_out> <extracted fasta>  
 
 my %sampleid;
 my %metainfo;
+my $rlen = 100;
 
 die "$!\n" unless open(I,"$ARGV[2]");
 die "$!\n" unless open(T,">$ARGV[3]");
@@ -66,23 +67,23 @@ for my $ids (sort {$a <=> $b}  keys %sampleid){
 			my $snum1 = (split(/\s+/,$s1))[0];
 			my $snum2 = (split(/\s+/,$s2))[0];
 			my $s16num = $snum1 + $snum2;
-			$hash16s{$sampleid{$ids}} = $s16num; 
+			$hash16s{$sampleid{$ids}} = $s16num * $rlen / 1432; 
 
 		}else{
 			die "wrong run\n";
 		}
 	}
 	##for cell number counting
-	if(-e "$opt_o/$sampleid{$ids}.16s_hvr_community.adjust.txt"){
-		die "$!" unless open(TEM, "$opt_o/$sampleid{$ids}.16s_hvr_community.adjust.txt");		
-		my $cellc = 0;
+	if(-e "$opt_o/$sampleid{$ids}.16s_hvr_normal.copy.txt"){
+		die "$!" unless open(TEM, "$opt_o/$sampleid{$ids}.16s_hvr_normal.copy.txt");		
+		my $avecopy = 0;
 		while(<TEM>){
 			chomp;
 			my @tt = split("\t", $_);
-			$cellc += $tt[1];
+			$avecopy = $tt[1];
 		}			
 		close TEM;
-		$cellnum{$sampleid{$ids}} = $cellc;	
+		$cellnum{$sampleid{$ids}} = $hash16s{$sampleid{$ids}}  / $avecopy ;	
 
 	
 	}else{

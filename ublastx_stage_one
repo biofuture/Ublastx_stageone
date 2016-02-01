@@ -44,7 +44,7 @@ getopts('i:o:n:f:m:ahzc');
 $opt_n ||= 1;
 $opt_f ||="fq";
 $opt_o ||= ".";
-
+$opt_c ||=1;
 #$opt_c
 my $ARDB_PATH ||= "$ublastxdir/DB/SARDB.udb";
 my $ggnr85 ||= "$ublastxdir/DB/gg85.udb"; 
@@ -164,8 +164,8 @@ for my $fq (sort {$a <=> $b } keys %samples){
 	print BASH "$ublastxdir/bin/extract_usearch_reads.pl $uso2 $f2 $e2fa\n";
 
 	##do usearch against greengene nr90 database to calculate 16S copies number
-	print BASH "$ublastxdir/bin/usearch -ublast $f1 -db $ggnr85 -evalue 1e-5 -accel 0.5 -blast6out $us16s1 -threads $opt_n -strand both  -maxaccepts 1\n";
-        print BASH "$ublastxdir/bin/usearch -ublast $f2 -db $ggnr85 -evalue 1e-5 -accel 0.5 -blast6out $us16s2 -threads $opt_n -strand both  -maxaccepts 1\n\n";
+	print BASH "$ublastxdir/bin/usearch -ublast $f1 -db $ggnr85 -evalue 1e-10 -accel 0.5 -blast6out $us16s1 -threads $opt_n -strand both  -maxaccepts 1\n";
+        print BASH "$ublastxdir/bin/usearch -ublast $f2 -db $ggnr85 -evalue 1e-10 -accel 0.5 -blast6out $us16s2 -threads $opt_n -strand both  -maxaccepts 1\n\n";
 
 
 	##Obtain microbial community by 16S hyper variable informaton in shotgun metagenomics data
@@ -178,7 +178,7 @@ for my $fq (sort {$a <=> $b } keys %samples){
 			my $us16s2v6 = "$opt_o/$samples{$fq}.16s_2v6.us";
 			my $hyperout = "$opt_o/$samples{$fq}.16s_hyperout.txt";
 			my $community = "$opt_o/$samples{$fq}.16s_hvr_community.txt";
-			my $correctcommunity = "$opt_o/$samples{$fq}.16s_hvr_community.adjust.txt";
+			my $avercopy = "$opt_o/$samples{$fq}.16s_hvr_normal.copy.txt";
 
 			print BASH "\n#Search hyper variable region\n";
 			print BASH "$ublastxdir/bin/usearch -ublast $f1 -db  $REFHVR6  -evalue 1e-5 -accel 0.5 -blast6out $us16s1v6 -threads $opt_n -strand both  -maxaccepts 10 -query_cov 0.2 -target_cov 0.5 -id 0.9\n";		
@@ -195,7 +195,7 @@ for my $fq (sort {$a <=> $b } keys %samples){
 			##copy number correction by Copywriter copy number database
 
 			print BASH "\n#Copy number correction\n";
-			print BASH "$ublastxdir/bin/copy_correction.pl $community $cnd $correctcommunity\n";
+			print BASH "$ublastxdir/bin/copy_correction.pl $community $cnd $avercopy\n";
 	}
 
 }##for process each sample separately

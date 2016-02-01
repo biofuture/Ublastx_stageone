@@ -1,8 +1,8 @@
-k__Bacteria; p__; c__; o__; f__; g__; s__	0.646153846153846
-k__Bacteria; p__Bacteroidetes; c__Flavobacteriia; o__Flavobacteriales; f__; g__; s__	0.813846153846154
-k__Bacteria; p__Proteobacteria; c__Alphaproteobacteria; o__; f__; g__; s__	0.730769230769231
-k__Bacteria; p__Proteobacteria; c__Deltaproteobacteria; o__; f__; g__; s__	0.644615384615385
-k__Bacteria; p__Proteobacteria; c__Deltaproteobacteria; o__Myxococcales; f__; g__; s__	0.629230769230769
-k__Bacteria; p__Proteobacteria; c__Deltaproteobacteria; o__Myxococcales; f__Haliangiaceae; g__; s__	0.649230769230769
-k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__Chromatiales; f__; g__; s__	0.963076923076923
-k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__Oceanospirillales; f__Halomonadaceae; g__Halomonas; s__	0.581538461538461
+k__Bacteria; p__; c__; o__; f__; g__; s__	0.634441087613293
+k__Bacteria; p__Bacteroidetes; c__Flavobacteriia; o__Flavobacteriales; f__; g__; s__	0.799093655589124
+k__Bacteria; p__Proteobacteria; c__Alphaproteobacteria; o__; f__; g__; s__	0.717522658610272
+k__Bacteria; p__Proteobacteria; c__Deltaproteobacteria; o__; f__; g__; s__	1.19939577039275
+k__Bacteria; p__Proteobacteria; c__Deltaproteobacteria; o__Myxococcales; f__; g__; s__	0.617824773413897
+k__Bacteria; p__Proteobacteria; c__Deltaproteobacteria; o__Myxococcales; f__Haliangiaceae; g__; s__	1.30211480362538
+k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__Chromatiales; f__; g__; s__	0.945619335347432
+k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__Oceanospirillales; f__Halomonadaceae; g__Halomonas; s__	0.570996978851964

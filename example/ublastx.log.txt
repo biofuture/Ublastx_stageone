@@ -70,5 +70,3 @@ http://drive5.com/usearch
 
 Licensed to: yy1095035@gmail.com
 
-k__Bacteria; p__Proteobacteria; c__Betaproteobacteria; o__Burkholderiales; f__; g__; s__
-k__Bacteria; p__Spirochaetes; c__[Leptospirae]; o__; f__; g__; s__

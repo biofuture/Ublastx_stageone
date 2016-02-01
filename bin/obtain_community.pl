@@ -66,6 +66,7 @@ sub lca{
 
 
 my %community;
+my $totalv6 = 0;
 while(my $n = <I>){
 	my $s = <I>;
 	chomp($n);
@@ -75,9 +76,13 @@ while(my $n = <I>){
 	my @alls = split("-", $tem[-1]); ##split all the hits to one reads
 	my @seqtax;
 	my $averlen = 0;
+	#my $maxle = 0;
 	for(my $i =0; $i <= $#alls ; $i++){
 		my @sp = split(":", $alls[$i]);
 		$averlen += $sp[1];
+		#if($sp[1] >= $maxle){
+		#	$maxle = $sp[1];
+		#}
 		#print "$sp[0]\t$id2tax{$sp[0]}\n";
 		push @seqtax, $id2tax{$sp[0]};
 	}
@@ -88,15 +93,19 @@ while(my $n = <I>){
 	my $taxs = lca(@seqtax);
 	#print "$taxs\n";
 
-	if(exists $id2tax{$tem[-1]}){
+	#if(exists $id2tax{$tem[-1]}){
+	if(exists $community{$taxs}){
 		$community{$taxs} += $averlen/66.2;
+		#$community{$taxs} += $maxle/66.2;
 	}else{
 		$community{$taxs} = $averlen/66.2;
 	}
 
+	#$totalv6 += $maxle; 
 }
 close I;
 
+#print "$totalv6\n";
 for my $key (sort keys %community){
 	print T "$key\t$community{$key}\n";
 }

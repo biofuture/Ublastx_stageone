@@ -41,6 +41,7 @@ die "$!\n" unless open(B, "$opt_b");
 while(<A>){
 	chomp;
 	my @tem = split(/\t/);
+	#next if($tem[2] < 0.9 || $tem[3] < 50); 
 	$tem[0] = (split(/\s+/, $tem[0]))[0];
 	$f1hash{$tem[0]}{$tem[1]} = $tem[3];
 }
@@ -49,6 +50,7 @@ close A;
 while(<B>){
 	chomp;
 	my @tem = split(/\t/);
+	#next if($tem[2] < 0.9 || $tem[3] < 50); 
 	$tem[0] = (split(/\s+/, $tem[0]))[0];
 	$f2hash{$tem[0]}{$tem[1]} = $tem[3];
 }
