@@ -28,9 +28,9 @@ die "$!\n" unless open(TT,">$ARGV[4]");
 my $h = <I>; chomp($h);
 if($ARGV[5] eq "Y"){
 
-	print T "$h\t#ofReads\t#of16Sreads\tCellNumber\n";
+	print T "$h\t#ofReads\t#of16S\tCellNumber\n";
 }else{
-	print T "$h\t#ofReads\t#of16Sreads\n";
+	print T "$h\t#ofReads\t#of16S\n";
 }
 while(<I>){
 	chomp;
