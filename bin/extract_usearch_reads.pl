@@ -10,7 +10,7 @@ while(<I>){
 	chomp;
 	my @tm = split(/\t/,$_);
 	if(exists $get{$tm[0]}){
-		print "duplicate $tm[0] in blastout6 with maxaccepts 1 in usearch sequencing file contain same name\n";
+		print "duplicate $tm[0] $tm[1] in blastout6 with maxaccepts 1 in usearch sequencing file contain same name\n";
 		$get{$tm[0]} = 1;
 	}else{
 		$get{$tm[0]} = 1;
@@ -25,6 +25,7 @@ while(my $id = <II>){
 	chomp($id);
 	my $seq = <II>;
 	$id =~ s/^>//;
+	$id = (split(/\s+/, $id))[0];
 	if(exists $get{$id}){
 		print T ">$id\n$seq";
 		delete($get{$id});
