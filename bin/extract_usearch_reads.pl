@@ -9,6 +9,7 @@ die "$! " unless open(I,"$ARGV[0]");
 while(<I>){
 	chomp;
 	my @tm = split(/\t/,$_);
+	$tm[0] = (split(/\s+/, $tm[0]))[0]; ##to make sure  the consistence we only kept the first onune black 
 	if(exists $get{$tm[0]}){
 		print "duplicate $tm[0] $tm[1] in blastout6 with maxaccepts 1 in usearch sequencing file contain same name\n";
 		$get{$tm[0]} = 1;
@@ -25,9 +26,11 @@ while(my $id = <II>){
 	chomp($id);
 	my $seq = <II>;
 	$id =~ s/^>//;
-	$id = (split(/\s+/, $id))[0];
+	my @tem = split(/\s+/,$id);  ##first none black block as the target id 
+	$id = $tem[0];
 	if(exists $get{$id}){
 		print T ">$id\n$seq";
+		#print "$id\n";
 		delete($get{$id});
 	}else{
 		
