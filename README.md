@@ -50,7 +50,7 @@ When meta-data.txt is prepared, then put all your fastq files into one directory
         -c This option fulfill copy number correction by Copywriter database to transfrom 16S information into cell number [ direct searching hyper variable region database by usearch; default 1]
         -h print this help information 
 
-This step will search reads against ARG database and 16S greengene non-redundant 85 OTUs database to identify potential ARG reads and 16S reads. This step will generate searching results files for each fastq.  This step also obtain the microbial community structure information of samples by searching against hyper-variable region database, and then perform copy number correction using Copyrighter copy number database (release date) to finally estimate the cell number of samples **by setting the option -c**.
+This step will search reads against ARG database ([CARD](https://card.mcmaster.ca/) and [ARDB](http://ardb.cbcb.umd.edu/)) and 16S greengene non-redundant 85 OTUs database to identify potential ARG reads and 16S reads. This step will generate searching results files for each fastq.  This step also obtain the microbial community structure information of samples by searching against hyper-variable region database, and then perform copy number correction using Copyrighter copy number database (release date) to finally estimate the cell number of samples **by setting the option -c**.
  
 The results are in testoutdir/, it looks like this:
 
