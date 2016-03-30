@@ -1,6 +1,6 @@
 New release of Ublastx Version 1.2
 
-**Updating DB **
+**Updating DB**
 
 **1. adding a method to obtain microbial community structure from the shotgun metagenomics data set.**  
 **2. adding copy number correction using Copyrighter database and normalize ARGs abundance by cell number.**  
