@@ -99,16 +99,18 @@ for my $ids (sort {$a <=> $b}  keys %sampleid){
 
 		my $count = 1;
 		while(my $ntem = <TEM1>){
+			$ntem =~ s/^>//; chomp($ntem);
 			my $stem = <TEM1>;
-			my $changename = ">$sampleid{$ids}_$count";
+			my $changename = ">$sampleid{$ids}_$count\t$ntem";
 			print TT "$changename\n$stem";
 			$count ++;
 		}
 		close TEM1;
 	
 		while(my $ntem = <TEM2>){
+			$ntem =~ s/^>//; chomp($ntem);
 			my $stem = <TEM2>;
-			my $changename = ">$sampleid{$ids}_$count";
+			my $changename = ">$sampleid{$ids}_$count\t$ntem";
 			print TT "$changename\n$stem";
 			$count ++;
 		}
