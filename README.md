@@ -89,5 +89,23 @@ After a while or so, you will notice that their are four files generated for you
 **File 3 and 4**: Other tabular mother tables which including the profile of ARGs type and sub type information, as long as with other environment samples mother table. File3 results of ARGs abundance normalization aganist 16S reads number; File 4 results of ARGs abundance normalization aganist cell number
 
 
+**Notice:**
+
+This tools only provide the required scripts for ARGs-OAP pipeline (Bioinformatics (2016) doi: 10.1093/bioinformatics/btw136).
+
+This pipeline is only allowed to be used for non-commercial and academic purpose.
+
+The copyrights of the following tools/databases which could be used in this pipeline belong to their original developers. The user of this pipeline should follow the guideline and regulations of these tools/database which could be found at the websites of their developers.
+1)     ARDB: (http://ardb.cbcb.umd.edu/)
+
+2)     CARD: (https://card.mcmaster.ca/)
+
+3)     Usearch: (http://www.drive5.com/usearch/)
+
+4)     Copyrighter: (http://microbiomejournal.biomedcentral.com/articles/10.1186/2049-2618-2-11)
+
+5)     Greengenes: (http://greengenes.lbl.gov/cgi-bin/nph-index.cgi)
+
+Please check the above websites for details of these tools/databases.
 
  
