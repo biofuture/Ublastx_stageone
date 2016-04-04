@@ -75,7 +75,7 @@ SampleID | Name | Category | Librarysize | #ofreads | #of16S| **#ofCell**
 
 ###Stage two pipeline on Galaxy system and download results
 
-Go to http://smile.hku.hk/SARGs and using the module ARG_OAP.  
+Go to http://smile.hku.hk/SARGs (**Server is under mantance, will recover soon**) and using the module ARG_OAP.  
 
 1. Using **ARG_OAP** -> **Upload Files** module to upload the extracted fasta file and meta_data_online.txt file generated in stage one into Galaxy  
 2. Click **ARG_OAP** and **Ublast_stagetwo**, select your uploaded files  
