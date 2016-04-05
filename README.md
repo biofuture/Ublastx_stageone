@@ -39,7 +39,7 @@ SampleID | Name | Category | Librarysize
 To make use of our scripts, users need to download database of ARDB and CARD by themselves.    
 1. obtain [CARD](https://card.mcmaster.ca/) and [ARDB](http://ardb.cbcb.umd.edu/) as well as [usearch](http://www.drive5.com/usearch/).  
      Please note that if the memory requirement over 4Gbps for usearch; 64 bit usearch should be used. Here we use 32 bit usearch as the example, which is free for user to use.   
-2. dereplicate and merge ARG data base with our script2. dereplicate and merge ARG data base with our script    
+2. dereplicate and merge ARG database with our script       
     `perl merge_deprelicate.pl <card.fasta> <ardb.fasta> <merge_dereplicate.fa>`
 3. make .udb of the integrated database.  
     please put the 32 bit usearch under directory **bin/**  
