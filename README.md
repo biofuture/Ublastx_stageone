@@ -34,7 +34,7 @@ SampleID | Name | Category | Librarysize
  1       | STAS | ST  |         300  
  2       | SWHAS104 | SWH  |         300
 
-###Prepare ARG database
+###Prepare database and usearch
 
 To make use of our scripts, users need to download database of ARDB and CARD by themselves.    
 1. obtain [CARD](https://card.mcmaster.ca/download/0/broadsteet-v1.0.1.tar.gz) and [ARDB](https://card.mcmaster.ca/download/0/broadsteet-v1.0.1.tar.gz) as well as [usearch](http://www.drive5.com/usearch/).  
@@ -59,7 +59,7 @@ Put all the .udb files into DB directory and put usearch excutable file into bin
 
 ###Stage one pipeline
 
-When meta-data.txt is prepared, then put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
+When meta-data.txt and database files are prepared, then put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
 
 `nohup ../ublastx_stage_one  -i inputfqs -o testoutdir -m meta-data.txt -c -n 2`   
     
