@@ -34,6 +34,20 @@ SampleID | Name | Category | Librarysize
  1       | STAS | ST  |         300  
  2       | SWHAS104 | SWH  |         300
 
+###Prepare ARG database
+
+To make use of our scripts, users need to download database of ARDB and CARD by themselves.    
+1. obtain [CARD](https://card.mcmaster.ca/) and [ARDB](http://ardb.cbcb.umd.edu/) as well as [usearch](http://www.drive5.com/usearch/).  
+     Please note that if the memory requirement over 4Gbps for usearch; 64 bit usearch should be used. Here we use 32 bit usearch as the example, which is free for user to use.   
+2. dereplicate with our script    
+    `perl dereplicate.pl <card.fasta> <ardb.fasta> <merge_dereplicate.fa>`  
+3. make .udb of the integrated database.  
+    please put the 32 bit usearch under directory **bin/**  
+    `chmod 755 usearch`    
+    makeudb of merge_dereplicate.fa to search against and put them under directory **DB/**  
+    `bin/usearch -makeudb_ublast merge.fasta -output SARG.udb`  
+
+
 ###Stage one pipeline
 
 When meta-data.txt is prepared, then put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
