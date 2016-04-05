@@ -46,7 +46,7 @@ $opt_f ||="fq";
 $opt_o ||= ".";
 $opt_c ||=1;
 #$opt_c
-my $ARDB_PATH ||= "$ublastxdir/DB/SARDB.udb";
+my $ARDB_PATH ||= "$ublastxdir/DB/SARG.udb";
 my $ggnr85 ||= "$ublastxdir/DB/gg85.udb"; 
 
 
