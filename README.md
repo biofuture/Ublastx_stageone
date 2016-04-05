@@ -47,7 +47,7 @@ To make use of our scripts, users need to download database of ARDB and CARD by 
 3. make .udb of the integrated database.  
     please put the 32 bit usearch under directory **bin/**  
     `chmod 755 usearch`    
-    makeudb of merge_dereplicate.fa to search against and put them under directory **DB/**; the name of udb shoud be **SARG.udb**     
+    makeudb of merge_dereplicate.fa to search against and put SARG.udb under directory **DB/**; the name of udb shoud be **SARG.udb**     
     `bin/usearch -makeudb_ublast merge.fasta -output SARG.udb`  
 
 
