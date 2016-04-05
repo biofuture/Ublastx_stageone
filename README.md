@@ -50,8 +50,7 @@ To make use of our scripts, users need to download database of ARDB and CARD by 
     makeudb of merge_dereplicate.fa to search against and put SARG.udb under directory **DB/**; the name of udb shoud be **SARG.udb** 
     `bin/usearch -makeudb_ublast merge.fasta -output SARG.udb`  
 4. make .udb for ggotu85.fasta    
-
-    Download greengene 85 OTUs represent sequences from [gg85otu.fasta](ftp://greengenes.microbio.me/greengenes_release/gg_13_8_otus/rep_set/85_otus.fasta).       
+    Download greengene 85 OTUs represent sequences from [gg85otu.fasta](ftp://greengenes.microbio.me/greengenes_release/gg_13_8_otus/rep_set/85_otus.fasta).          
     `bin/usearch -makeudb_ublast ggotu85.fasta -out gg85.udb`    
 5. make .udb for RefHVR.V6.fa     
     `bin/usearch -makeudb_ublast RefHVR.V6.fa -out RefHVR.V6.udb`    
