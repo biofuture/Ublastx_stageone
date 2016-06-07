@@ -51,9 +51,9 @@ To make use of our scripts, users need to download database of ARDB and CARD by 
     `bin/usearch -makeudb_ublast merge.fasta -output SARG.udb`  
 4. make .udb for 85_otus.fasta       
     Download greengene 85 OTUs represent sequences 85_otus.fasta, link to download: ftp://greengenes.microbio.me/greengenes_release/gg_13_8_otus/rep_set/85_otus.fasta              
-    `bin/usearch -makeudb_ublast 85_otus.fasta -out gg85.udb`    
+    `bin/usearch -makeudb_ublast 85_otus.fasta -output gg85.udb`    
 5. make .udb for RefHVR.V6.fa     
-    `bin/usearch -makeudb_ublast RefHVR.V6.fa -out RefHVR.V6.udb`   
+    `bin/usearch -makeudb_ublast RefHVR.V6.fa -output RefHVR.V6.udb`   
 Put all the .udb files into DB directory and put usearch excutable file into bin directory.    
 
 
