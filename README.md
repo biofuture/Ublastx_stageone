@@ -7,6 +7,7 @@ New release of Ublastx Version 1.2
 
 Detail introduction of copy number correction can be referred to [Transform ARGs abundance against cell number](https://github.com/biofuture/Ublastx_stageone/wiki/Transform-ARGs-abundance-against-cell-number)
 
+There are some questions raised by users, please refer to the [FAQ](https://github.com/biofuture/Ublastx_stageone/wiki/FAQ) for details.  
 
 Welcome to the Ublastx_v1.2 wiki!
 
