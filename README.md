@@ -37,7 +37,7 @@ SampleID | Name | Category | Librarysize
 ###Prepare database and usearch
 
 To make use of our scripts, users need to download database of ARDB and CARD by themselves.    
-1. obtain [CARD](https://card.mcmaster.ca/download/0/broadsteet-v1.0.1.tar.gz) and [ARDB](http://ardb.cbcb.umd.edu/) as well as [usearch](http://www.drive5.com/usearch/).  
+1. obtain [CARD](https://card.mcmaster.ca/download/0/broadsteet-v1.0.1.tar.gz) and [ARDB](ftp://ftp.cbcb.umd.edu/pub/data/ARDB/ardbAnno1.0.tar.gz) as well as [usearch](http://www.drive5.com/usearch/).  
      Please note that if the memory requirement over 4Gbps for usearch; 64 bit usearch should be used. Here we use 32 bit usearch as the example, which is free for user to use. Note that after uncompress the .gz files, users need to obtain the relevant fasta files for downstream analysis.  The CARD contains four fasta, we do not count the mutation ones (SNP induced antibiotic resistence), so only three fasta files in card database are used.   
     `tar -xf card.tar.gz`   
     `tar -zxvf ardb.tar.gz`   
