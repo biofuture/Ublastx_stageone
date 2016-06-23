@@ -28,6 +28,17 @@ while(<I>){
 }
 close I;
 
+#last sequences
+if($#tmp >= 0){
+	
+	my  $o = join("", @tmp);
+	if(exists $seqall{$o}){
+		$seqall{$o} += 1;	
+	}else{
+		$seqall{$o} = 1;
+	}
+}
+
 ##Process ardb
 <II>;
 @tmp = ();
@@ -48,6 +59,16 @@ while(<II>){
 }
 close II;
 
+#last sequences
+if($#tmp >= 0){
+	
+	my  $o = join("", @tmp);
+	if(exists $seqall{$o}){
+		$seqall{$o} += 1;	
+	}else{
+		$seqall{$o} = 1;
+	}
+}
 
 ##Generate the output uniq ARGs sequences
 my $index =1;
