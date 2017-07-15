@@ -64,7 +64,7 @@ Put all the .udb files into DB directory and put usearch excutable file into bin
 
 When meta-data.txt and database files are prepared, then put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
 
-`nohup ../ublastx_stage_one  -i inputfqs -o testoutdir -m meta-data.txt -c -n 2`   
+`nohup ../ublastx_stage_one  -i inputfqs -o testoutdir -m meta-data.txt -n 2`   
     
     Usage: ./ublastx_stage_one -i <Fq input dir> -m <Metadata_map.txt> -o <output dir> -n [number of threads] -f [fa|fq] -z -h  -c    
         -i Input files directory, required
