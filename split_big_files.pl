@@ -27,7 +27,11 @@ $o2 = "$pr2-part-$index\_2.fq";
 die "$!" if($o2 eq $ARGV[1]);
 
 unless( -d "$ARGV[3]"){
+<<<<<<< HEAD
 	`mkdir $ARGV[3]`;
+=======
+        `mkdir $ARGV[3]`;
+>>>>>>> origin/master
 }
 
 $o1 = "$ARGV[3]/$o1";
@@ -37,6 +41,7 @@ die "$!\n" unless open(TT, ">$o2");
 
 my $num = 0;
 while(my $f1 = <I>){
+<<<<<<< HEAD
 	my $f2 = <I>;
 	my $f3 = <I>;
 	my $f4 = <I>;
@@ -73,6 +78,44 @@ while(my $f1 = <I>){
 		print TT "$q1$q2$q3$q4";
 		$num ++;
 	}
+=======
+        my $f2 = <I>;
+        my $f3 = <I>;
+        my $f4 = <I>;
+
+        ##fastq 2
+        my $q1 = <II>;
+        my $q2 = <II>;
+        my $q3 = <II>;
+        my $q4 = <II>;
+
+        if($num > $ARGV[2]){
+
+                $num = 0;
+                $index ++;
+                close T; close TT;
+
+                ##open new output files
+                $o1 =  "$pr1-part-$index\_1.fq";
+                $o2 = "$pr2-part-$index\_2.fq";
+                my $on1 = "$ARGV[3]/$o1";
+                my $on2 = "$ARGV[3]/$o2";
+                die "$!\n" unless open(T, ">$on1");
+                die "$!\n" unless open(TT, ">$on2");
+
+                print T "$f1$f2$f3$f4";
+                print TT "$q1$q2$q3$q4";
+                
+
+                $num++;
+
+
+        }else{
+                print T "$f1$f2$f3$f4";
+                print TT "$q1$q2$q3$q4";
+                $num ++;
+        }
+>>>>>>> origin/master
 
 }
 close I;

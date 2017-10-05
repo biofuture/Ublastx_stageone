@@ -7,6 +7,7 @@ New release of Ublastx Version 1.2
 
 Detail introduction of copy number correction can be referred to [Transform ARGs abundance against cell number](https://github.com/biofuture/Ublastx_stageone/wiki/Transform-ARGs-abundance-against-cell-number)
 
+There are some questions raised by users, please refer to the [FAQ](https://github.com/biofuture/Ublastx_stageone/wiki/FAQ) for details.  
 
 Welcome to the Ublastx_v1.2 wiki!
 
@@ -28,6 +29,8 @@ Example of meta-data file **meta-data.txt**  Tips:
 * Category is the classification of your samples into groups and we will colored your samples in PcoA by this informaton
 * The meta-data table should be separated by tabular for each of the items 
 * The Name of each sample should be the fastq file names for your pair-end Illumina sequencing data, your fastq files will automatically be recognized by Name_1.fq and Name_2.fq, so you need to keep the name consistent with your fq file name. (if you files are end with .fastq or .fasta, you need to change them to end with .fq or .fa)
+ 
+**Please make sure the meta-data file is pure txt format, if you edit the file under windows, using nodepad++ and check the end of each line by cliking View-> Show Symbol -> Show All Characters. If the line is end up with CRLF, please remove the CR by replace \r to nothing**
 
 SampleID | Name | Category | Librarysize
 ---------|------|-----------|------------ 
@@ -37,7 +40,7 @@ SampleID | Name | Category | Librarysize
 ###Prepare database and usearch
 
 To make use of our scripts, users need to download database of ARDB and CARD by themselves.    
-1. obtain [CARD](https://card.mcmaster.ca/download/0/broadsteet-v1.0.1.tar.gz) and [ARDB](https://card.mcmaster.ca/download/0/broadsteet-v1.0.1.tar.gz) as well as [usearch](http://www.drive5.com/usearch/).  
+1. obtain [CARD](https://card.mcmaster.ca/download/0/broadsteet-v1.0.1.tar.gz) and [ARDB](ftp://ftp.cbcb.umd.edu/pub/data/ARDB/ardbAnno1.0.tar.gz) as well as [usearch](http://www.drive5.com/usearch/).  
      Please note that if the memory requirement over 4Gbps for usearch; 64 bit usearch should be used. Here we use 32 bit usearch as the example, which is free for user to use. Note that after uncompress the .gz files, users need to obtain the relevant fasta files for downstream analysis.  The CARD contains four fasta, we do not count the mutation ones (SNP induced antibiotic resistence), so only three fasta files in card database are used.   
     `tar -xf card.tar.gz`   
     `tar -zxvf ardb.tar.gz`   
@@ -51,9 +54,9 @@ To make use of our scripts, users need to download database of ARDB and CARD by 
     `bin/usearch -makeudb_ublast merge.fasta -output SARG.udb`  
 4. make .udb for 85_otus.fasta       
     Download greengene 85 OTUs represent sequences 85_otus.fasta, link to download: ftp://greengenes.microbio.me/greengenes_release/gg_13_8_otus/rep_set/85_otus.fasta              
-    `bin/usearch -makeudb_ublast 85_otus.fasta -out gg85.udb`    
+    `bin/usearch -makeudb_ublast 85_otus.fasta -output gg85.udb`    
 5. make .udb for RefHVR.V6.fa     
-    `bin/usearch -makeudb_ublast RefHVR.V6.fa -out RefHVR.V6.udb`   
+    `bin/usearch -makeudb_ublast RefHVR.V6.fa -output RefHVR.V6.udb`   
 Put all the .udb files into DB directory and put usearch excutable file into bin directory.    
 
 
@@ -61,7 +64,7 @@ Put all the .udb files into DB directory and put usearch excutable file into bin
 
 When meta-data.txt and database files are prepared, then put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
 
-`nohup ../ublastx_stage_one  -i inputfqs -o testoutdir -m meta-data.txt -c -n 2`   
+`nohup ../ublastx_stage_one  -i inputfqs -o testoutdir -m meta-data.txt -n 2`   
     
     Usage: ./ublastx_stage_one -i <Fq input dir> -m <Metadata_map.txt> -o <output dir> -n [number of threads] -f [fa|fq] -z -h  -c    
         -i Input files directory, required
@@ -98,7 +101,7 @@ SampleID | Name | Category | Librarysize | #ofreads | #of16S| **#ofCell**
 
 ###Stage two pipeline on Galaxy system and download results
 
-Go to http://smile.hku.hk/SARGs (**Server is under mantance, will recover soon**) and using the module ARG_OAP.  
+Go to http://smile.hku.hk/SARGs  and using the module ARG_OAP.  
 
 1. Using **ARG_OAP** -> **Upload Files** module to upload the extracted fasta file and meta_data_online.txt file generated in stage one into Galaxy  
 2. Click **ARG_OAP** and **Ublast_stagetwo**, select your uploaded files  
@@ -116,7 +119,7 @@ After a while or so, you will notice that their are four files generated for you
 
 This tools only provide the required scripts for ARGs-OAP pipeline (Bioinformatics (2016) doi: 10.1093/bioinformatics/btw136).
 
-This pipeline is only allowed to be used for non-commercial and academic purpose.
+This pipeline is distributed in the hope to achieve the aim of management of antibiotic resistant genes in envrionment, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.This pipeline is only allowed to be used for non-commercial and academic purpose.
 
 The copyrights of the following tools/databases which could be used in this pipeline belong to their original developers. The user of this pipeline should follow the guideline and regulations of these tools/database which could be found at the websites of their developers.  
 
