@@ -52,9 +52,7 @@ SampleID | Name | Category | Librarysize
 <s>   please put the 32 bit usearch under directory **bin/**   </s> . 
 <s>    `chmod 755 usearch`     </s> . 
 <s>    makeudb of merge_dereplicate.fa to search against and put SARG.udb under directory **DB/**; the name of udb shoud be <s> **SARG.udb**    </s> 
-<s>   `bin/usearch -makeudb_ublast merge.fasta -output SARG.udb`   </s>  
-
-
+<s>   `bin/usearch -makeudb_ublast merge.fasta -output SARG.udb`   </s>             
 
 1. make udb for SARG database . 
     `bin/usearch -makeudb_ublast SARG_v1.0.fa -output SARG.udb`   
