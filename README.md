@@ -54,7 +54,7 @@ SampleID | Name | Category | Librarysize
 <s>    makeudb of merge_dereplicate.fa to search against and put SARG.udb under directory **DB/**; the name of udb shoud be     **SARG.udb**    </s> 
 <s>   `bin/usearch -makeudb_ublast merge.fasta -output SARG.udb`   </s>             
 
-1. make udb for SARG database . 
+1. make udb for SARG database .     
     `bin/usearch -makeudb_ublast SARG_v1.0.fa -output SARG.udb`   
 2. make .udb for 85_otus.fasta       
     Download greengene 85 OTUs represent sequences 85_otus.fasta, link to download: ftp://greengenes.microbio.me/greengenes_release/gg_13_8_otus/rep_set/85_otus.fasta              
