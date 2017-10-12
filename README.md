@@ -40,7 +40,7 @@ SampleID | Name | Category
 
 ### Prepare database and usearch
 
-SARG Database and 32 bit usearch is avaliable in DB/ and bin/ directory, respectively.  **Users donot need to download CARD and ARDB anymore to merge them!! **
+SARG Database and 32 bit usearch is avaliable in DB/ and bin/ directory, respectively. **Users donot need to download CARD and ARDB anymore to merge them!!**
 
 ### Stage one pipeline
 
