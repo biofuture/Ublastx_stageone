@@ -1,5 +1,0 @@
-k__Bacteria; p__Actinobacteria; c__Acidimicrobiia; o__Acidimicrobiales; f__C111; g__; s__	1.05287009063444
-k__Bacteria; p__Proteobacteria; c__Betaproteobacteria; o__Burkholderiales; f__; g__; s__	0.79607250755287
-k__Bacteria; p__Proteobacteria; c__Betaproteobacteria; o__Rhodocyclales; f__Rhodocyclaceae; g__Thauera; s__	0.910876132930514
-k__Bacteria; p__Spirochaetes; c__[Leptospirae]; o__; f__; g__; s__	1.13293051359517
-k__Bacteria; p__TM7; c__TM7-3; o__; f__; g__; s__	1.06948640483384
