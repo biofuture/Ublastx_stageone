@@ -15,7 +15,7 @@ To run Ublastx, users should download the stage one source code into local compu
 
 ## What does Ublastx do:  
 
-1. Fast environmental searching of antibiotic resistant gene in multiple metagenomics data sets; the ARGs abundance can be normalized to cell number (updated by version 1.2)
+1. Fast environmental searching of antibiotic resistant gene in multiple metagenomics data sets; the ARGs abundance can be normalized to cell number
 2. Generate mother table of type and sub-type level ARGs of users' samples and a merged sub-type level mother table    
 3. Generate a PcoA of users samples with other typical environment samples such as human gut, ocean and sediment to show the relationship of user concerned samples with already sequenced environment.  
 
