@@ -39,30 +39,7 @@ SampleID | Name | Category | Librarysize
 
 ###Prepare database and usearch
 
-<s> To make use of our scripts, users need to download database of ARDB and CARD by themselves.  </s> . 
-<s> 1. obtain [CARD](https://card.mcmaster.ca/download/0/broadsteet-v1.0.1.tar.gz) and [ARDB](ftp://ftp.cbcb.umd.edu/pub/data/ARDB/ardbAnno1.0.tar.gz) as well as [usearch](http://www.drive5.com/usearch/).  </s> . 
-<s> Please note that if the memory requirement over 4Gbps for usearch; 64 bit usearch should be used. Here we use 32 bit </s> 
-<s> usearch as the example, which is free for user to use. Note that after uncompress the .gz files, users need to obtain   the relevant fasta files for downstream analysis.  The CARD contains four fasta, we do not count the mutation ones (SNP induced antibiotic resistence), so only three fasta files in card database are used.    </s> . 
-<s>    `tar -xf card.tar.gz`    </s> . 
-<s>    `tar -zxvf ardb.tar.gz`    </s> . 
-<s>    `cat protein_fasta\[protein\ homolog\ model\].fasta protein_fasta\[protein\ variant\ model\].fasta protein_fasta\ [protein\ wild\ type\ model\].fasta > card_without_mutation.fa`    </s> . 
-<s> 2. dereplicate and merge ARG database with our script        
-    `perl merge_deprelicate.pl <card.fasta> <ardb.fasta> <merge_dereplicate.fa>`    </s> .   
-<s> 3. make .udb of the integrated ARG database.   </s> . 
-<s>   please put the 32 bit usearch under directory **bin/**   </s> . 
-<s>    `chmod 755 usearch`     </s> . 
-<s>    makeudb of merge_dereplicate.fa to search against and put SARG.udb under directory **DB/**; the name of udb shoud be     **SARG.udb**    </s> 
-<s>   `bin/usearch -makeudb_ublast merge.fasta -output SARG.udb`   </s>             
-
-1. make udb for SARG database .     
-    `bin/usearch -makeudb_ublast SARG_v1.0.fa -output SARG.udb`   
-2. make .udb for 85_otus.fasta       
-    Download greengene 85 OTUs represent sequences 85_otus.fasta, link to download: ftp://greengenes.microbio.me/greengenes_release/gg_13_8_otus/rep_set/85_otus.fasta              
-    `bin/usearch -makeudb_ublast 85_otus.fasta -output gg85.udb`    
-3. make .udb for RefHVR.V6.fa     
-    `bin/usearch -makeudb_ublast RefHVR.V6.fa -output RefHVR.V6.udb`   
-Put all the .udb files into DB directory and put usearch excutable file into bin directory.    
-
+SARG Database and 32 bit usearch is avaliable in DB/ and bin/ directory, respectively.  **Users donot need to download CARD and ARDB anymore to merge them!! **
 
 ###Stage one pipeline
 
@@ -127,9 +104,9 @@ This pipeline is distributed in the hope to achieve the aim of management of ant
 
 The copyrights of the following tools/databases which could be used in this pipeline belong to their original developers. The user of this pipeline should follow the guideline and regulations of these tools/database which could be found at the websites of their developers.  
 
-1)     ARDB: (http://ardb.cbcb.umd.edu/)
+<s> 1)     ARDB: (http://ardb.cbcb.umd.edu/) </s> . 
 
-2)     CARD: (https://card.mcmaster.ca/)
+<s> 2)     CARD: (https://card.mcmaster.ca/) </s>  
 
 3)     Usearch: (http://www.drive5.com/usearch/)
 
