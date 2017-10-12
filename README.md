@@ -13,16 +13,16 @@ Welcome to the Ublastx_v1.2 wiki!
 
 To run Ublastx, users should download the stage one source code into local computer system (Unix/Linux) and upload the generated files for stage two onto our Galaxy analysis platform (http://smile.hku.hk/SARGs). 
 
-##What does Ublastx do:  
+## What does Ublastx do:  
 
 1. Fast environmental searching of antibiotic resistant gene in multiple metagenomics data sets; the ARGs abundance can be normalized to cell number (updated by version 1.2)
 2. Generate mother table of type and sub-type level ARGs of users' samples and a merged sub-type level mother table    
 3. Generate a PcoA of users samples with other typical environment samples such as human gut, ocean and sediment to show the relationship of user concerned samples with already sequenced environment.  
 
-###clone source code into local computer   
+### clone source code into local computer   
     git clone  https://github.com/biofuture/Ublastx_stageone.git  
 
-###Prepare the meta-data file of your samples  
+### Prepare the meta-data file of your samples  
  To run the stage one pipeline, users need to prepare relative meta-data.txt file and put all the pair-end fastq file into one directory  
 Example of meta-data file **meta-data.txt**  Tips:   
 * You need keep the first and second column's name as SampleID and Name
@@ -38,11 +38,11 @@ SampleID | Name | Category | Librarysize
  1       | STAS | ST  |         300  
  2       | SWHAS104 | SWH  |         300
 
-###Prepare database and usearch
+### Prepare database and usearch
 
 SARG Database and 32 bit usearch is avaliable in DB/ and bin/ directory, respectively.  **Users donot need to download CARD and ARDB anymore to merge them!! **
 
-###Stage one pipeline
+### Stage one pipeline
 
 When meta-data.txt and database files are prepared, then put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
 
@@ -81,7 +81,7 @@ SampleID | Name | Category | Librarysize | #ofreads | #of16S| **#ofCell**
  1       | STAS | ST  |         300  |200000 | 10.1  |   4.9
  2       | SWHAS104 | SWH  |         300  |200000 | 9.7 |    4.1
 
-###Stage two pipeline on Galaxy system and download results
+### Stage two pipeline on Galaxy system and download results
 
 Go to http://smile.hku.hk/SARGs  and using the module ARG_OAP.  
 
