@@ -18,10 +18,10 @@ To run Ublastx, users should download the stage one source code into local compu
 2. Generate mother table of type and sub-type level ARGs of users' samples and a merged sub-type level mother table    
 3. Generate a PcoA of users samples with other typical environment samples such as human gut, ocean and sediment to show the relationship of user concerned samples with already sequenced environment.  
 
-###**clone source code into local computer** .   
+###clone source code into local computer   
     git clone  https://github.com/biofuture/Ublastx_stageone.git  
 
-###**Prepare the meta-data file of your samples **   
+###Prepare the meta-data file of your samples  
  To run the stage one pipeline, users need to prepare relative meta-data.txt file and put all the pair-end fastq file into one directory  
 Example of meta-data file **meta-data.txt**  Tips:   
 * You need keep the first and second column's name as SampleID and Name
