@@ -1,6 +1,6 @@
 New release of Ublastx Version 1.2
 
-**Users should notice that before using the pipeline, users should prepare the ARGs database and usearch. Users need to put them under the directoty DB and bin, respectively**
+**We have simply the running process of ublastx_stage_one, a video about how to use ARGs-OAP to quantify ARGs in your metagenomics data will be available soon!** 
 
 **1. adding a method to obtain microbial community structure from the shotgun metagenomics data set.**  
 **2. adding copy number correction using Copyrighter database and normalize ARGs abundance by cell number.**  
