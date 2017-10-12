@@ -33,10 +33,10 @@ Example of meta-data file **meta-data.txt**  Tips:
  
 **Please make sure the meta-data file is pure txt format, if you edit the file under windows, using nodepad++ and check the end of each line by cliking View-> Show Symbol -> Show All Characters. If the line is end up with CRLF, please remove the CR by replace \r to nothing**
 
-SampleID | Name | Category | Librarysize
----------|------|-----------|------------ 
- 1       | STAS | ST  |         300  
- 2       | SWHAS104 | SWH  |         300
+SampleID | Name | Category 
+---------|------|-----------
+ 1       | STAS | ST    
+ 2       | SWHAS104 | SWH  
 
 ### Prepare database and usearch
 
@@ -76,10 +76,10 @@ The **extracted.fa** and **meta_data_online.txt** are two files needed for ublas
 
 The meta-data-online.txt looks like this 
 
-SampleID | Name | Category | Librarysize | #ofreads | #of16S| **#ofCell**
----------|------|-----------|------------|----------|-------|-------- 
- 1       | STAS | ST  |         300  |200000 | 10.1  |   4.9
- 2       | SWHAS104 | SWH  |         300  |200000 | 9.7 |    4.1
+SampleID | Name | Category | #ofreads | #of16S| **#ofCell**
+---------|------|-----------|----------|-------|-------- 
+ 1       | STAS | ST  |200000 | 10.1  |   4.9
+ 2       | SWHAS104 | SWH  |200000 | 9.7 |    4.1
 
 ### Stage two pipeline on Galaxy system and download results
 
