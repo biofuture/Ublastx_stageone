@@ -1,72 +1,72 @@
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+usearch v9.2.64_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013-16 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
-Licensed to: yy1095035@gmail.com
+License: biofuture.jiang@gmail.com
 
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+usearch v9.2.64_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013-16 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
-Licensed to: yy1095035@gmail.com
+License: biofuture.jiang@gmail.com
 
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+usearch v9.2.64_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013-16 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
-Licensed to: yy1095035@gmail.com
+License: biofuture.jiang@gmail.com
 
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+usearch v9.2.64_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013-16 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
-Licensed to: yy1095035@gmail.com
+License: biofuture.jiang@gmail.com
 
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+usearch v9.2.64_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013-16 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
-Licensed to: yy1095035@gmail.com
+License: biofuture.jiang@gmail.com
 
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+usearch v9.2.64_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013-16 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
-Licensed to: yy1095035@gmail.com
+License: biofuture.jiang@gmail.com
 
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+usearch v9.2.64_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013-16 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
-Licensed to: yy1095035@gmail.com
+License: biofuture.jiang@gmail.com
 
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+usearch v9.2.64_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013-16 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
-Licensed to: yy1095035@gmail.com
+License: biofuture.jiang@gmail.com
 
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+usearch v9.2.64_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013-16 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
-Licensed to: yy1095035@gmail.com
+License: biofuture.jiang@gmail.com
 
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+usearch v9.2.64_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013-16 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
-Licensed to: yy1095035@gmail.com
+License: biofuture.jiang@gmail.com
 
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+usearch v9.2.64_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013-16 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
-Licensed to: yy1095035@gmail.com
+License: biofuture.jiang@gmail.com
 
-usearch v7.0.1090_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
-(C) Copyright 2013 Robert C. Edgar, all rights reserved.
+usearch v9.2.64_i86linux32, 4.0Gb RAM (99.0Gb total), 16 cores
+(C) Copyright 2013-16 Robert C. Edgar, all rights reserved.
 http://drive5.com/usearch
 
-Licensed to: yy1095035@gmail.com
+License: biofuture.jiang@gmail.com
 
