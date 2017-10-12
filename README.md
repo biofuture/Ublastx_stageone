@@ -1,6 +1,6 @@
-New release of Ublastx Version 1.2
+**We have simplified the running process of ublastx_stage_one, a video about how to use ARGs-OAP to quantify ARGs in your metagenomics data will be available soon!** 
 
-**We have simply the running process of ublastx_stage_one, a video about how to use ARGs-OAP to quantify ARGs in your metagenomics data will be available soon!** 
+New release of Ublastx Version 1.2
 
 **1. adding a method to obtain microbial community structure from the shotgun metagenomics data set.**  
 **2. adding copy number correction using Copyrighter database and normalize ARGs abundance by cell number.**  
@@ -8,8 +8,6 @@ New release of Ublastx Version 1.2
 Detail introduction of copy number correction can be referred to [Transform ARGs abundance against cell number](https://github.com/biofuture/Ublastx_stageone/wiki/Transform-ARGs-abundance-against-cell-number)
 
 There are some questions raised by users, please refer to the [FAQ](https://github.com/biofuture/Ublastx_stageone/wiki/FAQ) for details.  
-
-Welcome to the Ublastx_v1.2 wiki!
 
 To run Ublastx, users should download the stage one source code into local computer system (Unix/Linux) and upload the generated files for stage two onto our Galaxy analysis platform (http://smile.hku.hk/SARGs). 
 
@@ -31,7 +29,7 @@ Example of meta-data file **meta-data.txt**  Tips:
 * The meta-data table should be separated by tabular for each of the items 
 * The Name of each sample should be the fastq file names for your pair-end Illumina sequencing data, your fastq files will automatically be recognized by Name_1.fq and Name_2.fq, so you need to keep the name consistent with your fq file name. (if you files are end with .fastq or .fasta, you need to change them to end with .fq or .fa)
  
-**Please make sure the meta-data file is pure txt format, if you edit the file under windows, using nodepad++ and check the end of each line by cliking View-> Show Symbol -> Show All Characters. If the line is end up with CRLF, please remove the CR by replace \r to nothing**
+**Please make sure the meta-data file is pure txt format, if you edit the file under windows, using nodepad++ and check the end of each line by cliking View-> Show Symbol -> Show All Characters. If the line is end up with CRLF, please remove the CR by replace \r to nothing in the replace dialogue frame**
 
 SampleID | Name | Category 
 ---------|------|-----------
@@ -40,7 +38,7 @@ SampleID | Name | Category
 
 ### Prepare database and usearch
 
-SARG Database and 32 bit usearch is avaliable in DB/ and bin/ directory, respectively. **Users donot need to download CARD and ARDB anymore to merge them!!**
+SARG Database and 32 bit usearch is avaliable in DB/ and bin/ directory, respectively. **Users donot need to download CARD and ARDB anymore!!**
 
 ### Stage one pipeline
 
