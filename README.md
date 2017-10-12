@@ -13,7 +13,8 @@ Welcome to the Ublastx_v1.2 wiki!
 
 To run Ublastx, users should download the stage one source code into local computer system (Unix/Linux) and upload the generated files for stage two onto our Galaxy analysis platform (http://smile.hku.hk/SARGs). 
 
-##**What does Ublastx do:**   
+##What does Ublastx do:  
+
 1. Fast environmental searching of antibiotic resistant gene in multiple metagenomics data sets; the ARGs abundance can be normalized to cell number (updated by version 1.2)
 2. Generate mother table of type and sub-type level ARGs of users' samples and a merged sub-type level mother table    
 3. Generate a PcoA of users samples with other typical environment samples such as human gut, ocean and sediment to show the relationship of user concerned samples with already sequenced environment.  
@@ -57,7 +58,7 @@ When meta-data.txt and database files are prepared, then put all your fastq file
         -c This option fulfill copy number correction by Copywriter database to transfrom 16S information into cell number [ direct searching hyper variable region database by usearch; default 1]
         -h print this help information 
 
-This step will search reads against ARG database ([CARD](https://card.mcmaster.ca/) and [ARDB](http://ardb.cbcb.umd.edu/)) and 16S greengene non-redundant 85 OTUs database to identify potential ARG reads and 16S reads. This step will generate searching results files for each fastq.  This step also obtain the microbial community structure information of samples by searching against hyper-variable region database, and then perform copy number correction using Copyrighter copy number database (release date) to finally estimate the cell number of samples **by setting the option -c**.
+This step will search reads against SARG databbase and 16S greengene non-redundant 85 OTUs database to identify potential ARG reads and 16S reads. This step will generate searching results files for each fastq.  This step also obtain the microbial community structure information of samples by searching against hyper-variable region database, and then perform copy number correction using Copyrighter copy number database (release date) to finally estimate the cell number of samples. 
  
 The results are in testoutdir/, it looks like this:
 
