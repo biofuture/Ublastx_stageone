@@ -104,9 +104,9 @@ This pipeline is distributed in the hope to achieve the aim of management of ant
 
 The copyrights of the following tools/databases which could be used in this pipeline belong to their original developers. The user of this pipeline should follow the guideline and regulations of these tools/database which could be found at the websites of their developers.  
 
-<s> 1)     ARDB: (http://ardb.cbcb.umd.edu/) </s> . 
+ <s> 1)     ARDB: (http://ardb.cbcb.umd.edu/) </s> . 
 
-<s> 2)     CARD: (https://card.mcmaster.ca/) </s>  
+ <s> 2)     CARD: (https://card.mcmaster.ca/) </s>  
 
 3)     Usearch: (http://www.drive5.com/usearch/)
 
