@@ -18,10 +18,10 @@ To run Ublastx, users should download the stage one source code into local compu
 2. Generate mother table of type and sub-type level ARGs of users' samples and a merged sub-type level mother table    
 3. Generate a PcoA of users samples with other typical environment samples such as human gut, ocean and sediment to show the relationship of user concerned samples with already sequenced environment.  
 
-###clone source code into local computer  
+###**clone source code into local computer** .   
     git clone  https://github.com/biofuture/Ublastx_stageone.git  
 
-###Prepare the meta-data file of your samples  
+###**Prepare the meta-data file of your samples **   
  To run the stage one pipeline, users need to prepare relative meta-data.txt file and put all the pair-end fastq file into one directory  
 Example of meta-data file **meta-data.txt**  Tips:   
 * You need keep the first and second column's name as SampleID and Name
@@ -104,15 +104,12 @@ This pipeline is distributed in the hope to achieve the aim of management of ant
 
 The copyrights of the following tools/databases which could be used in this pipeline belong to their original developers. The user of this pipeline should follow the guideline and regulations of these tools/database which could be found at the websites of their developers.  
 
- <s> 1)     ARDB: (http://ardb.cbcb.umd.edu/) </s> . 
 
- <s> 2)     CARD: (https://card.mcmaster.ca/) </s>  
+1)     Usearch: (http://www.drive5.com/usearch/)
 
-3)     Usearch: (http://www.drive5.com/usearch/)
+2)     Copyrighter: (http://microbiomejournal.biomedcentral.com/articles/10.1186/2049-2618-2-11)
 
-4)     Copyrighter: (http://microbiomejournal.biomedcentral.com/articles/10.1186/2049-2618-2-11)
-
-5)     Greengenes: (http://greengenes.lbl.gov/cgi-bin/nph-index.cgi)
+3)     Greengenes: (http://greengenes.lbl.gov/cgi-bin/nph-index.cgi)
 
 Please check the above websites for details of these tools/databases.
 
