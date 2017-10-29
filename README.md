@@ -1,4 +1,4 @@
-**We have simplified the running process of ublastx_stage_one, a video about how to use ARGs-OAP to quantify ARGs in your metagenomics data will be available soon!** 
+**We have simplified the running process of ublastx_stage_one. We have made a step by step video about how to use ARGs-OAP platform, hopefully, this video will guid new users to go through the process within ten minutes.  The address is: https://www.youtube.com/watch?v=DIshZDfJ6zQ&t=8s ** 
 
 New release of Ublastx Version 1.2
 
