@@ -1,5 +1,7 @@
 **We have simplified the running process of ublastx_stage_one. We have made a step by step video about how to use ARGs-OAP platform, hopefully, this video will guid new users to go through the process within ten minutes.  The address is: https://www.youtube.com/watch?v=PCr1ctXvZPk** 
 
+**A mirror site was added in Shenzhen China for mainland China users to solve the slow data uploading problem [SUSTC-MIRROR-ARGS-OAP](http://116.7.234.183:8080/)**
+
 New release of Ublastx Version 1.2
 
 **1. adding a method to obtain microbial community structure from the shotgun metagenomics data set.**  
