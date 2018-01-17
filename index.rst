@@ -1,3 +1,6 @@
+===============
+ARG_OAP manual
+===============
 **We have simplified the running process of ublastx_stage_one. We have made a step by step video about how to use ARGs-OAP platform, hopefully, this video will guid new users to go through the process within ten minutes.  The address is: https://www.youtube.com/watch?v=PCr1ctXvZPk** 
 
 **A mirror site was added in Shenzhen China for mainland China users to solve the slow data uploading problem [SUSTC-MIRROR-ARGS-OAP](http://smile.sustc.edu.cn:8080/)**
@@ -13,17 +16,20 @@ There are some questions raised by users, please refer to the [FAQ](https://gith
 
 To run Ublastx, users should download the stage one source code into local computer system (Unix/Linux) and upload the generated files for stage two onto our Galaxy analysis platform (http://smile.hku.hk/SARGs). 
 
-## What does Ublastx do:  
+What does Ublastx do:  
+=====================
 
 1. Fast environmental searching of antibiotic resistant gene in multiple metagenomics data sets; the ARGs abundance can be normalized to cell number
 2. Generate mother table of type and sub-type level ARGs of users' samples and a merged sub-type level mother table    
 3. Generate a PcoA of users samples with other typical environment samples such as human gut, ocean and sediment to show the relationship of user concerned samples with already sequenced environment.  
 
-### clone source code into local computer   
+clone source code into local computer
+=====================================
     git clone  https://github.com/biofuture/Ublastx_stageone.git  
 
-### Prepare the meta-data file of your samples  
- To run the stage one pipeline, users need to prepare relative meta-data.txt file and put all the pair-end fastq file into one directory  
+Prepare the meta-data file of your samples  
+==========================================
+To run the stage one pipeline, users need to prepare relative meta-data.txt file and put all the pair-end fastq file into one directory  
 Example of meta-data file **meta-data.txt**  Tips:   
 * You need keep the first and second column's name as SampleID and Name
 * The SampleID are required to be numbers counting from 1 to 2 to 3 etc.
@@ -38,12 +44,13 @@ SampleID | Name | Category
  1       | STAS | ST    
  2       | SWHAS104 | SWH  
 
-### Prepare database and usearch
+Prepare database and usearch
+============================
 
 SARG Database and 32 bit usearch is avaliable in DB/ and bin/ directory, respectively. **Users donot need to download CARD and ARDB anymore!!**
 
-### Stage one pipeline
-
+Stage one pipeline
+==================
 When meta-data.txt and database files are prepared, then put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
 
 `nohup ../ublastx_stage_one  -i inputfqs -o testoutdir -m meta-data.txt -n 2`   
@@ -81,8 +88,8 @@ SampleID | Name | Category | #ofreads | #of16S| **#ofCell**
  1       | STAS | ST  |200000 | 10.1  |   4.9
  2       | SWHAS104 | SWH  |200000 | 9.7 |    4.1
 
-### Stage two pipeline on Galaxy system and download results
-
+Stage two pipeline on Galaxy system and download results
+========================================================
 Go to http://smile.hku.hk/SARGs  and using the module ARG_OAP.  
 
 1. Using **ARG_OAP** -> **Upload Files** module to upload the extracted fasta file and meta_data_online.txt file generated in stage one into Galaxy  
