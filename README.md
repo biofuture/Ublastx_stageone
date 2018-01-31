@@ -13,7 +13,7 @@ Novel features
 
 **A mirror site was added in Shenzhen China for mainland China users to solve the slow data uploading problem [SUSTC-MIRROR-ARGS-OAP](http://smile.sustc.edu.cn:8080/)**
 
-New release of Ublastx [Version 1.2](https://github.com/biofuture/Ublastx_stageone/releases/tag/Ublastx_stageone) 
+Repo of Ublastx [Version 1.2](https://github.com/biofuture/Ublastx_stageone/releases/tag/Ublastx_stageone) 
 
 
 **1. adding a method to obtain microbial community structure from the shotgun metagenomics data set.**  
