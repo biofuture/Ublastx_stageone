@@ -20,7 +20,7 @@ BEGIN {
 }
 
 
-our ($opt_h, $opt_i, $opt_o, $opt_n, $opt_m, $opt_f, $opt_z, $opt_c, $opt_x, $opt_y, $opt_v) = "";
+our ($opt_h, $opt_i, $opt_o, $opt_n, $opt_m, $opt_f, $opt_z, $opt_c, $opt_x, $opt_y, $opt_v, $opt_q) = "";
 my  $usage = <<USE;
 	Author: JIANG Xiaotao
 	Date: 12-11-2014
@@ -34,6 +34,7 @@ my  $usage = <<USE;
 	-o Output files directory, default current directory
 	-n number of threads used for usearch, default 1
 	-f the format of processed files, default fq
+	-q quality control of fastq sequences defualt not take effect, set to 1, then will do QC with fastp
 	-z whether the fq files were .gz format, if -z, then firstly gzip -d, default(none) 
 	-x evalue for searching 16S in usearch default 1e-10
 	-y evalue for searching universal single copy marker gene default 3
@@ -44,7 +45,7 @@ USE
 
 #Get all the input parameters
 
-getopts('i:o:n:f:m:c:x:y:v:hz');
+getopts('i:o:n:f:m:c:x:y:v:hzq');
 if($opt_h  ||  ($opt_i eq "") ){
 	die "$usage\n";
 }
@@ -141,12 +142,32 @@ for my $fq (sort {$a <=> $b } keys %samples){
 			print BASH "gzip -f -d $f2\n";
 			$f1 = "$opt_i/$samples{$fq}_1.fq";
 			$f2 = "$opt_i/$samples{$fq}_2.fq";
+	
+			##if quality control needed using fastp to do it
+			if($opt_q){
+				my $fo1 = "$opt_i/$samples{$fq}.fastp.1.fq";
+				my $fo2 = "$opt_i/$samples{$fq}.fastp.2.fq";
+				print BASH "$ublastxdir/bin/fastp -i $f1 -I $f2 -o $fo1 -O $fo2 -w $opt_n -j $opt_i/$samples{$fq}.jason -h $opt_i/$samples{$fq}.html\n";
+				$f1 = $fo1;
+				$f2 = $fo2;
+				
+			}
 
 		}else{
 			$f1 = "$opt_i/$samples{$fq}_1.fq";
 			$f2 = "$opt_i/$samples{$fq}_2.fq";
 			##Need to transform fq to fa		
 			die "No $f1\t$f2\n" unless(-e $f1 && -e $f2); 		
+
+			if($opt_q){
+				my $fo1 = "$opt_i/$samples{$fq}.fastp.1.fq";
+				my $fo2 = "$opt_i/$samples{$fq}.fastp.2.fq";
+				print BASH "$ublastxdir/bin/fastp -i $f1 -I $f2 -o $fo1 -O $fo2 -w $opt_n -j $opt_i/$samples{$fq}.jason -h $opt_i/$samples{$fq}.html\n";
+				$f1 = $fo1;
+				$f2 = $fo2;
+				
+			}
+
 		}
 
 		##Fq -> fa

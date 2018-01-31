@@ -1,6 +1,6 @@
-Start Ublastx one : Wed Jan 31 15:52:13 2018
-1. Check the files processed : Wed Jan 31 15:52:13 2018
-2. Process files and generate shell scripts for running : Wed Jan 31 15:52:13 2018
-3. running of tasks: Wed Jan 31 15:52:13 2018
-4 Merge  extracted fasta and update meta data : Wed Jan 31 15:52:13 2018
-5. Finsh Ublastx one: Wed Jan 31 15:53:51 2018
+Start Ublastx one : Wed Jan 31 21:52:08 2018
+1. Check the files processed : Wed Jan 31 21:52:08 2018
+2. Process files and generate shell scripts for running : Wed Jan 31 21:52:08 2018
+3. running of tasks: Wed Jan 31 21:52:08 2018
+4 Merge  extracted fasta and update meta data : Wed Jan 31 21:52:08 2018
+5. Finsh Ublastx one: Wed Jan 31 21:53:26 2018
