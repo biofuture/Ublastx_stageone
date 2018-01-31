@@ -1,4 +1,4 @@
-ARG_OAP_v2.0 manual
+ARGs_OAP_v2.0 manual
 ===============
 
 **New release of ublastx verion 2.0**  
