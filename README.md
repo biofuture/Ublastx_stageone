@@ -1,8 +1,9 @@
 ARG_OAP_v2.0 manual
 ===============
 
-**New release of ublastx verion 2.0**
-Novel features
+**New release of ublastx verion 2.0**  
+
+**Novel features**
 
 1. The SARG database was expanded about three times in the version 2.0
 2. SARGfam was supplied
