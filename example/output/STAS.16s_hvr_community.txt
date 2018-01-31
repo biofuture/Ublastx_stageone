@@ -1,0 +1,10 @@
+k__Archaea; p__Crenarchaeota; c__MCG; o__; f__; g__; s__	0.845921450151057
+k__Bacteria; p__; c__; o__; f__; g__; s__	0.709969788519637
+k__Bacteria; p__Bacteroidetes; c__Bacteroidia; o__Bacteroidales; f__; g__; s__	0.655589123867069
+k__Bacteria; p__Proteobacteria; c__Alphaproteobacteria; o__; f__; g__; s__	0.513595166163142
+k__Bacteria; p__Proteobacteria; c__Deltaproteobacteria; o__; f__; g__; s__	1.13595166163142
+k__Bacteria; p__Proteobacteria; c__Deltaproteobacteria; o__Myxococcales; f__; g__; s__	1.16012084592145
+k__Bacteria; p__Proteobacteria; c__Deltaproteobacteria; o__Myxococcales; f__Haliangiaceae; g__; s__	0.664652567975831
+k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__; f__; g__; s__	1.78751258811682
+k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__Chromatiales; f__; g__; s__	0.95619335347432
+k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__Oceanospirillales; f__Halomonadaceae; g__Halomonas; s__	0.506042296072508
