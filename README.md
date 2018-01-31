@@ -63,17 +63,25 @@ Stage one pipeline
 ==================
 When meta-data.txt and database files are prepared, then put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
 
-`nohup ../ublastx_stage_one  -i inputfqs -o testoutdir -m meta-data.txt -n 2`   
-    
+`nohup ../ublastx_stage_one  -i inputfqs -o testoutdir -m meta-data.txt -n 8`
+
     Usage: ./ublastx_stage_one -i <Fq input dir> -m <Metadata_map.txt> -o <output dir> -n [number of threads] -f [fa|fq] -z -h  -c    
+            Author: JIANG Xiaotao
+        Date: 12-11-2014
+        Modidied : 31-01-2018
+        Email: biofuture.jiang@gmail.com
+        ./ublastx_stage_one_version2 -i <Fq input dir> -m <Metadata_map.txt> -o <output dir> -n [number of threads] -f [fa|fq] -z -h -c [S|U]
         -i Input files directory, required
         -m meta data file, required
         -o Output files directory, default current directory
         -n number of threads used for usearch, default 1
         -f the format of processed files, default fq
         -z whether the fq files were .gz format, if -z, then firstly gzip -d, default(none) 
-        -c This option fulfill copy number correction by Copywriter database to transfrom 16S information into cell number [ direct searching hyper variable region database by usearch; default 1]
-        -h print this help information 
+        -x evalue for searching 16S in usearch default 1e-10
+        -y evalue for searching universal single copy marker gene default 3
+        -v the identity value for diamond to search the USCMGs default  0.45
+        -c This option is to chose methods for estimating the prokyarto cell number  using copy number correction by Copywriter database to transfrom 16S information into cell number [ direct searching hyper variable region database by usearch] opetin "S", or using 30 universal single copy marker genes of prokyarto averagely coverage to estimate the cell number (Here, we ignore other eukaryota sequences in one metagenomics sample) represented by "U", (default U)
+        -h print this help information
 
 This step will search reads against SARG databbase and 16S greengene non-redundant 85 OTUs database to identify potential ARG reads and 16S reads. This step will generate searching results files for each fastq.  This step also obtain the microbial community structure information of samples by searching against hyper-variable region database, and then perform copy number correction using Copyrighter copy number database (release date) to finally estimate the cell number of samples. 
  
