@@ -1,0 +1,26 @@
+Type ppm
+	STAS	SWHAS104
+aminoglycoside	0	20
+bacitracin	5	5
+beta-lactam	0	45
+bleomycin	0	0
+carbomycin	0	0
+chloramphenicol	0	0
+fosfomycin	0	0
+fosmidomycin	0	0
+fusaric-acid	0	0
+fusidic-acid	0	0
+kasugamycin	0	0
+macrolide-lincosamide-streptogramin	5	10
+multidrug	15	30
+polymyxin	0	0
+puromycin	0	0
+quinolone	40	5
+rifamycin	5	0
+spectinomycin	0	0
+sulfonamide	5	15
+tetracenomycin_C	0	0
+tetracycline	0	25
+trimethoprim	0	0
+unclassified	5	0
+vancomycin	0	0

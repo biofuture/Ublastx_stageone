@@ -1,0 +1,89 @@
+
+R version 3.4.4 (2018-03-15) -- "Someone to Lean On"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> 
+> mothertable <- read.table(file="teststagetwoout.normalize_16s.mergesubtype.tab.txt", sep="\t",header=T,row.names=1,quote = "", stringsAsFactors = FALSE)
+> #remove zero line
+> mothertable <- mothertable[which(rowSums(mothertable)!=0),]
+> mothertable <- t(mothertable)
+> mothertable <- mothertable[which(rowSums(mothertable)!=0),]
+> dim(mothertable)
+[1]  47 728
+> 
+> library(vegan)
+Loading required package: permute
+Loading required package: lattice
+This is vegan 2.4-6
+> library(labdsv)
+Loading required package: mgcv
+Loading required package: nlme
+This is mgcv 1.8-23. For overview type 'help("mgcv-package")'.
+Loading required package: MASS
+Loading required package: cluster
+
+Attaching package: ‘labdsv’
+
+The following object is masked from ‘package:stats’:
+
+    density
+
+> library(ggplot2)
+> library(scales)
+> cols <- c("ST", "SWH", "DrinkingwaterSystem", "DrinkingwaterSystem", "DrinkingwaterSystem", "DrinkingwaterSystem", "DrinkingwaterSystem", "DrinkingwaterSystem", "DrinkingwaterSystem", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "SewageTreatmentPlant", "Sediment", "Sediment", "Sediment", "LiveStock", "LiveStock", "LiveStock", "LiveStock", "LiveStock", "LiveStock", "LiveStock", "LiveStock", "LiveStock", "LiveStock", "LiveStock", "LiveStock", "Ocean", "Ocean", "Ocean")
+> pdf("teststagetwoout.16S.pdf")
+> vd <- vegdist(mothertable,method="bray")
+> vd.pco <- pco(vd, k=10)
+> pcoadata <- data.frame(vd.pco$points[,1], vd.pco$points[,2], cols)
+> EnvironmentType <- pcoadata$cols
+> pc1n <- vd.pco$eig[1]/sum(vd.pco$eig)
+> pc2n <- vd.pco$eig[2]/sum(vd.pco$eig)
+> xl <- paste("Pco1(",(pc1n*10000)%/%100,"%)",sep="")
+> yl <- paste("Pco2(", (pc2n*10000)%/%100,"%)",sep="")
+> p <- ggplot(pcoadata, aes(x=pcoadata$vd.pco.points...1., y=pcoadata$vd.pco.points...2., color=EnvironmentType)) + geom_point(size=5,alpha=.8)
+> p+theme(legend.position=c(0.2,0.8), panel.border = element_blank(), panel.grid.major = element_blank(), panel.background = element_blank(), panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"), legend.background = element_rect(fill=alpha('white', 0.2)) ) + labs(fill="Samples Type") + xlab(xl) + ylab(yl)
+> dev.off()
+null device 
+          1 
+> mothertable <- read.table(file="teststagetwoout.normalize_cellnumber.mergesubtype.tab.txt", sep="\t",header=T,row.names=1,quote = "", stringsAsFactors = FALSE)
+> #remove zero line
+> mothertable <- mothertable[which(rowSums(mothertable)!=0),]
+> mothertable <- t(mothertable)
+> mothertable <- mothertable[which(rowSums(mothertable)!=0),]
+> dim(mothertable)
+[1]  47 722
+> pdf("teststagetwoout.cell.pdf")
+> vd <- vegdist(mothertable,method="bray")
+> vd.pco <- pco(vd, k=10)
+> pcoadata <- data.frame(vd.pco$points[,1], vd.pco$points[,2], cols)
+> EnvironmentType <- pcoadata$cols
+> pc1n <- vd.pco$eig[1]/sum(vd.pco$eig)
+> pc2n <- vd.pco$eig[2]/sum(vd.pco$eig)
+> xl <- paste("Pco1(",(pc1n*10000)%/%100,"%)",sep="")
+> yl <- paste("Pco2(", (pc2n*10000)%/%100,"%)",sep="")
+> p <- ggplot(pcoadata, aes(x=pcoadata$vd.pco.points...1., y=pcoadata$vd.pco.points...2., color=EnvironmentType)) + geom_point(size=5,alpha=.8)
+> p+theme(legend.position=c(0.2,0.8), panel.border = element_blank(), panel.grid.major = element_blank(), panel.background = element_blank(), panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"), legend.background = element_rect(fill=alpha('white', 0.2)) ) + labs(fill="Samples Type") + xlab(xl) + ylab(yl)
+> dev.off()
+null device 
+          1 
+> 
+> proc.time()
+   user  system elapsed 
+  3.372   0.052   3.422 
