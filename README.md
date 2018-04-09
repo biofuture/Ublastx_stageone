@@ -9,13 +9,13 @@ ARGs_OAP_v2.0 manual
 2. SARGfam was supplied
 3. Cell number estimation with universial single-copy marker gene was added
 4. Add -q for quality control of raw fastq files
-5. Local version of stage two script
-
+5. <span style="color:red">Local version of stage two script</span>
+6. <span style="color:red">Adding option -s for very big input data (useful for users without 64bit usearch to split big input automatically)</span>,
  
 
 **We have simplified the running process of stage_one. We have made a step by step video about how to use ARGs-OAP platform, hopefully, this video will guid new users to go through the process within ten minutes.  The address is: https://www.youtube.com/watch?v=PCr1ctXvZPk**    
 
-**As many users have very big data to analyze, we will supply a local version for the stage two analysis in the near future along with SARG2.0 database. Some users report that the Galaxy has problem for uploading data in China, please refreash the page and upload again, the server is not stable as previous after upgrading.**
+**As many users have very big data to analyze, we supplied a local version for the stage two analysis in the near future along with SARG2.0 database. Some users report that the Galaxy has problem for uploading data in China, please refreash the page and upload again, the server is not stable as previous after upgrading.**
 
 **The DATABASE FILE of [SARG2.0](https://github.com/biofuture/Ublastx_stageone/blob/master/DB/SARG_20170328_12307.fasta) and the [structure](https://github.com/biofuture/Ublastx_stageone/blob/master/DB/structure_20170328_12037.LIST) of the database are under the DB directory.**
 
