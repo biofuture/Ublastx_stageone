@@ -5,13 +5,13 @@ ARGs_OAP_v2.0 manual
 
 **Novel features**
 
-1. The SARG database was expanded about three times in the version 2.0
-2. SARGfam was supplied
-3. Cell number estimation with universial single-copy marker gene was added
-4. Add -q for quality control of raw fastq files
-5. <span style="color:red">Local version of stage two script</span>
-6. <span style="color:red">Adding option -s for very big input data (useful for users without 64bit usearch to split big input automatically)</span>,
- 
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `1. The SARG database was expanded about three times in the version 2.0`  
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `2. SARGfam was supplied`    
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+)  `3. Cell number estimation with universial single-copy marker gene was added`    
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `4. Add -q for quality control of raw fastq files`    
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `5. Local version of stage two script`    
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `6. Adding option -s for very big input data (useful for users without 64bit usearch to split big input automatically)`      
+
 
 **We have simplified the running process of stage_one. We have made a step by step video about how to use ARGs-OAP platform, hopefully, this video will guid new users to go through the process within ten minutes.  The address is: https://www.youtube.com/watch?v=PCr1ctXvZPk**    
 
@@ -73,25 +73,29 @@ Stage one pipeline
 ==================
 When meta-data.txt and database files are prepared, then put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
 
-`nohup ../ublastx_stage_one  -i inputfqs -o testoutdir -m meta-data.txt -n 8`
+`nohup   ./argoap_pipeline_stageone_version2 -i inputfqs -o testoutdir -m meta-data.txt -n 8`
 
-    Usage: ./ublastx_stage_one -i <Fq input dir> -m <Metadata_map.txt> -o <output dir> -n [number of threads] -f [fa|fq] -z -h  -c    
-            Author: JIANG Xiaotao
-        Date: 12-11-2014
-        Modidied : 31-01-2018
+    ./argoap_pipeline_stageone_version2  -h
+        Author: JIANG Xiaotao
+        Modidied : 09-04-2018
         Email: biofuture.jiang@gmail.com
-        ./ublastx_stage_one_version2 -i <Fq input dir> -m <Metadata_map.txt> -o <output dir> -n [number of threads] -f [fa|fq] -z -h -c [S|U]
+        ./argoap_pipeline_stageone_version2 -i <Fq input dir> -m <Metadata_map.txt> -o <output dir> -n [number of threads] -f [fa|fq] -z -h -c [S|U]
+
         -i Input files directory, required
         -m meta data file, required
         -o Output files directory, default current directory
         -n number of threads used for usearch, default 1
         -f the format of processed files, default fq
+        -q quality control of fastq sequences defualt not take effect, set to 1, then will do QC with fastp
         -z whether the fq files were .gz format, if -z, then firstly gzip -d, default(none) 
         -x evalue for searching 16S in usearch default 1e-10
         -y evalue for searching universal single copy marker gene default 3
         -v the identity value for diamond to search the USCMGs default  0.45
+        -s if fastq is too large, split into smaller ones 
         -c This option is to chose methods for estimating the prokyarto cell number  using copy number correction by Copywriter database to transfrom 16S information into cell number [ direct searching hyper variable region database by usearch] opetin "S", or using 30 universal single copy marker genes of prokyarto averagely coverage to estimate the cell number (Here, we ignore other eukaryota sequences in one metagenomics sample) represented by "U", (default U)
         -h print this help information
+
+
 
 This step will search reads against SARG databbase and 16S greengene non-redundant 85 OTUs database to identify potential ARG reads and 16S reads. This step will generate searching results files for each fastq.  This step also obtain the microbial community structure information of samples by searching against hyper-variable region database, and then perform copy number correction using Copyrighter copy number database (release date) to finally estimate the cell number of samples. 
  
@@ -116,6 +120,38 @@ SampleID | Name | Category | #ofreads | #of16S| **#ofCell**
  1       | STAS | ST  |200000 | 10.1  |   4.9
  2       | SWHAS104 | SWH  |200000 | 9.7 |    4.1
 
+
+Stage two pipeline for local runnig
+========================================================
+As many users have very big data, we supply a local version for the stage two analyses in this updation.   
+
+**Prerequest for stage two script to run:**     
+    1. download the whole fold of this repo.    
+    2. install R packages **vegan, labdsv, ggplot2 and scales**  (Enter R and use install.packages(pkgs="vegan") to install these packages).       
+
+
+    perl ublastx_stage_two_version2
+        Author: JIANG Xiao-Tao
+        Modidied : 06-04-2018
+        Email: biofuture.jiang@gmail.com
+        ./ublastx_stage_two_version2 -i <extracted.fa> -m <meta_data_online.txt> -n [number of threads] -l [length] -e [evalue] -d [identity] -o <output_prefix>
+        
+        -i the potential arg reads from stage one 
+        -m meta data online from stage one 
+        -o Output prefix
+        -n number of threads used for blastx, default 1
+        -l length filtering default 25 aa 
+        -e evalue filtering default 1e-7
+        -d identity filtering default 80
+        -b indicate starting points/ if set then process the blastx results directly [default off]
+        -h print this help information
+
+
+We added a -b option for the stage two script if users already have the blastx outfmt 6 format resutls by alighment against SARG2.0.    
+    **A typical senery is that users can paralelly run the blastx on clusters by multi-nodes, and then merge the blastx output as the input for the -b option.**
+    
+    perl ublastx_stage_two_version2 -i extracted.fa -m meta_data_online.txt -o testout -b merge_blastx.out.txt 
+   
 Stage two pipeline on Galaxy system and download results
 ========================================================
 Go to http://smile.hku.hk/SARGs  and using the module ARG_OAP.  
