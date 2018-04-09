@@ -1,83 +1,83 @@
-FCC21WPACXX:1:1101:4997:3115#GAGGTTCA/1	ARG887	66.7	33	11	0	99	1	262	294	6.2e-06	44.7
-FCC21WPACXX:1:1101:18580:1802#GAGGTTCA/1	ARG1495	60.6	33	13	0	1	99	312	344	2.1e-06	46.2
-FCC21WPACXX:1:1101:14841:2389#GAGGTTCA/1	ARG389	64.3	28	10	0	97	14	776	803	1.6e-06	46.6
-FCC21WPACXX:1:1101:15875:2275#GAGGTTCA/1	ARG1059	51.5	33	16	0	100	2	63	95	2.1e-06	46.2
-FCC21WPACXX:1:1101:11812:5920#GAGGTTCA/1	ARG866	63.3	30	11	0	3	92	358	387	1e-05	43.9
-FCC21WPACXX:1:1101:19637:5991#GAGGTTCA/1	ARG3236	63.6	33	12	0	99	1	186	218	4.3e-07	48.5
-FCC21WPACXX:1:1101:16204:6435#GAGGTTCA/1	ARG1918	61.3	31	12	0	1	93	247	277	9.6e-07	47.4
-FCC21WPACXX:1:1101:17421:6517#GAGGTTCA/1	ARG3580	68.8	32	10	0	1	96	538	569	2.1e-06	46.2
-FCC21WPACXX:1:1101:20314:8048#GAGGTTCA/1	ARG329	65.6	32	11	0	3	98	29	60	5.5e-07	48.1
-FCC21WPACXX:1:1101:15032:8317#GAGGTTCA/1	ARG273	60.6	33	13	0	1	99	443	475	6.2e-06	44.7
-FCC21WPACXX:1:1101:13602:8564#GAGGTTCA/1	ARG329	68.8	32	10	0	98	3	363	394	7.1e-07	47.8
-FCC21WPACXX:1:1101:2280:11889#GAGGTTCA/1	ARG57	65.6	32	11	0	100	5	500	531	2.8e-06	45.8
-FCC21WPACXX:1:1101:2904:12505#GAGGTTCA/1	ARG23	66.7	33	11	0	1	99	456	488	6.6e-08	51.2
-FCC21WPACXX:1:1101:11329:12538#GAGGTTCA/1	ARG198	60.6	33	13	0	99	1	74	106	4.8e-06	45.1
-FCC21WPACXX:1:1101:17060:13438#GAGGTTCA/1	ARG167	100.0	33	0	0	1	99	200	232	7.3e-15	74.3
-FCC21WPACXX:1:1101:9358:13567#GAGGTTCA/1	ARG6846	76.9	26	6	0	79	2	852	877	8.1e-06	44.3
-FCC21WPACXX:1:1101:7349:15130#GAGGTTCA/1	ARG404	71.0	31	9	0	93	1	136	166	5.1e-08	51.6
-FCC21WPACXX:1:1101:3895:21289#GAGGTTCA/1	ARG11238	62.5	32	12	0	98	3	104	135	3.5e-06	45.4
-FCC21WPACXX:1:1101:1437:23904#GAGGTTCA/1	ARG2993	57.6	33	14	0	1	99	389	421	6.2e-06	44.7
-FCC21WPACXX:1:1101:6787:23767#GAGGTTCA/1	ARG404	56.7	30	13	0	5	94	24	53	3.6e-06	45.4
-FCC21WPACXX:1:1101:13592:22322#GAGGTTCA/1	ARG856	68.8	32	10	0	96	1	330	361	6e-09	54.7
-FCC21WPACXX:1:1101:10489:25004#GAGGTTCA/1	ARG198	61.3	31	12	0	8	100	69	99	2.1e-06	46.2
-FCC21WPACXX:1:1101:2438:25701#GAGGTTCA/1	ARG479	69.7	33	10	0	2	100	947	979	5.6e-07	48.1
-FCC21WPACXX:1:1101:10315:25616#GAGGTTCA/1	ARG8343	56.2	32	14	0	97	2	284	315	2.1e-06	46.2
-FCC21WPACXX:1:1101:7166:25964#GAGGTTCA/1	ARG183	51.5	33	16	0	1	99	114	146	4.8e-06	45.1
-FCC21WPACXX:1:1101:21110:25883#GAGGTTCA/1	ARG12124	58.6	29	12	0	13	99	57	85	2.8e-06	45.8
-FCC21WPACXX:1:1101:19464:26274#GAGGTTCA/1	ARG3236	71.9	32	9	0	96	1	169	200	1.6e-06	46.6
-FCC21WPACXX:1:1101:15327:26503#GAGGTTCA/1	ARG2022	57.6	33	14	0	1	99	220	252	6.2e-06	44.7
-FCC21WPACXX:1:1101:19253:27340#GAGGTTCA/1	ARG2468	76.9	26	6	0	9	86	68	93	2.7e-06	45.8
-FCC21WPACXX:1:1101:5023:27925#GAGGTTCA/1	ARG391	69.7	33	10	0	100	2	342	374	4.6e-09	55.1
-FCC21WPACXX:1:1101:2411:30397#GAGGTTCA/1	ARG59	75.0	28	7	0	85	2	85	112	4.8e-06	45.1
-FCC21WPACXX:1:1101:18541:31096#GAGGTTCA/1	ARG298	62.1	29	11	0	5	91	75	103	4.8e-06	45.1
-FCC21WPACXX:1:1101:4982:29664#GAGGTTCA/1	ARG1507	57.6	33	14	0	1	99	56	88	2.8e-06	45.8
-FCC21WPACXX:1:1101:8290:29509#GAGGTTCA/1	ARG816	75.0	32	8	0	1	96	75	106	1e-08	53.9
-FCC21WPACXX:1:1101:10300:30171#GAGGTTCA/1	ARG229	68.8	32	10	0	3	98	28	59	8.4e-08	50.8
-FCC21WPACXX:1:1101:4238:33726#GAGGTTCA/1	ARG270	75.0	32	8	0	4	99	312	343	2.7e-09	55.8
-FCC21WPACXX:1:1101:19613:36399#GAGGTTCA/1	ARG23	80.0	25	5	0	75	1	926	950	2.8e-06	45.8
-FCC21WPACXX:1:1101:11721:35554#GAGGTTCA/1	ARG940	75.0	32	8	0	98	3	83	114	2.2e-08	52.8
-FCC21WPACXX:1:1101:16031:36977#GAGGTTCA/1	ARG329	65.6	32	11	0	3	98	846	877	2.4e-07	49.3
-FCC21WPACXX:1:1101:20483:36879#GAGGTTCA/1	ARG8204	100.0	32	0	0	3	98	2	33	1.3e-13	70.1
-FCC21WPACXX:1:1101:16039:37484#GAGGTTCA/1	ARG10228	63.0	27	10	0	2	82	133	159	4.5e-06	45.1
-FCC21WPACXX:1:1101:14166:37756#GAGGTTCA/1	ARG1463	62.5	32	12	0	98	3	972	1003	2.1e-06	46.2
-FCC21WPACXX:1:1101:17381:37864#GAGGTTCA/1	ARG1664	56.2	32	14	0	3	98	139	170	4.6e-06	45.1
-FCC21WPACXX:1:1101:19451:38221#GAGGTTCA/1	ARG649	53.1	32	15	0	3	98	217	248	2.1e-06	46.2
-FCC21WPACXX:1:1101:9992:42287#GAGGTTCA/1	ARG2508	72.7	33	9	0	100	2	55	87	3e-08	52.4
-FCC21WPACXX:1:1101:7569:44528#GAGGTTCA/1	ARG2468	76.9	26	6	0	85	8	68	93	2.8e-06	45.8
-FCC21WPACXX:1:1101:4739:44949#GAGGTTCA/1	ARG1006	60.6	33	13	0	2	100	465	497	8.1e-06	44.3
-FCC21WPACXX:1:1101:5462:46743#GAGGTTCA/1	ARG4762	62.5	32	12	0	3	98	75	106	7.9e-06	44.3
-FCC21WPACXX:1:1101:18828:46764#GAGGTTCA/1	ARG9060	60.6	33	13	0	1	99	79	111	2.5e-07	49.3
-FCC21WPACXX:1:1101:18609:47933#GAGGTTCA/1	ARG391	60.6	33	13	0	99	1	353	385	9.6e-07	47.4
-FCC21WPACXX:1:1101:15258:48010#GAGGTTCA/1	ARG391	69.7	33	10	0	1	99	344	376	7.8e-09	54.3
-FCC21WPACXX:1:1101:16919:49387#GAGGTTCA/1	ARG7846	66.7	33	11	0	2	100	380	412	8.7e-08	50.8
-FCC21WPACXX:1:1101:10739:50705#GAGGTTCA/1	ARG3236	57.6	33	14	0	2	100	184	216	3.3e-07	48.9
-FCC21WPACXX:1:1101:9301:52283#GAGGTTCA/1	ARG510	68.8	32	10	0	5	100	27	58	9.6e-07	47.4
-FCC21WPACXX:1:1101:2293:53431#GAGGTTCA/1	ARG1965	87.5	32	4	0	98	3	299	330	2.1e-11	62.8
-FCC21WPACXX:1:1101:8019:54631#GAGGTTCA/1	ARG6086	62.5	32	12	0	3	98	519	550	7.9e-06	44.3
-FCC21WPACXX:1:1101:12454:54849#GAGGTTCA/1	ARG273	60.6	33	13	0	2	100	440	472	2.8e-06	45.8
-FCC21WPACXX:1:1101:21000:56570#GAGGTTCA/1	ARG4364	56.2	32	14	0	3	98	362	393	7.9e-06	44.3
-FCC21WPACXX:1:1101:16734:55659#GAGGTTCA/1	ARG391	65.6	32	11	0	99	4	346	377	6.6e-08	51.2
-FCC21WPACXX:1:1101:15355:59528#GAGGTTCA/1	ARG11259	68.8	32	10	0	1	96	306	337	7.3e-07	47.8
-FCC21WPACXX:1:1101:11849:61073#GAGGTTCA/1	ARG2468	76.9	26	6	0	14	91	68	93	2.8e-06	45.8
-FCC21WPACXX:1:1101:1915:61448#GAGGTTCA/1	ARG26	87.5	32	4	0	1	96	533	564	1.4e-10	60.1
-FCC21WPACXX:1:1101:10093:61536#GAGGTTCA/1	ARG1059	70.4	27	8	0	19	99	327	353	1.9e-07	49.7
-FCC21WPACXX:1:1101:18717:62925#GAGGTTCA/1	ARG329	59.4	32	13	0	3	98	125	156	5.5e-07	48.1
-FCC21WPACXX:1:1101:3500:63061#GAGGTTCA/1	ARG1664	54.5	33	15	0	2	100	138	170	2.8e-06	45.8
-FCC21WPACXX:1:1101:12997:63076#GAGGTTCA/1	ARG1947	66.7	33	11	0	1	99	188	220	7.3e-07	47.8
-FCC21WPACXX:1:1101:6039:63457#GAGGTTCA/1	ARG3366	72.7	33	9	0	100	2	21	53	1.5e-07	50.1
-FCC21WPACXX:1:1101:12897:65428#GAGGTTCA/1	ARG2468	76.9	26	6	0	84	7	68	93	2.8e-06	45.8
-FCC21WPACXX:1:1101:14210:65289#GAGGTTCA/1	ARG3091	60.0	30	12	0	10	99	412	441	8.1e-06	44.3
-FCC21WPACXX:1:1101:10356:64434#GAGGTTCA/1	ARG873	78.8	33	7	0	2	100	290	322	3.8e-11	62.0
-FCC21WPACXX:1:1101:20216:68042#GAGGTTCA/1	ARG569	76.9	26	6	0	13	90	10	35	2.8e-06	45.8
-FCC21WPACXX:1:1101:2993:69858#GAGGTTCA/1	ARG329	56.2	32	14	0	1	96	904	935	2.8e-06	45.8
-FCC21WPACXX:1:1101:3463:69849#GAGGTTCA/1	ARG1146	54.5	33	15	0	1	99	404	436	6.2e-06	44.7
-FCC21WPACXX:1:1101:16684:70637#GAGGTTCA/1	ARG329	83.9	31	5	0	95	3	855	885	4e-10	58.5
-FCC21WPACXX:1:1101:8206:71242#GAGGTTCA/1	ARG7	68.8	32	10	0	2	97	396	427	3.6e-06	45.4
-FCC21WPACXX:1:1101:1541:72415#GAGGTTCA/1	ARG65	60.6	33	13	0	99	1	398	430	2.1e-06	46.2
-FCC21WPACXX:1:1101:1092:72609#GAGGTTCA/1	ARG110	78.8	33	7	0	2	100	869	901	2.3e-08	52.8
-FCC21WPACXX:1:1101:8843:72595#GAGGTTCA/1	ARG32	60.6	33	13	0	99	1	252	284	1.3e-06	47.0
-FCC21WPACXX:1:1101:11018:73424#GAGGTTCA/1	ARG309	100.0	33	0	0	1	99	123	155	2.4e-13	69.3
-FCC21WPACXX:1:1101:7977:74075#GAGGTTCA/1	ARG59	78.6	28	6	0	86	3	73	100	4.9e-08	51.6
-FCC21WPACXX:1:1101:2639:74565#GAGGTTCA/1	ARG1134	100.0	33	0	0	100	2	129	161	5.3e-13	68.2
-FCC21WPACXX:1:1101:18358:74813#GAGGTTCA/1	ARG25	71.0	31	9	0	7	99	118	148	1.9e-07	49.7
-FCC21WPACXX:1:1101:1795:74803#GAGGTTCA/1	ARG461	100.0	33	0	0	2	100	56	88	1.2e-14	73.6
+FCC21WPACXX:1:1101:18580:1802#GAGGTTCA/1	ZP_02371789 hydrophobe/amphiphile efflux family protein [Burkholderia thailandensis TXDOH].	60.6	33	13	0	1	99	312	344	2.1e-06	46.2
+FCC21WPACXX:1:1101:14841:2389#GAGGTTCA/1	NC_002516.2.877852.p01 Resistance-Nodulation-cell Division (RND) multidrug efflux transporter MexB. Product name confidence: class 1 (Function experimentally demonstrated in P. aeruginosa). Encoded by gene mexB. ARO:3000378 mexB. [Pseudomonas aeruginosa PAO1]	64.3	28	10	0	97	14	776	803	1.6e-06	46.6
+FCC21WPACXX:1:1101:4997:3115#GAGGTTCA/1	YP_001668663 hydrophobe/amphiphile efflux-1 (HAE1) family protein [Pseudomonas putida GB-1].	66.7	33	11	0	99	1	262	294	6.2e-06	44.7
+FCC21WPACXX:1:1101:15875:2275#GAGGTTCA/1	AAF86692 AMPC cephalosporinase precursor protein ACC-1a [Hafnia alvei].	51.5	33	16	0	100	2	63	95	2.1e-06	46.2
+FCC21WPACXX:1:1101:11812:5920#GAGGTTCA/1	gi|829054192|ref|WP_047288005.1| class C beta-lactamase [Pseudomonas fluorescens]	63.3	30	11	0	3	92	358	387	1e-05	43.9
+FCC21WPACXX:1:1101:19637:5991#GAGGTTCA/1	M80346.gene.p01 car(A) protein. carA Curated. Encoded by gene car(A). ARO:3002817 carA. [Streptomyces thermotolerans]	63.6	33	12	0	99	1	186	218	4.3e-07	48.5
+FCC21WPACXX:1:1101:16204:6435#GAGGTTCA/1	ZP_03265942 undecaprenol kinase [Burkholderia sp. H160].	61.3	31	12	0	1	93	247	277	9.6e-07	47.4
+FCC21WPACXX:1:1101:17421:6517#GAGGTTCA/1	gi|943909899|ref|WP_055545300.1| multidrug ABC transporter ATP-binding protein [Streptomyces kanamyceticus]	68.8	32	10	0	1	96	538	569	2.1e-06	46.2
+FCC21WPACXX:1:1101:20314:8048#GAGGTTCA/1	gi|657322971|ref|WP_029396025.1| multidrug resistance protein MdtC [Escherichia coli]	65.6	32	11	0	3	98	29	60	5.5e-07	48.1
+FCC21WPACXX:1:1101:15032:8317#GAGGTTCA/1	AF024666.2.gene6.p01 TetA. ABC transporter. Encoded by gene tetA. ARO:3000165 tetA. [Corynebacterium striatum]	60.6	33	13	0	1	99	443	475	6.2e-06	44.7
+FCC21WPACXX:1:1101:13602:8564#GAGGTTCA/1	gi|657322971|ref|WP_029396025.1| multidrug resistance protein MdtC [Escherichia coli]	68.8	32	10	0	98	3	363	394	7.1e-07	47.8
+FCC21WPACXX:1:1101:2280:11889#GAGGTTCA/1	gi|662754041|ref|WP_030125200.1| multidrug ABC transporter ATPase [[Kitasatospora] papulosa]	65.6	32	11	0	100	5	500	531	2.8e-06	45.8
+FCC21WPACXX:1:1101:2904:12505#GAGGTTCA/1	gi|950562188|ref|WP_057431811.1| transporter [Pseudomonas syringae] >gi|940075131|gb|KPW96110.1| Multidrug efflux RND transporter MexF [Pseudomonas syringae pv. castaneae] >gi|982671032|gb|KWS91487.1| transporter [Pseudomonas syringae pv. castaneae]	66.7	33	11	0	1	99	456	488	6.6e-08	51.2
+FCC21WPACXX:1:1101:11329:12538#GAGGTTCA/1	L42544.gene.p01 tetT* protein. Encoded by gene tetT*. ARO:3000193 tetT. [Streptococcus pyogenes]	60.6	33	13	0	99	1	74	106	4.8e-06	45.1
+FCC21WPACXX:1:1101:17060:13438#GAGGTTCA/1	gi|504871867|ref|WP_015058969.1| ANT(3'') family aminoglycoside nucleotidyltransferase [Escherichia coli] >gi|410593050|ref|YP_006952971.1| aminoglycoside resistance protein AadA [Escherichia coli] >gi|305670978|gb|ADM62839.1| aminoglycoside resistance protein AadA (plasmid) [Escherichia coli]	100.0	33	0	0	1	99	200	232	7.3e-15	74.3
+FCC21WPACXX:1:1101:9358:13567#GAGGTTCA/1	YP_792720 multidrug efflux protein [Pseudomonas aeruginosa UCBPP-PA14].	76.9	26	6	0	79	2	852	877	8.1e-06	44.3
+FCC21WPACXX:1:1101:7349:15130#GAGGTTCA/1	gi|507050365|ref|WP_016121371.1| bacitracin transport ATP-binding protein BcrA [Bacillus cereus] >gi|500433629|gb|EOP47564.1| bacitracin transport ATP-binding protein BcrA [Bacillus cereus VD146]	71.0	31	9	0	93	1	136	166	5.1e-08	51.6
+FCC21WPACXX:1:1101:3895:21289#GAGGTTCA/1	GQ244501.1.gene1.p01 Tet43. Encoded by gene tet43. Efflux protein. ARO:3000573 tet43. [uncultured bacterium AOTet43]	62.5	32	12	0	98	3	104	135	3.5e-06	45.4
+FCC21WPACXX:1:1101:13592:22322#GAGGTTCA/1	AJ295345.1.gene1.p01 beta-lactamase class C. OCH-7 Curated. Encoded by gene bla OCH-7. ARO:3002520 OCH-7. [Ochrobactrum anthropi]	68.8	32	10	0	96	1	330	361	6e-09	54.7
+FCC21WPACXX:1:1101:1437:23904#GAGGTTCA/1	gi|966407319|ref|WP_058450725.1| transporter [Legionella jamestowniensis] >gi|962224083|gb|KTD08733.1| RND multidrug efflux transporter MexF [Legionella jamestowniensis] >gi|1045919862|gb|OCH96829.1| transporter [Legionella jamestowniensis]	57.6	33	14	0	1	99	389	421	6.2e-06	44.7
+FCC21WPACXX:1:1101:6787:23767#GAGGTTCA/1	gi|507050365|ref|WP_016121371.1| bacitracin transport ATP-binding protein BcrA [Bacillus cereus] >gi|500433629|gb|EOP47564.1| bacitracin transport ATP-binding protein BcrA [Bacillus cereus VD146]	56.7	30	13	0	5	94	24	53	3.6e-06	45.4
+FCC21WPACXX:1:1101:10489:25004#GAGGTTCA/1	L42544.gene.p01 tetT* protein. Encoded by gene tetT*. ARO:3000193 tetT. [Streptococcus pyogenes]	61.3	31	12	0	8	100	69	99	2.1e-06	46.2
+FCC21WPACXX:1:1101:2438:25701#GAGGTTCA/1	gi|691078841|ref|WP_032016505.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|571711092|gb|ETR00064.1| RND-type multidrug efflux pump subunit AdeJ [Acinetobacter baumannii UH6107]	69.7	33	10	0	2	100	947	979	5.6e-07	48.1
+FCC21WPACXX:1:1101:10315:25616#GAGGTTCA/1	CP001918.1.gene3440.p01 multidrug efflux system subunit MdtB. Encoded by gene ECL_03402. ARO:3000793 mdtB. [Enterobacter cloacae subsp. cloacae ATCC 13047]	56.2	32	14	0	97	2	284	315	2.1e-06	46.2
+FCC21WPACXX:1:1101:7166:25964#GAGGTTCA/1	AAZ93366 CMY-2 [Salmonella enterica subsp. enterica serovar Newport].	51.5	33	16	0	1	99	114	146	4.8e-06	45.1
+FCC21WPACXX:1:1101:21110:25883#GAGGTTCA/1	AJ250203.gene.p01 tet31 protein. Encoded by gene tet31. ARO:3000476 tet31. [Aeromonas salmonicida]	58.6	29	12	0	13	99	57	85	2.8e-06	45.8
+FCC21WPACXX:1:1101:19464:26274#GAGGTTCA/1	M80346.gene.p01 car(A) protein. carA Curated. Encoded by gene car(A). ARO:3002817 carA. [Streptomyces thermotolerans]	71.9	32	9	0	96	1	169	200	1.6e-06	46.6
+FCC21WPACXX:1:1101:15327:26503#GAGGTTCA/1	gi|985600749|ref|WP_060840246.1| class C beta-lactamase [Pseudomonas sp. Os17] >gi|771844055|dbj|BAQ75842.1| beta-lactamase [Pseudomonas sp. Os17]	57.6	33	14	0	1	99	220	252	6.2e-06	44.7
+FCC21WPACXX:1:1101:19253:27340#GAGGTTCA/1	gi|525770206|ref|WP_020826741.1| class C beta-lactamase [Serratia liquefaciens] >gi|523442092|gb|AGQ31003.1| beta-lactamase [Serratia liquefaciens ATCC 27592]	76.9	26	6	0	9	86	68	93	2.7e-06	45.8
+FCC21WPACXX:1:1101:5023:27925#GAGGTTCA/1	gi|1001893474|ref|WP_061347329.1| OCH family class C extended-spectrum beta-lactamase [Ochrobactrum anthropi] >gi|1001186942|gb|KXO74441.1| class C beta-lactamase [Ochrobactrum anthropi]	69.7	33	10	0	100	2	342	374	4.6e-09	55.1
+FCC21WPACXX:1:1101:4982:29664#GAGGTTCA/1	ABB70054 TetA(M) [Enterococcus faecalis].	57.6	33	14	0	1	99	56	88	2.8e-06	45.8
+FCC21WPACXX:1:1101:8290:29509#GAGGTTCA/1	YP_001478290 pentapeptide repeat-containing protein [Serratia proteamaculans 568].	75.0	32	8	0	1	96	75	106	1e-08	53.9
+FCC21WPACXX:1:1101:10300:30171#GAGGTTCA/1	YP_001176128 macrolide transporter ATP-binding /permease protein [Enterobacter sp. 638].	68.8	32	10	0	3	98	28	59	8.4e-08	50.8
+FCC21WPACXX:1:1101:2411:30397#GAGGTTCA/1	CP000647.1.gene4257.p01 response regulator in two-component regulatory system with CpxA, regulates expression of stress-related genes (OmpR family). Encoded by gene cpxR. ARO:3000831 cpxR. [Klebsiella pneumoniae subsp. pneumoniae MGH 78578]	75.0	28	7	0	85	2	85	112	4.8e-06	45.1
+FCC21WPACXX:1:1101:18541:31096#GAGGTTCA/1	CP000675.2.gene1535.p01 transcriptional regulatory protein CpxR. Encoded by gene cpxR. ARO:3000831 cpxR. [Legionella pneumophila str. Corby]	62.1	29	11	0	5	91	75	103	4.8e-06	45.1
+FCC21WPACXX:1:1101:4238:33726#GAGGTTCA/1	P74872 RecName: Full=Penicillin-binding protein 2; Short=PBP-2.	75.0	32	8	0	4	99	312	343	2.7e-09	55.8
+FCC21WPACXX:1:1101:11721:35554#GAGGTTCA/1	CAL13137 multidrug efflux protein [Yersinia enterocolitica subsp. enterocolitica 8081].	75.0	32	8	0	98	3	83	114	2.2e-08	52.8
+FCC21WPACXX:1:1101:19613:36399#GAGGTTCA/1	gi|950562188|ref|WP_057431811.1| transporter [Pseudomonas syringae] >gi|940075131|gb|KPW96110.1| Multidrug efflux RND transporter MexF [Pseudomonas syringae pv. castaneae] >gi|982671032|gb|KWS91487.1| transporter [Pseudomonas syringae pv. castaneae]	80.0	25	5	0	75	1	926	950	2.8e-06	45.8
+FCC21WPACXX:1:1101:16031:36977#GAGGTTCA/1	gi|657322971|ref|WP_029396025.1| multidrug resistance protein MdtC [Escherichia coli]	65.6	32	11	0	3	98	846	877	2.4e-07	49.3
+FCC21WPACXX:1:1101:20483:36879#GAGGTTCA/1	CAI46978 Class-A beta-lactamase [Pseudomonas aeruginosa].	100.0	32	0	0	3	98	2	33	1.3e-13	70.1
+FCC21WPACXX:1:1101:16039:37484#GAGGTTCA/1	L12710.gene.p01 AAC6-Ii protein. Encoded by gene AAC6-Ii. AAC(6')-Ii Curated. ARO:3002556 AAC(6')-Ii. [Enterococcus faecium]	63.0	27	10	0	2	82	133	159	4.8e-06	45.1
+FCC21WPACXX:1:1101:14166:37756#GAGGTTCA/1	YP_001266290 multidrug efflux protein [Pseudomonas putida F1].	62.5	32	12	0	98	3	972	1003	2.1e-06	46.2
+FCC21WPACXX:1:1101:17381:37864#GAGGTTCA/1	gi|738693880|ref|WP_036593137.1| MULTISPECIES: OCH family class C extended-spectrum beta-lactamase [Ochrobactrum] >gi|1025937477|gb|OAB85248.1| class C beta-lactamase [Ochrobactrum intermedium]	56.2	32	14	0	3	98	139	170	4.6e-06	45.1
+FCC21WPACXX:1:1101:19451:38221#GAGGTTCA/1	FJ262599.1.gene1.p1 extended spectrum beta-lactamase MOX-4. MOX-4 Curated. Encoded by gene ACI89425.1. ARO:3002184 MOX-4. [Aeromonas caviae]	53.1	32	15	0	3	98	217	248	2.1e-06	46.2
+FCC21WPACXX:1:1101:9992:42287#GAGGTTCA/1	AJ250876.1.gene1.p01 THIN-B proetin. THIN-B beta-lactamase Curated. Encoded by gene blaTHIN-B. ARO:3000851 THIN-B beta-lactamase. [Janthinobacterium lividum]	72.7	33	9	0	100	2	55	87	3e-08	52.4
+FCC21WPACXX:1:1101:7569:44528#GAGGTTCA/1	gi|525770206|ref|WP_020826741.1| class C beta-lactamase [Serratia liquefaciens] >gi|523442092|gb|AGQ31003.1| beta-lactamase [Serratia liquefaciens ATCC 27592]	76.9	26	6	0	85	8	68	93	2.8e-06	45.8
+FCC21WPACXX:1:1101:4739:44949#GAGGTTCA/1	gi|1011069317|ref|WP_062010695.1| multidrug ABC transporter ATP-binding protein [Streptomyces sporocinereus]	60.6	33	13	0	2	100	465	497	8.1e-06	44.3
+FCC21WPACXX:1:1101:5462:46743#GAGGTTCA/1	gi|943675889|ref|WP_055502070.1| vancomycin resistance DNA-binding response regulator VanR [Nonomuraea sp. NBRC 110462]	62.5	32	12	0	3	98	75	106	7.9e-06	44.3
+FCC21WPACXX:1:1101:18828:46764#GAGGTTCA/1	CP003583.1.gene2512.p01 adenine deaminase. Encoded by gene adeC. ARO:3000776 adeC. [Enterococcus faecium DO]	60.6	33	13	0	1	99	79	111	2.5e-07	49.3
+FCC21WPACXX:1:1101:18609:47933#GAGGTTCA/1	gi|1001893474|ref|WP_061347329.1| OCH family class C extended-spectrum beta-lactamase [Ochrobactrum anthropi] >gi|1001186942|gb|KXO74441.1| class C beta-lactamase [Ochrobactrum anthropi]	60.6	33	13	0	99	1	353	385	9.6e-07	47.4
+FCC21WPACXX:1:1101:15258:48010#GAGGTTCA/1	gi|1001893474|ref|WP_061347329.1| OCH family class C extended-spectrum beta-lactamase [Ochrobactrum anthropi] >gi|1001186942|gb|KXO74441.1| class C beta-lactamase [Ochrobactrum anthropi]	69.7	33	10	0	1	99	344	376	7.8e-09	54.3
+FCC21WPACXX:1:1101:16919:49387#GAGGTTCA/1	gi|654923461|ref|WP_028373991.1| transporter [Legionella lansingensis] >gi|962235717|gb|KTD20210.1| RND multidrug efflux transporter MexF [Legionella lansingensis]	66.7	33	11	0	2	100	380	412	8.7e-08	50.8
+FCC21WPACXX:1:1101:10739:50705#GAGGTTCA/1	M80346.gene.p01 car(A) protein. carA Curated. Encoded by gene car(A). ARO:3002817 carA. [Streptomyces thermotolerans]	57.6	33	14	0	2	100	184	216	3.3e-07	48.9
+FCC21WPACXX:1:1101:9301:52283#GAGGTTCA/1	gi|1022664304|ref|WP_063420886.1| macrolide ABC transporter permease/ATP-binding protein MacB [[Enterobacter] aerogenes] >gi|1022006465|gb|KZQ51067.1| macrolide ABC transporter permease/ATP-binding protein MacB [[Enterobacter] aerogenes]	68.8	32	10	0	5	100	27	58	9.6e-07	47.4
+FCC21WPACXX:1:1101:2293:53431#GAGGTTCA/1	gi|654549100|ref|WP_028016802.1| multidrug export protein EmrA [Enterobacter cloacae]	87.5	32	4	0	98	3	299	330	2.1e-11	62.8
+FCC21WPACXX:1:1101:8019:54631#GAGGTTCA/1	AF170880.4.gene1.p01 NovA. novA Curated. Encoded by gene novA. ABC transporter. ARO:3002522 novA. [Streptomyces niveus]	62.5	32	12	0	3	98	519	550	7.9e-06	44.3
+FCC21WPACXX:1:1101:12454:54849#GAGGTTCA/1	AF024666.2.gene6.p01 TetA. ABC transporter. Encoded by gene tetA. ARO:3000165 tetA. [Corynebacterium striatum]	60.6	33	13	0	2	100	440	472	2.8e-06	45.8
+FCC21WPACXX:1:1101:16734:55659#GAGGTTCA/1	gi|1001893474|ref|WP_061347329.1| OCH family class C extended-spectrum beta-lactamase [Ochrobactrum anthropi] >gi|1001186942|gb|KXO74441.1| class C beta-lactamase [Ochrobactrum anthropi]	65.6	32	11	0	99	4	346	377	6.6e-08	51.2
+FCC21WPACXX:1:1101:21000:56570#GAGGTTCA/1	gi|686197643|ref|WP_031807899.1| multidrug ABC transporter ATP-binding protein [Staphylococcus aureus] >gi|584825631|gb|EWJ51379.1| ABC transporter, ATP-binding/permease [Staphylococcus aureus H84980]	56.2	32	14	0	3	98	362	393	7.9e-06	44.3
+FCC21WPACXX:1:1101:15355:59528#GAGGTTCA/1	gi|951185348|ref|WP_057663064.1| multidrug transporter [Stenotrophomonas koreensis] >gi|947006582|gb|KRG60087.1| multidrug transporter [Stenotrophomonas koreensis]	68.8	32	10	0	1	96	306	337	7.3e-07	47.8
+FCC21WPACXX:1:1101:11849:61073#GAGGTTCA/1	gi|525770206|ref|WP_020826741.1| class C beta-lactamase [Serratia liquefaciens] >gi|523442092|gb|AGQ31003.1| beta-lactamase [Serratia liquefaciens ATCC 27592]	76.9	26	6	0	14	91	68	93	2.8e-06	45.8
+FCC21WPACXX:1:1101:1915:61448#GAGGTTCA/1	gi|554685678|ref|WP_023185565.1| MacB family efflux pump subunit [Salmonella enterica] >gi|554035491|gb|ESE81472.1| macrolide transporter ATP-binding /permease protein [Salmonella enterica subsp. indica serovar 6,14,25:z10:1,(2),7 str. 1121]	87.5	32	4	0	1	96	533	564	1.4e-10	60.1
+FCC21WPACXX:1:1101:10093:61536#GAGGTTCA/1	AAF86692 AMPC cephalosporinase precursor protein ACC-1a [Hafnia alvei].	70.4	27	8	0	19	99	327	353	1.9e-07	49.7
+FCC21WPACXX:1:1101:18717:62925#GAGGTTCA/1	gi|657322971|ref|WP_029396025.1| multidrug resistance protein MdtC [Escherichia coli]	59.4	32	13	0	3	98	125	156	5.5e-07	48.1
+FCC21WPACXX:1:1101:3500:63061#GAGGTTCA/1	gi|738693880|ref|WP_036593137.1| MULTISPECIES: OCH family class C extended-spectrum beta-lactamase [Ochrobactrum] >gi|1025937477|gb|OAB85248.1| class C beta-lactamase [Ochrobactrum intermedium]	54.5	33	15	0	2	100	138	170	2.8e-06	45.8
+FCC21WPACXX:1:1101:12997:63076#GAGGTTCA/1	YP_001187667 undecaprenyl pyrophosphate phosphatase [Pseudomonas mendocina ymp].	66.7	33	11	0	1	99	188	220	7.3e-07	47.8
+FCC21WPACXX:1:1101:6039:63457#GAGGTTCA/1	AF319779.2.orf0.gene.p01 macrolide-lincosamide-streptogramin B resistance protein. Encoded by gene erm(35). ARO:3000604 Erm(35). [Bacteroides coprosuis DSM 18011]	72.7	33	9	0	100	2	21	53	1.5e-07	50.1
+FCC21WPACXX:1:1101:10356:64434#GAGGTTCA/1	gi|1004696287|gb|AMP47315.1| TetA [uncultured bacterium]	78.8	33	7	0	2	100	290	322	3.8e-11	62.0
+FCC21WPACXX:1:1101:12897:65428#GAGGTTCA/1	gi|525770206|ref|WP_020826741.1| class C beta-lactamase [Serratia liquefaciens] >gi|523442092|gb|AGQ31003.1| beta-lactamase [Serratia liquefaciens ATCC 27592]	76.9	26	6	0	84	7	68	93	2.8e-06	45.8
+FCC21WPACXX:1:1101:14210:65289#GAGGTTCA/1	gi|171851258|emb|CAQ04234.1| ABC-type transport system TetA [Corynebacterium urealyticum DSM 7109]	60.0	30	12	0	10	99	412	441	8.1e-06	44.3
+FCC21WPACXX:1:1101:20216:68042#GAGGTTCA/1	Q8XL56 RecName: Full=Undecaprenyl-diphosphatase; AltName: Full=Undecaprenyl pyrophosphate phosphatase; AltName: Full=Bacitracin resistance protein.	76.9	26	6	0	13	90	10	35	2.8e-06	45.8
+FCC21WPACXX:1:1101:2993:69858#GAGGTTCA/1	gi|657322971|ref|WP_029396025.1| multidrug resistance protein MdtC [Escherichia coli]	56.2	32	14	0	1	96	904	935	2.8e-06	45.8
+FCC21WPACXX:1:1101:3463:69849#GAGGTTCA/1	FR772051.1.gene9.p01 ABC transporter. vgaE Curated. Encoded by gene vga(E). ARO:3002833 vgaE. [Staphylococcus aureus subsp. aureus ST398]	54.5	33	15	0	1	99	404	436	6.2e-06	44.7
+FCC21WPACXX:1:1101:16684:70637#GAGGTTCA/1	gi|657322971|ref|WP_029396025.1| multidrug resistance protein MdtC [Escherichia coli]	83.9	31	5	0	95	3	855	885	4e-10	58.5
+FCC21WPACXX:1:1101:8206:71242#GAGGTTCA/1	gi|446910356|ref|WP_000987612.1| AdeB family multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|342225309|gb|EGT90308.1| cation/multidrug efflux pump [Acinetobacter baumannii ABNIH1] >gi|404673637|gb|EKB41408.1| hydrophobe/amphiphile efflux-1 (HAE1) family RND transporter [Acinetobacter baumannii Ab44444] >gi|444766508|gb|ELW90780.1| RND transporter, HAE1 family [Acinetobacter baumannii Naval-78] >gi|475921215|gb|EMT90580.1| hydrophobe/amphiphile efflux-1 (HAE1) family transporter [Acinetobacter baumannii ABNIH25] >gi|475961106|gb|EMU27189.1| hydrophobe/amphiphile efflux-1 (HAE1) family transporter [Acinetobacter baumannii ABNIH18] >gi|741311275|gb|KHV32725.1| acriflavine resistance protein B [Acinetobacter baumannii] >gi|741323874|gb|KHV44015.1| acriflavine resistance protein B [Acinetobacter baumannii] >gi|741328152|gb|KHV48223.1| acriflavine resistance protein B [Acinetobacter baumannii] >gi|763948994|gb|KJC96845.1| acriflavine resistance protein B [Acinetobacter baumannii] >gi|974996916|gb|KUR57217.1| acriflavine resistance protein B [Acinetobacter baumannii] >gi|1037439454|gb|OBA38604.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037636298|gb|OBC27198.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037647739|gb|OBC38254.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037652915|gb|OBC43296.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037659834|gb|OBC50011.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037664790|gb|OBC54819.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037677029|gb|OBC66700.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037684597|gb|OBC74010.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037687198|gb|OBC76521.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037698256|gb|OBC87253.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037709155|gb|OBC97828.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037713243|gb|OBD01773.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037720061|gb|OBD08338.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037722709|gb|OBD10877.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037729283|gb|OBD17241.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037735787|gb|OBD23571.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037746358|gb|OBD33828.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037759198|gb|OBD46279.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037759583|gb|OBD46652.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037762699|gb|OBD49658.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037767509|gb|OBD54320.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037769247|gb|OBD55997.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037772098|gb|OBD58742.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037781297|gb|OBD67627.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037783157|gb|OBD69437.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037784623|gb|OBD70853.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037796503|gb|OBD82327.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037806067|gb|OBD91620.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037814726|gb|OBE00227.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037815878|gb|OBE01331.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037823825|gb|OBE09015.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037825188|gb|OBE10328.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037830576|gb|OBE15539.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037832790|gb|OBE17679.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037842993|gb|OBE27581.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037843064|gb|OBE27651.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037845759|gb|OBE30259.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037852499|gb|OBE36755.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037856341|gb|OBE40468.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037861193|gb|OBE45183.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037861937|gb|OBE45904.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037862234|gb|OBE46196.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037872743|gb|OBE56323.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037876096|gb|OBE59564.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii] >gi|1037884300|gb|OBE67473.1| multidrug efflux RND transporter permease subunit [Acinetobacter baumannii]	68.8	32	10	0	2	97	396	427	3.6e-06	45.4
+FCC21WPACXX:1:1101:1541:72415#GAGGTTCA/1	gi|489009547|ref|WP_002920107.1| multidrug efflux RND transporter permease subunit [Campylobacter jejuni] >gi|380658821|gb|EIB74817.1| inner membrane efflux transporter CmeB [Campylobacter jejuni subsp. jejuni 140-16]	60.6	33	13	0	99	1	398	430	2.1e-06	46.2
+FCC21WPACXX:1:1101:1092:72609#GAGGTTCA/1	gi|1000934451|ref|WP_061180994.1| multidrug efflux RND transporter permease [Pseudomonas aeruginosa] >gi|985021289|gb|KWX31369.1| multidrug transporter [Pseudomonas aeruginosa] >gi|985021904|gb|KWX31970.1| multidrug transporter [Pseudomonas aeruginosa] >gi|985037233|gb|KWX47120.1| multidrug transporter [Pseudomonas aeruginosa] >gi|985039150|gb|KWX49012.1| multidrug transporter [Pseudomonas aeruginosa]	78.8	33	7	0	2	100	869	901	2.3e-08	52.8
+FCC21WPACXX:1:1101:8843:72595#GAGGTTCA/1	gi|966358723|ref|WP_058407068.1| CMY/LAT/MOX/ACT/MIR/FOX family class C beta-lactamase [Aeromonas salmonicida] >gi|961702794|gb|KTA91876.1| beta-lactamase/D-alanine carboxypeptidase [Aeromonas salmonicida subsp. smithia]	60.6	33	13	0	99	1	252	284	1.3e-06	47.0
+FCC21WPACXX:1:1101:11018:73424#GAGGTTCA/1	gi|695268617|ref|WP_032490794.1| sulfonamide-resistant dihydropteroate synthase Sul1 [Aeromonas salmonicida] >gi|34556023|emb|CAD57197.1| sulphonamide resistant dihydropteroate synthase (plasmid) [Aeromonas salmonicida]	100.0	33	0	0	1	99	123	155	2.4e-13	69.3
+FCC21WPACXX:1:1101:7977:74075#GAGGTTCA/1	CP000647.1.gene4257.p01 response regulator in two-component regulatory system with CpxA, regulates expression of stress-related genes (OmpR family). Encoded by gene cpxR. ARO:3000831 cpxR. [Klebsiella pneumoniae subsp. pneumoniae MGH 78578]	78.6	28	6	0	86	3	73	100	4.9e-08	51.6
+FCC21WPACXX:1:1101:2639:74565#GAGGTTCA/1	gi|241992581|gb|ACS73641.1| AadA [uncultured bacterium]	100.0	33	0	0	100	2	129	161	5.3e-13	68.2
+FCC21WPACXX:1:1101:1795:74803#GAGGTTCA/1	ZP_04576183 elongation factor Tu GTP binding domain-containing protein [Oxalobacter formigenes HOxBLS].	100.0	33	0	0	2	100	56	88	1.2e-14	73.6
+FCC21WPACXX:1:1101:18358:74813#GAGGTTCA/1	AAF24171 acetyltransferase SatG [Enterococcus faecium].	71.0	31	9	0	7	99	118	148	1.9e-07	49.7

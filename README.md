@@ -1,7 +1,7 @@
 ARGs_OAP_v2.0 manual
 ===============
 
-**New release of ublastx verion 2.0**  
+**New release of ARGs_OAP verion 2.0**  
 
 **Novel features**
 
@@ -9,16 +9,22 @@ ARGs_OAP_v2.0 manual
 2. SARGfam was supplied
 3. Cell number estimation with universial single-copy marker gene was added
 4. Add -q for quality control of raw fastq files
+5. Local version of stage two script
 
-**We have simplified the running process of ublastx_stage_one. We have made a step by step video about how to use ARGs-OAP platform, hopefully, this video will guid new users to go through the process within ten minutes.  The address is: https://www.youtube.com/watch?v=PCr1ctXvZPk**    
+ 
+
+**We have simplified the running process of stage_one. We have made a step by step video about how to use ARGs-OAP platform, hopefully, this video will guid new users to go through the process within ten minutes.  The address is: https://www.youtube.com/watch?v=PCr1ctXvZPk**    
 
 **As many users have very big data to analyze, we will supply a local version for the stage two analysis in the near future along with SARG2.0 database. Some users report that the Galaxy has problem for uploading data in China, please refreash the page and upload again, the server is not stable as previous after upgrading.**
 
-**The DATABASE FILE of [SARG2.0](https://github.com/biofuture/Ublastx_stageone/blob/master/DB/SARG_20170328_12307.fasta) is already under the DB directory.**  
+**The DATABASE FILE of [SARG2.0](https://github.com/biofuture/Ublastx_stageone/blob/master/DB/SARG_20170328_12307.fasta) and the [structure](https://github.com/biofuture/Ublastx_stageone/blob/master/DB/structure_20170328_12037.LIST) of the database are under the DB directory.**
+
 
 **A mirror site was added in Shenzhen China for mainland China users to solve the slow data uploading problem [SUSTC-MIRROR-ARGS-OAP](http://smile.sustc.edu.cn:8080/)**
 
-Repo of Ublastx [Version 1.2](https://github.com/biofuture/Ublastx_stageone/releases/tag/Ublastx_stageone) 
+
+Repo of ARGs_OAP2.0 
+Repo of ARGs_OAP1.0 [Version 1.0](https://github.com/biofuture/Ublastx_stageone/releases/tag/Ublastx_stageone) 
 
 
 **1. adding a method to obtain microbial community structure from the shotgun metagenomics data set.**  
@@ -128,9 +134,13 @@ After a while or so, you will notice that their are four files generated for you
 ------------------------------------------------------------------------------------------------------------------------  
 **Notice:**
 
-This tools only provide the required scripts for ARGs-OAP pipeline (Bioinformatics (2016) doi: 10.1093/bioinformatics/btw136).
+This tools only provide the required scripts for ARGs-OAP1.0/2.0 pipeline
 
 This pipeline is distributed in the hope to achieve the aim of management of antibiotic resistant genes in envrionment, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.This pipeline is only allowed to be used for non-commercial and academic purpose.
+
+**The SARG database is distributed only freely used for academic prupose, any commercial use should require the agrrement from the developer team.** 
+
+
 
 The copyrights of the following tools/databases which could be used in this pipeline belong to their original developers. The user of this pipeline should follow the guideline and regulations of these tools/database which could be found at the websites of their developers.  
 

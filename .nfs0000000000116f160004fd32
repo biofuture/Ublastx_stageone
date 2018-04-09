@@ -1,0 +1,335 @@
+#!/usr/bin/perl -w
+use strict;
+
+##This programme generate scripts for uclust + blastx + R  for all the metagenomics fastq files 
+##in one input directory.
+##Author: JIANG Xiaotao - 2014-12-12
+##Email: biofurue.jiang@gmail.com
+##version 1.2 
+
+use Getopt::Std;
+use File::Basename;
+use FindBin qw($Bin);
+
+##Generalize dir for this program
+our (@dirset,$ublastxdir);
+BEGIN {
+    @dirset = split(/\//,$Bin);
+    $ublastxdir = join("/", @dirset);
+    unshift @INC, "$ublastxdir/bin";
+}
+
+
+our ($opt_h, $opt_i, $opt_o, $opt_n, $opt_m, $opt_f, $opt_z, $opt_c, $opt_x, $opt_y, $opt_v, $opt_q, $opt_s) = "";
+my  $usage = <<USE;
+	Author: JIANG Xiaotao
+	Date: 12-11-2014
+	Modified : 10-01-2016
+	Modidied : 31-01-2018
+	Email: biofuture.jiang\@gmail.com
+	$0 -i <Fq input dir> -m <Metadata_map.txt> -o <output dir> -n [number of threads] -f [fa|fq] -z -h -c [S|U]
+
+	-i Input files directory, required
+	-m meta data file, required
+	-o Output files directory, default current directory
+	-n number of threads used for usearch, default 1
+	-f the format of processed files, default fq
+	-q quality control of fastq sequences defualt not take effect, set to 1, then will do QC with fastp
+	-z whether the fq files were .gz format, if -z, then firstly gzip -d, default(none) 
+	-x evalue for searching 16S in usearch default 1e-10
+	-y evalue for searching universal single copy marker gene default 3
+	-v the identity value for diamond to search the USCMGs default  0.45
+	-s if fastq is too large, split into smaller ones 
+	-c This option is to chose methods for estimating the prokyarto cell number  using copy number correction by Copywriter database to transfrom 16S information into cell number [ direct searching hyper variable region database by usearch] opetin "S", or using 30 universal single copy marker genes of prokyarto averagely coverage to estimate the cell number (Here, we ignore other eukaryota sequences in one metagenomics sample) represented by "U", (default U)
+	-h print this help information
+USE
+
+#Get all the input parameters
+
+getopts('i:o:n:f:m:c:x:y:v:shzq');
+if($opt_h  ||  ($opt_i eq "") ){
+	die "$usage\n";
+}
+
+$opt_n ||= 1;
+$opt_f ||="fq";
+$opt_o ||= ".";
+#$opt_c ||= 1;
+$opt_c ||="U";  ##U represent using universal single copy marker genes to estimate the cell number, wheras S is using 16S to estimate the cell number 
+unless(-d $opt_o){
+	`mkdir $opt_o`;
+}
+
+$opt_x ||= 1e-10;
+$opt_y ||= 3;
+$opt_v ||= 0.45;
+my $eval1 =$opt_x;
+my $eval2 =$opt_y;
+my $did = $opt_v; ##identity for diamond searching
+
+my $logF = "$opt_o/Log.txt";
+my $date = localtime;
+open(LOG, ">$logF") || die "Can not create Log.txt\n";
+print LOG "Start Ublastx one : $date\n";
+#$opt_c
+my $ARDB_PATH ||= "$ublastxdir/DB/SARGV2.0.udb"; ##change to the new one
+my $opt_d ||= $ARDB_PATH; ## This option is to replace the version of database, such as new and old SARG database, or other heirachical database with similar format 
+my $ggnr85 ||= "$ublastxdir/DB/gg85.udb"; 
+##Adding database files for copy number correction  for -c S
+my $REFHVR6 ||= "$ublastxdir/DB/RefHVR.V6.udb";  ##Hyper variable region Usearch database
+my $REFHVR6_taxonomy ||= "$ublastxdir/DB/RefHVR.V6.taxonomy.txt";  ##Taxonomy information of each hyper variable region in database
+my $cnd ||= "$ublastxdir/DB/Copy_db.copyrighter.txt";
+
+##Adding database files for copy number corrction for -c U
+my $KO30DMD ||= "$ublastxdir/DB/KO30_DIAMOND.dmnd";
+my $genekolist ||="$ublastxdir/DB/all_KO30_name.list";
+
+
+##Get all the fastq in input dir
+##Generate output script files for all fastq
+$date =~ s/\s+/-/g;
+
+my $o_sh = "$opt_o/ublastx_bash_$date.sh";
+unless(-d $opt_o){
+	`mkdir $opt_o`;
+}
+open(BASH, ">$o_sh") || die "output dir can not write:\n"; 
+
+my $count = 1;
+
+##--------------------------------------------------------------------------------------------------------
+##1. Check the files processed. 
+##hash %samples store all samples information 
+$date = localtime;
+print LOG "1. Check the files processed : $date\n";
+
+my %samples;
+my %metainfo;
+#my %singlepair;  ##single_end or pair_end
+die "$!\n" unless open(META,"$opt_m");
+<META>;
+while(<META>){
+	chomp;
+	my $info = $_;
+	my @tem = split("\t", $_);
+	$samples{$tem[0]} = $tem[1];
+	$metainfo{$tem[0]} = $info;
+}#
+close META;
+
+##--------------------------------------------------------------------------------------------------------
+##2. Process files and generate shell scripts for running
+##Read meta_data and check all the fastq and fasta gzip  files
+$date = localtime;
+print LOG "2. Process files and generate shell scripts for running : $date\n";
+
+my %sample16s; #this hash store 16S number of each sample 
+
+for my $fq (sort {$a <=> $b } keys %samples){
+
+	##process each sample separately 
+	print BASH "#Processing fq $fq begain:\n";
+	
+	my ($f1,$f2) = ("","");
+	if($opt_f eq "fq"){
+		if($opt_z){				
+			$f1 = "$opt_i/$samples{$fq}_1.fq.gz";
+			$f2 = "$opt_i/$samples{$fq}_2.fq.gz";
+			die "No $f1\t$f2\n" unless(-e $f1 && -e $f2);
+			print BASH "gzip -f -d $f1\n";
+			print BASH "gzip -f -d $f2\n";
+			$f1 = "$opt_i/$samples{$fq}_1.fq";
+			$f2 = "$opt_i/$samples{$fq}_2.fq";
+	
+			##if quality control needed using fastp to do it
+			if($opt_q){
+				my $fo1 = "$opt_i/$samples{$fq}.fastp.1.fq";
+				my $fo2 = "$opt_i/$samples{$fq}.fastp.2.fq";
+				print BASH "$ublastxdir/bin/fastp -i $f1 -I $f2 -o $fo1 -O $fo2 -w $opt_n -j $opt_i/$samples{$fq}.jason -h $opt_i/$samples{$fq}.html\n";
+				$f1 = $fo1;
+				$f2 = $fo2;
+				
+			}
+
+		}else{
+			$f1 = "$opt_i/$samples{$fq}_1.fq";
+			$f2 = "$opt_i/$samples{$fq}_2.fq";
+			##Need to transform fq to fa		
+			die "No $f1\t$f2\n" unless(-e $f1 && -e $f2); 		
+
+			if($opt_q){
+				my $fo1 = "$opt_i/$samples{$fq}.fastp.1.fq";
+				my $fo2 = "$opt_i/$samples{$fq}.fastp.2.fq";
+				print BASH "$ublastxdir/bin/fastp -i $f1 -I $f2 -o $fo1 -O $fo2 -w $opt_n -j $opt_i/$samples{$fq}.jason -h $opt_i/$samples{$fq}.html\n";
+				$f1 = $fo1;
+				$f2 = $fo2;
+				
+			}
+
+		}
+
+		##Fq -> fa
+		my $fa1 = "$opt_i/$samples{$fq}_1.fa";
+		my $fa2 = "$opt_i/$samples{$fq}_2.fa";
+
+		print BASH "perl  $ublastxdir/bin/Fq2fa.pl $f1 $fa1\n";
+		print BASH "perl  $ublastxdir/bin/Fq2fa.pl $f2 $fa2\n";
+		
+		$f1 = $fa1;
+		$f2 = $fa2;	##Read Files and keep $f1 $f2 store fa name
+
+
+	}elsif( $opt_f eq "fa"){
+		$f1 = "$opt_i/$samples{$fq}_1.fa";
+		$f2 = "$opt_i/$samples{$fq}_2.fa";
+		die "No $f1\t$f2\n" unless(-e $f1 && -e $f2);
+	}else{
+		die "Wrong format, files were not end with fa or fq\n";
+	}##Fq->fa
+
+
+
+
+	my $uso1 = "$opt_o/$samples{$fq}_1.us";
+	my $uso2 = "$opt_o/$samples{$fq}_2.us";
+	my $us16s1 = "$opt_o/$samples{$fq}_1.16s";
+	my $us16s2 = "$opt_o/$samples{$fq}_2.16s";
+
+	if($opt_s){  ##split fastq into smaller ones 
+					
+		##make an tmp directory 
+		unless(-d "$opt_o/tmp"){
+			print BASH "mkdir $opt_o/tmp\n";
+		}
+
+		##for each pair of $f1 and $f2, spliting them into smaller ones into the tmp directoy 
+		print BASH "$ublastxdir/bin/split_big.pl $f1 $f2 20000000 $opt_o/tmp\n";		
+		##merge all the results in the tmp to have one output
+		print BASH "$ublastxdir/bin/merge_split.pl $opt_o/tmp/ $opt_d  pro $eval1 $uso1 $uso2 $opt_n $ublastxdir\n";
+		
+		print BASH "rm $opt_o/tmp/*tmp1\n";
+		print BASH "rm $opt_o/tmp/*tmp2\n";
+		
+		print BASH "$ublastxdir/bin/merge_split.pl $opt_o/tmp/ $ggnr85 nuc $eval1 $us16s1 $us16s2 $opt_n $ublastxdir\n";
+		print BASH "rm $opt_o/tmp/*tmp1\n";
+		print BASH "rm $opt_o/tmp/*tmp2\n";
+		
+
+	}else{
+		##statistic the data size of each sample with #number of reads
+
+
+		##do usearch against ARDB to extract potential ARG reads
+		print BASH "$ublastxdir/bin/usearch -ublast $f1 -db $opt_d -evalue 1e-5 -accel 0.5 -blast6out $uso1 -threads $opt_n -maxaccepts 1\n";
+		print BASH "$ublastxdir/bin/usearch -ublast $f2 -db $opt_d -evalue 1e-5 -accel 0.5 -blast6out $uso2 -threads $opt_n -maxaccepts 1\n\n";
+
+		##do usearch against greengene nr90 database to calculate 16S copies number
+		print BASH "$ublastxdir/bin/usearch -ublast $f1 -db $ggnr85 -evalue $eval1 -accel 0.5 -blast6out $us16s1 -threads $opt_n -strand both  -maxaccepts 1\n";
+		print BASH "$ublastxdir/bin/usearch -ublast $f2 -db $ggnr85 -evalue $eval1 -accel 0.5 -blast6out $us16s2 -threads $opt_n -strand both  -maxaccepts 1\n\n";
+
+	}
+
+
+	##extract potential reads for each sample
+	my $e1fa = "$opt_o/$samples{$fq}.extract_1.fa";
+	my $e2fa = "$opt_o/$samples{$fq}.extract_2.fa";
+	print BASH "$ublastxdir/bin/extract_usearch_reads.pl $uso1 $f1 $e1fa\n";
+	print BASH "$ublastxdir/bin/extract_usearch_reads.pl $uso2 $f2 $e2fa\n";
+
+	##Obtain microbial community by 16S hyper variable informaton in shotgun metagenomics data
+	##This option is heavy locading in computation
+	
+	if($opt_c eq "S"){
+			
+			##Directly searching the hyper variable region database and obtain the target 16S hyper varaible region data
+			my $us16s1v6 = "$opt_o/$samples{$fq}.16s_1v6.us";
+			my $us16s2v6 = "$opt_o/$samples{$fq}.16s_2v6.us";
+			my $hyperout = "$opt_o/$samples{$fq}.16s_hyperout.txt";
+			my $community = "$opt_o/$samples{$fq}.16s_hvr_community.txt";
+			my $avercopy = "$opt_o/$samples{$fq}.16s_hvr_normal.copy.txt";
+
+			if($opt_s){
+##make an tmp directory 
+				unless(-d "$opt_o/tmp"){
+					`mkdir $opt_o/tmp`;
+				}
+##for each pair of $f1 and $f2, spliting them into smaller ones into the tmp directoy 
+##merge all the results in the tmp to have one output
+				print BASH "$ublastxdir/bin/merge_split.pl $opt_o/tmp/ $REFHVR6  nuc  1e-5  $us16s1v6 $us16s2v6 $opt_n $ublastxdir\n";
+
+				print BASH "rm $opt_o/tmp/*tmp1\n";
+				print BASH "rm $opt_o/tmp/*tmp2\n";
+
+			}else{
+				print BASH "\n#Search hyper variable region\n";
+				print BASH "$ublastxdir/bin/usearch -ublast $f1 -db  $REFHVR6  -evalue 1e-5 -accel 0.5 -blast6out $us16s1v6 -threads $opt_n -strand both  -maxaccepts 10\n";		
+				print BASH "$ublastxdir/bin/usearch -ublast $f2 -db  $REFHVR6  -evalue 1e-5 -accel 0.5 -blast6out $us16s2v6 -threads $opt_n -strand both  -maxaccepts 10\n";		
+			}
+			##filter out all the target 16S hypervairable reads and merge the two 16S hyper varaible reads files 
+			print BASH "\n#Cut, filter and merge two fasta files 16S hyper varaible region\n";
+			print BASH "$ublastxdir/bin/filter_16shvr.pl -a $us16s1v6 -b $us16s2v6 -c $f1 -d $f2 -o $hyperout\n";	
+
+			##taxonomy classification of the hypervariable region and obtain the microbial community
+			print BASH "\n#Obatin the microbial community from the hyper variable data\n";
+
+			print BASH "$ublastxdir/bin/obtain_community.pl $hyperout  $REFHVR6_taxonomy $community\n\n";			
+			##copy number correction by Copywriter copy number database
+
+			print BASH "\n#Copy number correction\n";
+			print BASH "$ublastxdir/bin/copy_correction.pl $community $cnd $avercopy\n";
+	}elsif($opt_c eq "U"){
+
+			#-----------------------------------------------------------------------			
+			##using the USCMGs method to get the cell number 
+			my $dmd1out = "$opt_o/$samples{$fq}.uscmg_1.dmd"; 	
+			my $dmd2out = "$opt_o/$samples{$fq}.uscmg_2.dmd";
+			my $dmout = "$opt_o/$samples{$fq}.uscmg.blastx.txt";
+	
+			print BASH "\n#Using Diamond to search USCMGs\n";
+			print BASH "$ublastxdir/bin/diamond blastx -q $f1 -d $KO30DMD -o $dmd1out -f tab  -p $opt_n -e $eval2  --id $did --max-target-seqs 1\n";		
+			print BASH "$ublastxdir/bin/diamond blastx -q $f2 -d $KO30DMD -o $dmd2out -f tab  -p $opt_n  -e $eval2 --id $did --max-target-seqs 1\n";		
+			print BASH "cat $dmd1out $dmd2out > $dmout\n"
+			
+	}else{
+			die "Please give correct command for -c with either U or S\n";
+	}
+
+	if($opt_s){
+		##remove the tmp directory 
+		if(-d "$opt_o/tmp"){
+                        print BASH "rm -rf $opt_o/tmp\n";
+                }
+		
+	}		
+
+}##for process each sample separately
+
+##--------------------------------------------------------------------------------------------------------
+##3. Paralell running of tasks
+print BASH "#The script file is $o_sh\n";
+$date = localtime;
+print LOG "3. running of tasks: $date\n";
+##excute the program
+
+## 4 Merge  extracted fasta and update meta data 
+##---------------------------------------------------------------------------------------------------------------
+$date = localtime;
+print LOG "4 Merge  extracted fasta and update meta data : $date\n";
+
+my $metaout = "$opt_o/meta_data_online.txt";
+my $extractfa = "$opt_o/extracted.fa";
+#option -c do copy number correction
+
+print BASH "$ublastxdir/bin/merge_extracted_fa_update_metadate.pl $opt_i $opt_o $opt_m $metaout $extractfa $opt_c $genekolist\n";
+
+close BASH;
+
+`sh $o_sh  > ublastx.log.txt`;
+
+$date = localtime;
+print LOG "5. Finsh Ublastx one: $date\n";
+close LOG;
+
+
+1;
+__END__

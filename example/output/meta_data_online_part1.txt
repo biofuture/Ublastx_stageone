@@ -1,0 +1,2 @@
+SampleID	Name	Category	LibrarySize	#ofReads	#of16Sreads	CellNumber
+1	STAS	ST	300	200000	8.35125698324022	3.05466168640877
