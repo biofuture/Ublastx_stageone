@@ -92,7 +92,7 @@ When meta-data.txt and database files are prepared, then put all your fastq file
         -y evalue for searching universal single copy marker gene default 3
         -v the identity value for diamond to search the USCMGs default  0.45
         -s if fastq is too large, split into smaller ones 
-        -c This option is to chose methods for estimating the prokyarto cell number  using copy number correction by Copywriter database to transfrom 16S information into cell number [ direct searching hyper variable region database by usearch] opetin "S", or using 30 universal single copy marker genes of prokyarto averagely coverage to estimate the cell number (Here, we ignore other eukaryota sequences in one metagenomics sample) represented by "U", (default U)
+        -c This option is to chose methods for estimating the prokyarto cell number  using copy number correction by Copywriter database to transfrom 16S information into cell number [ direct searching hyper variable region database by usearch] opetin "S", or using 30 universal single copy marker genes of prokaryote averagely coverage to estimate the cell number (Here, we ignore other eukaryota sequences in one metagenomics sample) represented by "U", (default U)
         -h print this help information
 
 
