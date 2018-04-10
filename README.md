@@ -174,7 +174,7 @@ This tools only provide the required scripts for ARGs-OAP1.0/2.0 pipeline
 
 This pipeline is distributed in the hope to achieve the aim of management of antibiotic resistant genes in envrionment, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.This pipeline is only allowed to be used for non-commercial and academic purpose.
 
-**The SARG database is distributed only freely used for academic prupose, any commercial use should require the agrrement from the developer team.** 
+**The SARG database is distributed only freely used for academic prupose, any commercial use should require the agreement from the developer team.** 
 
 
 
