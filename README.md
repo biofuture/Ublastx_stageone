@@ -130,11 +130,11 @@ As many users have very big data, we supply a local version for the stage two an
     2. install R packages **vegan, labdsv, ggplot2 and scales**  (Enter R and use install.packages(pkgs="vegan") to install these packages).       
 
 
-    perl ublastx_stage_two_version2
+    perl argoap_pipeline_stagetwo_version2
         Author: JIANG Xiao-Tao
         Modidied : 06-04-2018
         Email: biofuture.jiang@gmail.com
-        ./ublastx_stage_two_version2 -i <extracted.fa> -m <meta_data_online.txt> -n [number of threads] -l [length] -e [evalue] -d [identity] -o <output_prefix>
+        ./argoap_pipeline_stagetwo_version2 -i <extracted.fa> -m <meta_data_online.txt> -n [number of threads] -l [length] -e [evalue] -d [identity] -o <output_prefix>
         
         -i the potential arg reads from stage one 
         -m meta data online from stage one 
@@ -150,7 +150,7 @@ As many users have very big data, we supply a local version for the stage two an
 We added a -b option for the stage two script if users already have the blastx outfmt 6 format resutls by alighment against SARG2.0.    
     **A typical senery is that users can paralelly run the blastx on clusters by multi-nodes, and then merge the blastx output as the input for the -b option.**
     
-    perl ublastx_stage_two_version2 -i extracted.fa -m meta_data_online.txt -o testout -b merge_blastx.out.txt 
+    perl argoap_pipeline_stagetwo_version2 -i extracted.fa -m meta_data_online.txt -o testout -b merge_blastx.out.txt 
    
 Stage two pipeline on Galaxy system and download results
 ========================================================
