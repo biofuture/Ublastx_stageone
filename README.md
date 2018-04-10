@@ -36,7 +36,7 @@ There are some questions raised by users, please refer to the [FAQ](https://gith
 
 To run Ublastx, users should download the stage one source code into local computer system (Unix/Linux) and upload the generated files for stage two onto our Galaxy analysis platform (http://smile.hku.hk/SARGs). 
 
-What does Ublastx do:  
+What does ARGs_OAP do:  
 =====================
 
 1. Fast environmental searching of antibiotic resistant gene in multiple metagenomics data sets; the ARGs abundance can be normalized to cell number
