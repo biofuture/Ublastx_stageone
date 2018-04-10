@@ -111,7 +111,7 @@ The results are in testoutdir/, it looks like this:
     STAS.16s_hyperout.txt         SWHAS104.16s_hvr_community.txt
     STAS_1.us                     SWHAS104.16s_hvr_normal.copy.txt
 
-The **extracted.fa** and **meta_data_online.txt** are two files needed for ublastx_stage_two analysis. The STAS.16s_hvr_community.txt is the microbial community of sample STAS and STAS.16s_hvr_normal.copy.txt is the averagely copy number of the microbial community after CopyRighter database correction.
+The **extracted.fa** and **meta_data_online.txt** are two files needed for ublastx_stage_two analysis. The STAS.16s_hvr_community.txt is the microbial community of sample STAS and STAS.16s_hvr_normal.copy.txt is the averagely copy number of the microbial community after CopyRighter database correction. <mark>In the version2, by default we use the universal single-copy gene to calculate the cell numbers rather than use 16S hyper variable region, hence, there will be no intermediate files like community.txt or copy.txt</mark>    
 
 The meta-data-online.txt looks like this 
 
