@@ -80,8 +80,7 @@ When meta-data.txt and database files are prepared, then put all your fastq file
         -h print this help information
 
 
-
-This step will search reads against SARG databbase and 16S greengene non-redundant 85 OTUs database to identify potential ARG reads and 16S reads. This step will generate searching results files for each fastq.  This step also obtain the microbial community structure information of samples by searching against hyper-variable region database, and then perform copy number correction using Copyrighter copy number database (release date) to finally estimate the cell number of samples. 
+Stage one will search reads against SARG databbase and 16S greengene non-redundant 85 OTUs database to identify potential ARG reads and 16S reads. This step will generate searching results files for each fastq. This step also obtain the cell number of each fastq by searching essential single copy marker genes (version 2.0) or by searching against hyper-variable region database, and then perform copy number correction using Copyrighter copy number database (release date) to finally estimate the cell number of samples (version 1.0).
  
 The results are in testoutdir/, it looks like this:
 
