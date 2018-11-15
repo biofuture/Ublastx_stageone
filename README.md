@@ -1,9 +1,14 @@
-ARGs_OAP_v2.0 manual
+ARGs_OAP manual
 ===============
 
-**New release of ARGs_OAP verion 2.0**  
+**Usful links:**
 
-**Novel features**
+1) **A step by step video tutorial (less than 10 min) can be accessed from: https://www.youtube.com/watch?v=PCr1ctXvZPk**
+2) **Online analysis platform for stage two: http://smile.hku.hk/SARGs**
+3) **A mirror site was added in Shenzhen China for mainland China users to solve the slow data uploading problem [SUSTC-MIRROR-ARGS-OAP]( http://smile.sustc.edu.cn )**
+  
+
+**Novel features of version2.0**
 
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `1. The SARG database was expanded about three times in the version 2.0`  
 - ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `2. SARGfam was supplied`    
@@ -13,14 +18,7 @@ ARGs_OAP_v2.0 manual
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `6. Adding option -s for very big input data (useful for users without 64bit usearch to split big input automatically)`      
 
 
-**We have simplified the running process of stage_one. We have made a step by step video about how to use ARGs-OAP platform, hopefully, this video will guid new users to go through the process within ten minutes.  The address is: https://www.youtube.com/watch?v=PCr1ctXvZPk**    
-
-**As many users have very big data to analyze, we supplied a local version for the stage two analysis in the near future along with SARG2.0 database. Some users report that the Galaxy has problem for uploading data in China, please refreash the page and upload again, the server is not stable as previous after upgrading.**
-
 **The DATABASE FILE of [SARG2.0](https://github.com/biofuture/Ublastx_stageone/blob/master/DB/SARG_20170328_12307.fasta) and the [structure](https://github.com/biofuture/Ublastx_stageone/blob/master/DB/structure_20170328_12037.LIST) of the database are under the DB directory.**
-
-
-**A mirror site was added in Shenzhen China for mainland China users to solve the slow data uploading problem [SUSTC-MIRROR-ARGS-OAP](http://smile.sustc.edu.cn:8080/)**
 
 
 Repo of ARGs_OAP2.0 
@@ -33,8 +31,7 @@ Repo of ARGs_OAP1.0 [Version 1.0](https://github.com/biofuture/Ublastx_stageone/
 Detail introduction of copy number correction can be referred to [Transform ARGs abundance against cell number](https://github.com/biofuture/Ublastx_stageone/wiki/Transform-ARGs-abundance-against-cell-number)
 
 There are some questions raised by users, please refer to the [FAQ](https://github.com/biofuture/Ublastx_stageone/wiki/FAQ) for details.  
-
-To run Ublastx, users should download the stage one source code into local computer system (Unix/Linux) and upload the generated files for stage two onto our Galaxy analysis platform (http://smile.hku.hk/SARGs). 
+To run ARG OAP locally, users should download the source code into local computer system (Unix/Linux). Users can upload the generated files for stage two onto our Galaxy analysis platform (http://smile.hku.hk/SARGs) or use the local version of stage two script. 
 
 What does ARGs_OAP do:  
 =====================
@@ -69,7 +66,7 @@ Prepare database and usearch
 
 SARG Database and 32 bit usearch is avaliable in DB/ and bin/ directory, respectively. **Users donot need to download CARD and ARDB anymore!!**
 
-Stage one pipeline
+Stage one ARG_OAP
 ==================
 When meta-data.txt and database files are prepared, then put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
 
@@ -121,7 +118,7 @@ SampleID | Name | Category | #ofreads | #of16S| **#ofCell**
  2       | SWHAS104 | SWH  |200000 | 9.7 |    4.1
 
 
-Stage two pipeline for local runnig
+Stage two ARG_OAP for local runnig
 ========================================================
 As many users have very big data, we supply a local version for the stage two analyses in this updation.   
 
