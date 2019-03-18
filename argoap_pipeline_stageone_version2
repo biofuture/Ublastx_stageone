@@ -203,7 +203,7 @@ for my $fq (sort {$a <=> $b } keys %samples){
 		}
 
 		##for each pair of $f1 and $f2, spliting them into smaller ones into the tmp directoy 
-		print BASH "$ublastxdir/bin/split_big.pl $f1 $f2 20000000 $opt_o/tmp\n";		
+		print BASH "$ublastxdir/bin/split_big.pl $f1 $f2 10000000 $opt_o/tmp\n";		
 		##merge all the results in the tmp to have one output
 		print BASH "$ublastxdir/bin/merge_split.pl $opt_o/tmp/ $opt_d  pro $eval1 $uso1 $uso2 $opt_n $ublastxdir\n";
 		
