@@ -1,6 +1,8 @@
 ARGs_OAP manual
 ===============
 
+**We found some problem for the -s option, please do not use this feature temporally**
+
 **Usful links:**
 
 1) **A step by step video tutorial (less than 10 min) can be accessed from: https://www.youtube.com/watch?v=PCr1ctXvZPk**
