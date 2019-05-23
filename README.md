@@ -1,7 +1,7 @@
 ARGs_OAP manual
 ===============
 
-**Due to the requirement of usearch developer, we removed the binary usearch from the github, please download the usearch by yourself and rebuild the gg85.udb and SARGV2.0.udb and replace the two files under DB directory**
+**Due to the requirement of usearch developer, we removed the binary usearch from the github, please download the usearch by yourself and rebuild the gg85.udb [https://gg-sg-web.s3-us-west-2.amazonaws.com/downloads/greengenes_database/gg_13_5/gg_13_5_otus.tar.gz] from and SARGV2.0.udb and replace the two files under DB directory**
 
 **Usful links:**
 
