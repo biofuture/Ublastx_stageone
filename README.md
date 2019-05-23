@@ -1,8 +1,7 @@
 ARGs_OAP manual
 ===============
 
-**Due to the requirement of usearch developer, we removed the binary usearch from the github, please download the usearch by yourself and rebuild the gg85.udb and SARGDB.udb and replace the two files under DB directory**
-
+**Due to the requirement of usearch developer, we removed the binary usearch from the github, please download the usearch by yourself and rebuild the gg85.udb and SARGV2.0.udb and replace the two files under DB directory**
 
 **Usful links:**
 
