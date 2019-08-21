@@ -468,6 +468,7 @@ mothertable <- read.table(file="$subtypemerge16s", sep="\\t",header=T,row.names=
 #remove zero line
 mothertable <- mothertable[which(rowSums(mothertable)!=0),]
 mothertable <- t(mothertable)
+samples.orig <- rownames(mothertable) # recording original sample names
 mothertable <- mothertable[which(rowSums(mothertable)!=0),]
 dim(mothertable)
 
@@ -476,6 +477,8 @@ library(labdsv)
 library(ggplot2)
 library(scales)
 cols <- c($ocater, \"DrinkingwaterSystem\", \"DrinkingwaterSystem\", \"DrinkingwaterSystem\", \"DrinkingwaterSystem\", \"DrinkingwaterSystem\", \"DrinkingwaterSystem\", \"DrinkingwaterSystem\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"SewageTreatmentPlant\", \"Sediment\", \"Sediment\", \"Sediment\", \"LiveStock\", \"LiveStock\", \"LiveStock\", \"LiveStock\", \"LiveStock\", \"LiveStock\", \"LiveStock\", \"LiveStock\", \"LiveStock\", \"LiveStock\", \"LiveStock\", \"LiveStock\", \"Ocean\", \"Ocean\", \"Ocean\")
+cols <- cols[match(rownames(mothertable), samples.orig)] #update cols in case certain samples has been filtered out.
+
 pdf("$pdf16s")
 vd <- vegdist(mothertable,method="bray")
 vd.pco <- pco(vd, k=10)
