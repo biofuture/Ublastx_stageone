@@ -135,7 +135,7 @@ As many users have very big data, we supply a local version for the stage two an
 
 
 We added a -b option for the stage two script if users already have the blastx outfmt 6 format resutls by alighment against SARG2.0.    
-    **A typical senery is that users can paralelly run the blastx on clusters by multi-nodes, and then merge the blastx output as the input for the -b option.**
+    **A typical scene is that users can paralelly run the blastx on clusters by multi-nodes, and then merge the blastx output as the input for the -b option.**
     
     perl argoap_pipeline_stagetwo_version2 -i extracted.fa -m meta_data_online.txt -o testout -b merge_blastx.out.txt 
    
