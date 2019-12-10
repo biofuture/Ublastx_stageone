@@ -47,9 +47,9 @@ if($opt_h  ||  (!$opt_i) ){
 }
 my $efa = $opt_i;
 my $blast6out = "$opt_o.blast6out.txt";
-my $ARDB_PATH = "$ublastxdir/DB/SARGV2BLASTX";
-my $ARDB_STRUCTURE = "$ublastxdir/DB/structure_20170328_12037.LIST";
-my $ARDBFA = "$ublastxdir/DB/SARG_20170328_12307.fasta";
+my $ARDB_PATH = "$ublastxdir/DB/SARG.2.2.fasta";
+my $ARDB_STRUCTURE = "$ublastxdir/DB/structure_20181107.LIST";
+my $ARDBFA = "$ublastxdir/DB/SARG.2.2.fasta";
 $opt_n ||= 4;
 $opt_l ||= 25;
 $opt_e ||= 1e-7;
@@ -66,17 +66,19 @@ my $envtablecellnumber = "$ublastxdir/DB/update_45_sarg2.0_cell.table_201704.txt
 ##generate ppm 
 my $subtypeppm = "$opt_o.ppm.subtype.txt";
 my $typeppm = "$opt_o.ppm.type.txt";
+my $geneppm = "$opt_o.ppm.gene.txt";
 
 #for 16s normalization
 my $subtype16s = "$opt_o.normalize_16s.subtype.tab.txt";
 my $type16s = "$opt_o.normalize_16s.type.tab.txt";
 my $subtypemerge16s = "$opt_o.normalize_16s.mergesubtype.tab.txt";
+my $gene16s = "$opt_o.normalize_16s.gene.tab.txt";
 
 #for cell number normalization
 my $subtypecellnumber = "$opt_o.normalize_cellnumber.subtype.tab.txt";
 my $typecellnumber = "$opt_o.normalize_cellnumber.type.tab.txt";
 my $subtypemergecellnumber = "$opt_o.normalize_cellnumber.mergesubtype.tab.txt";
-
+my $genecellnumber = "$opt_o.normalize_cellnumber.gene.txt";
 
 my $begin = localtime;
 
@@ -132,6 +134,7 @@ my %type;
 my %subtype;
 my %typelist;
 my %subtypelist;
+my %gene;
 
 <STRU>;
 while(<STRU>){
@@ -148,7 +151,8 @@ while(<STRU>){
 		$ids[$i] =~ s/\'$//;
 		#print "$ids[$i]\n";
 		$subtype{$ids[$i]} = $tem[0];
-		$type{$ids[$i]} = $stem[0]; 
+		$type{$ids[$i]} = $stem[0];
+	        $gene{$ids[$i]} = 1;	
 	}
 
 	#including all type and subtype
@@ -179,20 +183,22 @@ while(<BLAST6>){
 		if(exists $samplehit{$tem[0]}){
 			$samplehit{$tem[0]}{$type{$tem[1]}} += $ratio;
 			$samplehit{$tem[0]}{$subtype{$tem[1]}} += $ratio;
+			$samplehit{$tem[0]}{$tem[1]} += $ratio;
 
 			##For counts
 			$samplenum{$tem[0]}{$type{$tem[1]}} ++;
 			$samplenum{$tem[0]}{$subtype{$tem[1]}} ++;
+			$samplenum{$tem[0]}{$tem[1]} ++;
 		}else{
 			##type
 			$samplehit{$tem[0]}{$type{$tem[1]}} = $ratio;
 			##subtype
 			$samplehit{$tem[0]}{$subtype{$tem[1]}} = $ratio;
-
+			$samplehit{$tem[0]}{$tem[1]} = $ratio;
 			##fro PPM calculation count the reads as one 
 		        $samplenum{$tem[0]}{$type{$tem[1]}} =1;
                         $samplenum{$tem[0]}{$subtype{$tem[1]}} =1;
-		
+			$samplenum{$tem[0]}{$tem[1]} = 1;
 
 		}
 	}
@@ -216,14 +222,21 @@ die "$!\n" unless open(TYPEM, ">$type16s");
 die "$!\n" unless open(SUBC, ">$subtypecellnumber");
 die "$!\n" unless open(TYPEC, ">$typecellnumber");
 #------
+die "$!\n" unless open(GENEP, ">$geneppm");
+die "$!\n" unless open(GENEM, ">$gene16s");
+die "$!\n" unless open(GENEC, ">$genecellnumber");
 
 print SUBP "\nSubtype ppm\n";
 print TYPEP "Type ppm\n";
 
-print SUBM "ARGs abundance normalization aganist 16S\tSubtype level results\n";
-print SUBC "ARGs abundance normalization aganist Cell number\tSubtype level results\n";
-print TYPEM "\nType level results\n";
-print TYPEC "\nType level results\n";
+print SUBM "ARGs abundance normalization aganist 16S";
+print SUBC "ARGs abundance normalization aganist Cell number";
+print TYPEM "Type level results";
+print TYPEC "Type level results";
+
+print GENEP "Gene to ppm\tSubtype\tType";
+print GENEM "Gene to number of 16s copies\tSubtype\tType";
+print GENEC "Gene to cell number level\tSutype\tType";
 
 for my $id (sort keys %sample2reads){
 		
@@ -236,6 +249,9 @@ for my $id (sort keys %sample2reads){
 	print SUBC "\t$id";
 	print TYPEC "\t$id";
 
+	print GENEP "\t$id";
+	print GENEM "\t$id";
+	print GENEC "\t$id";
 }
 print SUBP "\n";
 print TYPEP "\n";	
@@ -245,6 +261,43 @@ print TYPEM "\n";
 #-------
 print SUBC "\n";
 print TYPEC "\n";
+
+print GENEP "\n";
+print GENEM "\n";
+print GENEC "\n";
+
+
+## output gene mothor table
+for my $g (sort keys %gene){
+	print GENEP "$g\t$subtype{$g}\t$type{$g}";
+	print GENEM "$g\t$subtype{$g}\t$type{$g}";
+	print GENEC "$g\t$subtype{$g}\t$type{$g}";
+	for my $sam(sort keys %sample2reads){
+		#print "$sam\n";
+		 if(exists $samplehit{$sam}{$g}){
+			 ##normalize the abundance with sample size and 16s copies
+			 my $value = $samplehit{$sam}{$g} /  $sample216s{$sam};
+			 my $valuecls = $samplehit{$sam}{$g} / $sample2cellnumber{$sam};
+			 print GENEM "\t$value";
+			 print GENEC "\t$valuecls";
+		}else{
+			print GENEM "\t0";
+			print GENEC "\t0";
+		}
+		if(exists $samplenum{$sam}{$g}){
+			my $numb = $samplenum{$sam}{$g} * 1000000 / $sample2reads{$sam};
+			print GENEP "\t$numb";
+		}else{
+			print GENEP "\t0";
+		}
+	}
+	print GENEP "\n";
+	print GENEM "\n";
+	print GENEC "\n";
+}
+close GENEP;
+close GENEM;
+close GENEC;
 
 
 ##output subtype mothor table

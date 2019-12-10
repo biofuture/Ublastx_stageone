@@ -1,0 +1,6 @@
+Start Ublastx one : Fri Dec  6 10:26:44 2019
+1. Check the files processed : Fri Dec  6 10:26:44 2019
+2. Process files and generate shell scripts for running : Fri Dec  6 10:26:44 2019
+3. running of tasks: Fri Dec  6 10:26:44 2019
+4 Merge  extracted fasta and update meta data : Fri Dec  6 10:26:44 2019
+5. Finsh Ublastx one: Fri Dec  6 10:27:29 2019

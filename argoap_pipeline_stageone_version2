@@ -72,7 +72,7 @@ my $date = localtime;
 open(LOG, ">$logF") || die "Can not create Log.txt\n";
 print LOG "Start Ublastx one : $date\n";
 #$opt_c
-my $ARDB_PATH ||= "$ublastxdir/DB/SARGV2.0.udb"; ##change to the new one
+my $ARDB_PATH ||= "$ublastxdir/DB/SARG.2.2.udb"; ##change to the new one
 my $opt_d ||= $ARDB_PATH; ## This option is to replace the version of database, such as new and old SARG database, or other heirachical database with similar format 
 my $ggnr85 ||= "$ublastxdir/DB/gg85.udb"; 
 ##Adding database files for copy number correction  for -c S
@@ -203,7 +203,7 @@ for my $fq (sort {$a <=> $b } keys %samples){
 		}
 
 		##for each pair of $f1 and $f2, spliting them into smaller ones into the tmp directoy 
-		print BASH "$ublastxdir/bin/split_big.pl $f1 $f2 1000000 $opt_o/tmp\n";		
+		print BASH "$ublastxdir/bin/split_big.pl $f1 $f2 20000000 $opt_o/tmp\n";		
 		##merge all the results in the tmp to have one output
 		print BASH "$ublastxdir/bin/merge_split.pl $opt_o/tmp/ $opt_d  pro $eval1 $uso1 $uso2 $opt_n $ublastxdir\n";
 		
