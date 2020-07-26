@@ -3,11 +3,11 @@ ARGs_OAP manual
 
 The change log of this version (2020.07.15) includes:
 1. pipeline modification
-no usearch now (if users prefer usearch, please go to previous version)
-Now, we use minimap2 and diamond.
+No usearch now (We tested minimap2 and find that the minimap2 is faster and equvalently accurate)
+Now, we use minimap2 and diamond. For using usearch, please refer the older version
 2. pipeline modification 2
 In stage one, we removed parameter "-s" and "-c"
-More importantly, you need to state you Read Length in the meta-data.txt!!!! 
+Now, the Read Length is a column in the in the meta-data.txt! need to be filled by the user!!! 
 
 Prepare compulsory command
 ============================
@@ -40,10 +40,10 @@ Example of meta-data file **meta-data.txt**  Tips:
  
 **Please make sure the meta-data file is pure txt format, if you edit the file under windows, using nodepad++ and check the end of each line by cliking View-> Show Symbol -> Show All Characters. If the line is end up with CRLF, please remove the CR by replace \r to nothing in the replace dialogue frame**
 
-SampleID | Name | Category |ReadLength
----------|------|-----------
- 1       | STAS | ST       |100
- 2       | SWHAS104 | SWH  |100
+SampleID | Name | Category |ReadLength   
+---------|------|-------------------
+ 1       | STAS | ST       | 100
+ 2       | SWHAS104 | SWH  | 100
 
 Stage one
 ==================
@@ -59,7 +59,7 @@ The **extracted.fa** and **meta_data_online.txt** are two files needed for ublas
 
 The meta-data-online.txt looks like this 
 
-SampleID | Name | Category | ReadLength |#ofreads | #of16S| **#ofCell**
+SampleID | Name | Category | ReadLength |#ofreads | #of16S| **#ofCell**   
 ---------|------|-----------|----------|-------|----|---- 
  1       | STAS | ST  | 100| 200000 | 10.1  |   4.9
  2       | SWHAS104 | SWH | 100|200000 | 9.7 |    4.1
