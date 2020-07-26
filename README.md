@@ -3,8 +3,8 @@ ARGs_OAP manual
 
 The change log of this version (2020.07.15) includes:
 1. pipeline modification
-No usearch now (We tested minimap2 and find that the minimap2 is faster and equvalently accurate)
-Now, we use minimap2 and diamond. For using usearch, please refer the older version
+No usearch now (We tested minimap2 and find that the minimap2 is faster and equvalently accurate, thanks Xiaole Yin for the testing of minimap2 and replacement of usearch)
+Now, we use minimap2 and diamond. For using usearch, please refer the older version. 
 2. pipeline modification 2
 In stage one, we removed parameter "-s" and "-c"
 Now, the Read Length is a column in the in the meta-data.txt! need to be filled by the user!!! 
@@ -40,8 +40,8 @@ Example of meta-data file **meta-data.txt**  Tips:
  
 **Please make sure the meta-data file is pure txt format, if you edit the file under windows, using nodepad++ and check the end of each line by cliking View-> Show Symbol -> Show All Characters. If the line is end up with CRLF, please remove the CR by replace \r to nothing in the replace dialogue frame**
 
-SampleID | Name | Category |ReadLength     
----------|------|-------------------  
+SampleID | Name | Category | ReadLength     
+---------|------|----------|---------  
  1       | STAS | ST       | 100   
  2       | SWHAS104 | SWH  | 100   
 
