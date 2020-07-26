@@ -40,10 +40,10 @@ Example of meta-data file **meta-data.txt**  Tips:
  
 **Please make sure the meta-data file is pure txt format, if you edit the file under windows, using nodepad++ and check the end of each line by cliking View-> Show Symbol -> Show All Characters. If the line is end up with CRLF, please remove the CR by replace \r to nothing in the replace dialogue frame**
 
-SampleID | Name | Category |ReadLength   
----------|------|-------------------
- 1       | STAS | ST       | 100
- 2       | SWHAS104 | SWH  | 100
+SampleID | Name | Category |ReadLength     
+---------|------|-------------------  
+ 1       | STAS | ST       | 100   
+ 2       | SWHAS104 | SWH  | 100   
 
 Stage one
 ==================
@@ -67,7 +67,7 @@ SampleID | Name | Category | ReadLength |#ofreads | #of16S| **#ofCell**
 
 Stage two
 ========================================================
-Normally, juse run
+Normally, just run
     nohup perl argoap_pipeline_stagetwo_version2 -i extracted.fa -m meta_data_online.txt -o testout -l 25 -d 80 -e 1e-5
 
 For users have very big data and prefer complex running:
