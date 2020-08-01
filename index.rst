@@ -1,6 +1,8 @@
 ===============
 ARG_OAP_v2.0 manual
 ===============
+**The mannual is updated with a change of usearch to minimap2. Please refer to the new read me doc for instructions**
+
 **We have simplified the running process of ublastx_stage_one. We have made a step by step video about how to use ARGs-OAP platform, hopefully, this video will guid new users to go through the process within ten minutes.  The address is: https://www.youtube.com/watch?v=PCr1ctXvZPk** 
 
 **A mirror site was added in Shenzhen China for mainland China users to solve the slow data uploading problem [SUSTC-MIRROR-ARGS-OAP](http://smile.sustc.edu.cn:8080/)**
