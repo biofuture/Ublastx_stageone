@@ -1,8 +1,6 @@
 ARGs_OAP manual
 ==========================================
 
-A singularity version of ARGsOAP will be released soon! With singularity, users do not  need to bother about dependence and installation and also easy to use, the sif image can run on any computer with singularity installed. 
-====
 
 
 The change log of this version (2020.07.15) includes:
