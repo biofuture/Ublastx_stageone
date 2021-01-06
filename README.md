@@ -49,7 +49,7 @@ Put all your fastq files into one directory in your local system (notice the nam
     -i Input files directory, required
     -m meta data file, required
     -o Output files directory, default current directory
-    -n number of threads used for usearch, default 1
+    -n number of threads used, default 1
     -f the format of processed files, default fq
     -q quality control of fastq sequences defualt not take effect, if set, then will do QC with fastp
     -z whether the fq files were .gz format, if -z, then firstly gzip -d, default(none)    
@@ -148,6 +148,8 @@ SampleID | Name | Category | ReadLength |#ofreads | #of16S| **#ofCell**
  1       | STAS | ST  | 100| 200000 | 10.1  |   4.9
  2       | SWHAS104 | SWH | 100|200000 | 9.7 |    4.1
 
+
+----------------------------------------------------------------------------------------------------------------
 For online version, please refer to http://smile.hku.hk/SARGs; for version with scripts please refer to the older repository (https://github.com/biofuture/Ublastx_stageone/releases/tag/2.3).  
 
 ------------------------------------------------------------------------------------------------------------------------  
