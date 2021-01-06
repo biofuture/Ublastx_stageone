@@ -25,16 +25,15 @@ SampleID | Name | Category | ReadLength
 
 Run the following command to exec the singularity version of the pipeline
 ==================================
-Download  the singularity verion of the pipeline image from the following link (https://ndownloader.figshare.com/files/25953791), due to large file size limitation of github, the sif image is deposited on figshare
+Download  the singularity verion of the pipeline image from the following link (https://ndownloader.figshare.com/files/25953791), due to large file size limitation of github, the sif image is deposited on figshare  
+Recommended version 3.5.3 singularity[https://sylabs.io/guides/3.0/user-guide/installation.html] is used    
 
-glone the example data in the repo to your local computer
+clone the example data in the repo to your local computer  
+   
    git clone  git@github.com:biofuture/Ublastx_stageone.git
 
 Put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
 	
-  Recommended version 3.5.3 singularity[https://sylabs.io/guides/3.0/user-guide/installation.html] is used, users can refer to 
-
-
     singularity exec -B inputdir argoapv2.5.sif /home/argsoapv2.5/argoap_version2.5 \
     -i inputdir \
     -m meta-data.txt \
@@ -70,7 +69,74 @@ Put all your fastq files into one directory in your local system (notice the nam
     -r if set, the remove all the intemediate files
     -h print this help information
 
-The results are in testoutdir/
+The results are in testoutdir/  
+The files with prefix stage2output are the quantitative tables of resistome in all samples  
+check the output directory  
+    tree testoutdir/
+    testoutdir/
+    |-- extracted.fa
+    |-- Log.txt
+    |-- meta_data_online.txt
+    |-- stage2output.16S.pdf
+    |-- stage2output.blast6out2.txt
+    |-- stage2output.cell.pdf
+    |-- stage2output.normalize_16s.gene.tab.txt
+    |-- stage2output.normalize_16s.mergesubtype.tab.txt
+    |-- stage2output.normalize_16s.subtype.tab.txt
+    |-- stage2output.normalize.16s.txt
+    |-- stage2output.normalize_16s.type.tab.txt
+    |-- stage2output.normalize_cellnumber.gene.txt
+    |-- stage2output.normalize_cellnumber.mergesubtype.tab.txt
+    |-- stage2output.normalize_cellnumber.subtype.tab.txt
+    |-- stage2output.normalize_cellnumber.type.tab.txt
+    |-- stage2output.normalize.cell.txt
+    |-- stage2output.ppm.gene.txt
+    |-- stage2output.ppm.subtype.txt
+    |-- stage2output.ppm.txt
+    |-- stage2output.ppm.type.txt
+    |-- STAS_1.us
+    |-- STAS_2.us
+    |-- STAS.extract_1.fa
+    |-- STAS.extract_2.fa
+    |-- STAS_fixed_1.fa
+    |-- STAS_fixed_2.fa
+    |-- STAS.sam
+    |-- STAS_singletons.fa
+    |-- STAS.uscmg_1.dmd
+    |-- STAS.uscmg_2.dmd
+    |-- STAS.uscmg.blastx.txt
+    |-- STAS.uscmg.ko_averagecov.txt
+    |-- SWHAS104_1.us
+    |-- SWHAS104_2.us
+    |-- SWHAS104.extract_1.fa
+    |-- SWHAS104.extract_2.fa
+    |-- SWHAS104_fixed_1.fa
+    |-- SWHAS104_fixed_2.fa
+    |-- SWHAS104.sam
+    |-- SWHAS104_singletons.fa
+    |-- SWHAS104.uscmg_1.dmd
+    |-- SWHAS104.uscmg_2.dmd
+    |-- SWHAS104.uscmg.blastx.txt
+    |-- SWHAS104.uscmg.ko_averagecov.txt
+    |-- tmpblast
+    |   |-- xaa
+    |   |-- xaa.blast.txt
+    |   |-- xab
+    |   |-- xab.blast.txt
+    |   |-- xac
+    |   |-- xac.blast.txt
+    |   |-- xad
+    |   |-- xad.blast.txt
+    |   |-- xae
+    |   |-- xae.blast.txt
+    |   |-- xaf
+    |   |-- xaf.blast.txt
+    |   |-- xag
+    |   |-- xag.blast.txt
+    |   |-- xah
+    |   `-- xah.blast.txt
+    `-- ublastx_bash_Thu-Jan-7-09:41:22-2021.sh
+
 
 The **meta_data_online.txt** includes some intemediate numbers information such as #ofreads, #of16S, #ofCells, etc. All the tables are in the files with prefix: stage2output.
 
