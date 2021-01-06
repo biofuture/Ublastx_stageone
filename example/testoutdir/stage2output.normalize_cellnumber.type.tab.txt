@@ -1,0 +1,25 @@
+Type level results	STAS	SWHAS104
+aminoglycoside	0	0.144325464776797
+bacitracin	0.0383728639206272	0.0323657151468643
+beta-lactam	0	0.257807081069283
+bleomycin	0	0
+carbomycin	0	0
+chloramphenicol	0	0
+fosfomycin	0	0
+fosmidomycin	0	0
+fusaric-acid	0	0
+fusidic-acid	0	0
+kasugamycin	0	0
+macrolide-lincosamide-streptogramin	0.0156611471527907	0.0271112811446265
+multidrug	0.0397728688976984	0.242554985581761
+polymyxin	0	0
+puromycin	0	0
+quinolone	0.286822855993874	0.0457034005515721
+rifamycin	0.0770278812524354	0
+spectinomycin	0	0
+sulfonamide	0.0362400548327879	0.142112168758277
+tetracenomycin_C	0	0
+tetracycline	0	0.103747199293876
+trimethoprim	0	0
+unclassified	0.04055892862407	0.0352615949231627
+vancomycin	0	0

@@ -1,0 +1,10 @@
+Start Ublastx one : Thu Jan  7 09:41:22 2021
+1. Check the files processed : Thu Jan  7 09:41:22 2021
+2. Process files and generate shell scripts for running : Thu Jan  7 09:41:22 2021
+3. running of tasks: Thu Jan  7 09:41:22 2021
+4 Merge  extracted fasta and update meta data : Thu Jan  7 09:41:22 2021
+5. Finsh Ublastx one: Thu Jan  7 09:41:44 2021
+---Remove all intermediate files to save space
+6. starting blastx correction with paralell blastx
+7. statistical ARGs abundance at type and subtype level
+Finish confirmation and PcoA analysis

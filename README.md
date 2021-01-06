@@ -2,8 +2,9 @@ ARGs_OAP singularity version of manual
 ==========================================
 
 The change log of this version (2021-01-05) includes:
-1. Merge two steps into one command
-2. Add paralell computing for the blastx step searching against SARG2 database, this accelerating the whole process a lot
+1. Merge two steps into one command for easy of useage
+2. Add paralell computing for the blastx step searching against SARG2 database, this accelerats the whole process
+3. PcoA plot generated directly
 
 Prepare the meta-data file of your samples  
 ==========================================
@@ -24,11 +25,15 @@ SampleID | Name | Category | ReadLength
 
 Run the following command to exec the singularity version of the pipeline
 ==================================
+Download  the singularity verion of the pipeline image from the following link (https://ndownloader.figshare.com/files/25953791), due to large file size limitation of github, the sif image is deposited on figshare
+
+glone the example data in the repo to your local computer
+   git clone  git@github.com:biofuture/Ublastx_stageone.git
+
 Put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
 	
   Recommended version 3.5.3 singularity[https://sylabs.io/guides/3.0/user-guide/installation.html] is used, users can refer to 
 
- Download  the image from the following link https://ndownloader.figshare.com/files/25953791
 
     singularity exec -B inputdir argoapv2.5.sif /home/argsoapv2.5/argoap_version2.5 \
     -i inputdir \
@@ -36,7 +41,7 @@ Put all your fastq files into one directory in your local system (notice the nam
     -o testoutdir \
     -n 8 
 
-    singularity exec -B inputdir argoapv2.5.sif argoapv2.5 -h 
+    singularity exec -B inputdir argoapv2.5.sif /home/argsoapv2.5/argoap_version2.5 -h 
     Author: JIANG Xiaotao
     Modidied : 12-04-2020
     Email: biofuture.jiang@gmail.com
@@ -48,7 +53,7 @@ Put all your fastq files into one directory in your local system (notice the nam
     -n number of threads used for usearch, default 1
     -f the format of processed files, default fq
     -q quality control of fastq sequences defualt not take effect, if set, then will do QC with fastp
--z whether the fq files were .gz format, if -z, then firstly gzip -d, default(none) 
+    -z whether the fq files were .gz format, if -z, then firstly gzip -d, default(none)    
 
     #prescreening parameters 
     -x evalue for searching 16S in usearch default 1e-10
