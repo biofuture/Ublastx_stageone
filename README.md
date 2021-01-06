@@ -72,10 +72,11 @@ Put all your fastq files into one directory in your local system (notice the nam
 The results are in testoutdir/  
 The files with prefix stage2output are the quantitative tables of resistome in all samples  
 check the output directory  
-    tree testoutdir/
-    testoutdir/
-    |-- extracted.fa
-    |-- Log.txt
+
+    tree testoutdir/  
+    testoutdir/  
+    |-- extracted.fa 
+    |-- Log.txt 
     |-- meta_data_online.txt
     |-- stage2output.16S.pdf
     |-- stage2output.blast6out2.txt
@@ -136,7 +137,7 @@ check the output directory
     |   |-- xah
     |   `-- xah.blast.txt
     `-- ublastx_bash_Thu-Jan-7-09:41:22-2021.sh
-
+ 
 
 The **meta_data_online.txt** includes some intemediate numbers information such as #ofreads, #of16S, #ofCells, etc. All the tables are in the files with prefix: stage2output.
 
