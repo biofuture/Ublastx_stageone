@@ -1,6 +1,8 @@
 ARGs_OAP singularity version of manual
 ==========================================
 
+We recommand users try the singualrity version of the pipeline, and you will not need to install many tricky dependence. If you want to use the previouse version, please refer to https://github.com/biofuture/Ublastx_stageone/releases/tag/2.3
+
 The change log of this version (2021-01-05) includes:
 1. Merge two steps into one command for easy of useage
 2. Add paralell computing for the blastx step searching against SARG2 database, this accelerats the whole process
@@ -150,8 +152,7 @@ SampleID | Name | Category | ReadLength |#ofreads | #of16S| **#ofCell**
 
 
 ----------------------------------------------------------------------------------------------------------------
-For online version, please refer to http://smile.hku.hk/SARGs; for version with scripts please refer to the older repository (https://github.com/biofuture/Ublastx_stageone/releases/tag/2.3).  
-
+For online version, please refer to http://smile.hku.hk/SARGs
 ------------------------------------------------------------------------------------------------------------------------  
 **Notice:**
 
