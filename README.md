@@ -36,7 +36,7 @@ clone the example data in the repo to your local computer
    
    git clone  git@github.com:biofuture/Ublastx_stageone.git
 
-Put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information. Examples could be found in source directory example, in example directory run test:   
+Put all your fastq files into one directory in your local system (notice the name of your fastq files should be Name_1.fq and Name_2.fq). your can give -h to show the help information.  Examples could be found in source directory example, in example directory run test:   (The inputdir follow by the -B is  the directory you put your fastq files)
 	
     singularity exec -B inputdir argoapv2.5.sif /home/argsoapv2.5/argoap_version2.5 \
     -i inputdir \
